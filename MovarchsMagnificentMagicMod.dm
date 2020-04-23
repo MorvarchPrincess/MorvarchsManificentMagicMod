@@ -72,6 +72,262 @@
 #custommagic 640 10
 #end
 
+#newmonster
+#name "Shrieking Mauler"
+#descr "An angry beasty"
+#spr1 "./MorvarchsMagic/ShockTrooper_1.tga"
+#spr2 "./MorvarchsMagic/ShockTrooper_2.tga"
+#hp 25
+#size 4
+#prot 5
+#mr 12
+#mor 15
+#str 18
+#att 12
+#def 10
+#prec 8
+#ap 20
+#mapmove 20
+#enc 3
+#maxage 100
+#startage 30
+#fly
+#berserk 3
+#deathfire 5
+#fireres 15
+#weapon 166
+#weapon 166
+#weapon 20
+#end
+
+#newmonster 7000
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 20
+#size 6
+#mr 18
+#sleepaura 10
+#str 20
+#ap 10
+#secondshape 7001
+#end
+
+#newmonster 7001
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 17
+#size 5
+#mr 17
+#str 18
+#ap 9
+#sleepaura 9
+#secondshape 7002
+#end
+
+#newmonster 7002
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 14
+#size 4
+#mr 16
+#str 16
+#ap 8
+#sleepaura 8
+#secondshape 7003
+#end
+
+#newmonster 7003
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 11
+#size 3
+#mr 15
+#str 14
+#ap 7
+#sleepaura 7
+#secondshape 7004
+#end
+
+#newmonster 7004
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 8
+#size 2
+#mr 14
+#str 12
+#ap 6
+#sleepaura 6
+#secondshape 7005
+#end
+
+#newmonster 7005
+#name "Smog Elemental"
+#descr "Foggy"
+#spr1 "./MorvarchsMagic/SmogElemental_1.tga"
+#spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#ethereal
+#neednoteat
+#spiritsight
+#woundfend 99
+#flying
+#weapon 116
+#hp 5
+#size 1
+#mr 13
+#str 10
+#ap 5
+#sleepaura 5
+#end
+
+#newmonster 
+#name "Yrthak"
+#descr "Spoopy sonic"
+#spr1 "./MorvarchsMagic/Yrthak_1.tga"
+#spr2 "./MorvarchsMagic/Yrthak_2.tga"
+#size 6
+#hp 150
+#prot 22
+#mr 20
+#mor 30
+#str 25
+#att 15
+#def 10
+#prec 14
+#ap 10
+#mapmove 30
+#enc 2
+#maxage 3000
+#startage 1800
+#poorleader
+#poormagicleader
+#fear 10
+#shockres 25
+#flying
+#bird
+#itemslots 28672
+#magicbeing
+#stormimmune
+#woundfend 50
+#nametype 164
+#magicskill 1 3
+#magicskill 0 2
+#custommagic 1408
+#researchbonus -7
+
+#end
+
 #newspell 
 #name "Frostfire"
 #descr  "This spell rains down cold flames upon the enemy. It often  "
@@ -241,9 +497,72 @@
 #fatiguecost 2000
 #damage 3341 -- Transform into Janni
 #nreff 1
-#nextspell "Transformation Shock"
+--#nextspell "Transformation Shock"
 #spec 536870912 -- No effect on Lifeless
 #end
 
+#newspell
+#name "Shock Troops"
+#descr "Primes a group of soldiers to make a daring assault on the enemy back lines, giving them flying, and enraging them past the point of caring about their safety"
+#school 4
+#researchlevel 5
+#path 0 1
+#path 1 0
+#pathlevel 0 3
+#pathlevel 1 1
+#aoe 10
+#nreff 1
+#fatiguecost 100
+#range 10
+#effect 10
+#spec 545275904
+#damage 131328
+#end
+
+#newspell
+#name "Summon Shrieking Maulers"
+#descr "Summons a small group of shrieking maulers, violent savage beastial flyers that love to jump into the fray and tear their enemies apart with furious abandon"
+#school 0
+#researchlevel 4
+#path 0 1
+#path 1 0
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 500
+#effect 10001
+#nreff 5
+#damagemon "Shrieking Mauler"
+#end
+
+#newspell
+#name "Summon Smog Elemental"
+#descr "Summons a smog elemental, a deadly animate cloud of smoke that slowly suffocates its foes to death"
+#school 0
+#researchlevel 5
+#path 0 1
+#path 1 0
+#pathlevel 0 3
+#pathlevel 1 1
+#fatiguecost 1000
+#effect 10001
+#nreff 1
+#damage 7000
+#end
+
+#newitem
+#name "Djinn Queens Brooch"
+#descr "A precious brooch forged in the likeness of those of the queens of the djinn, worn around the brow, it grants powers similar to that of the djinn, but also the weaknesses as well"
+#type 9
+#constlevel 0
+#mainpath 0
+#mainlevel 1
+#secondarypath 1
+#secondarylevel 1
+#spr "./MorvarchsMagic/JinnQueensBrooch.tga"
+#fly
+#ethereal
+#glamour
+#ironvul 3
+#end
 
 #end
