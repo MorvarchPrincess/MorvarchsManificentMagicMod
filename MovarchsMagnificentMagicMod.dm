@@ -3,6 +3,9 @@
 #icon "./DomEnhanced/Banner.tga"
 #version 1.00
 
+
+-- New Weapons --
+
 #newweapon 1901
 #name "Frostfire"
 #dmg 5
@@ -27,6 +30,52 @@
 #secondaryeffect "Frostfire"
 #end
 
+#newweapon 1901
+#name "Shrapnel"
+#damage 5
+#aoe 10
+#blunt
+#slash
+#armorpiercing
+#nratt 1
+#end
+  
+ #newweapon 1902
+ #name "Sonic Lance"
+ #dmg 10
+ #nratt 1
+ #sound 24
+ #range 50
+ #ammo 20
+ #blunt
+ #magic
+ #aoe 1
+ #armorpiercing
+ #halfstr
+ #bonus
+ #secondaryeffectalways "Shrapnel"
+ #end
+ 
+ #newweapon 1903
+ #name "Sonic Spike"
+ #dmg 5
+ #nratt -2
+ #sound 24
+ #range -3
+ #natural
+ #ammo 20
+ #blunt
+ #magic
+ #armorpiercing
+ #halfstr
+ #bonus
+ #beam
+ #range0
+ #aoe 1
+ #end
+  
+-- New Monsters --
+  
 #newmonster
 #name "Frostfire Wraith"
 #nametype 101
@@ -325,8 +374,12 @@
 #magicskill 0 2
 #custommagic 1408
 #researchbonus -7
-
+#weapon 322
+#weapon "Sonic Spike"
+#weapon "Sonic Lance"
 #end
+
+-- New Spells --
 
 #newspell 
 #name "Frostfire"
@@ -508,7 +561,7 @@
 #researchlevel 5
 #path 0 1
 #path 1 0
-#pathlevel 0 3
+#pathlevel 0 2
 #pathlevel 1 1
 #aoe 10
 #nreff 1
@@ -548,6 +601,23 @@
 #nreff 1
 #damage 7000
 #end
+
+#newspell
+#name "Shrieking Howl"
+#descr "Summons a number of shrieking maulers from the edge of the battlefield"
+#school 0
+#researchlevel 7
+#path 0 1
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#fatiguecost 200
+#damagemon "Shrieking Mauler"
+#effect 43
+#nreff 2010
+#end
+
+-- New Items --
 
 #newitem
 #name "Djinn Queens Brooch"
