@@ -635,4 +635,16 @@
 #ironvul 3
 #end
 
+#selectmonster 201
+#spr1 "./MorvarchsMagic/ClockworkMaiden_1.tga"
+#spr2 "./MorvarchsMagic/ClockworkMaiden_2.tga"
+#drawsize -50
+#end
+
+#selectmonster 199
+#spr1 "./MorvarchsMagic/ClockworkMaiden_1.tga"
+#spr2 "./MorvarchsMagic/ClockworkMaiden_2.tga"
+#drawsize -70
+#end
+
 #end
