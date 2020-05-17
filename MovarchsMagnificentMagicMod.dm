@@ -73,6 +73,34 @@
  #range0
  #aoe 1
  #end
+ 
+ #newweapon 1904
+ #name "Fiery Snout"
+ #dmg 0
+ #att 1
+ #len 1
+ #nratt 2
+ #pierce
+ #charge
+ #secondaryeffect 216
+ #end
+ 
+ #newweapon 1905
+ #copyweapon 95
+ #name "Archon's Star"
+ #len 4
+ #dmg 10
+ #def 1
+ #end
+ 
+ #newweapon 1906
+ #copyweapon 209
+ #name "Javelins of Flame"
+ #ammo 30
+ #prec 0
+ #end
+
+
   
 -- New Monsters --
   
@@ -379,11 +407,290 @@
 #weapon "Sonic Lance"
 #end
 
+#newmonster
+#name "Azer"
+#descr "A Dwarf like figure with skin of bronze and a beard of flames. Potent mages of Fire and Earth, they excel in forging powerful magic items"
+#spr1 "./MorvarchsMagic/Azer_1.tga"
+#spr2 "./MorvarchsMagic/Azer_2.tga"
+#size 1
+#hp 15
+#prot 15
+#mr 17
+#mor 14
+#str 15
+#att 10
+#def 10
+#prec 10
+#ap 6
+#mapmove 10
+#enc 3
+#maxage 4500
+#startage 2000
+#fireres 30
+#magicbeing
+#magicskill 0 2
+#magicskill 3 2
+#custommagic 1152 100
+#custommagic 6400 100
+#magicbeing
+#poorleader
+#poormagicleader
+#mastersmith 1
+#fixforgebonus 2
+#weapon 18
+#armor 158
+#end
+
+#newmonster
+#name "Magma Giant"
+#descr "A giant humanoid comprised primarily of stone, Magma Giants are slow but powerful and hard to kill"
+#spr1 "./MorvarchsMagic/MagmaGiant_1.tga"
+#spr2 "./MorvarchsMagic/MagmaGiant_2.tga"
+#size 6
+#hp 120
+#prot 20
+#mr 15
+#mor 14
+#str 30
+#att 8
+#def 8
+#prec 6
+#mapmove 22
+#enc 3
+#maxage 500
+#startage 250
+#fireres 30
+#coldres -10
+#heat 10
+#weapon 8
+#armor 143
+#end
+
+#newmonster
+#name "Thoqqua"
+#descr "A worm like creature that burrows through the deep stone with its snout hot enough to melt stone. At the start of the battle, they will burrow through the ground and erupt like a coiled spring."
+#spr1 "./MorvarchsMagic/thoqqua_1.tga"
+#spr2 "./MorvarchsMagic/thoqqua_2.tga"
+#size 4
+#hp 50
+#prot 18
+#mr 14
+#mor 15
+#str 20
+#att 12
+#def 5
+#prec 4
+#mapmove 10
+#enc 2
+#maxage 1000
+#startage 300
+#fireres 30
+#uwfireshield 8
+#pooramphibian
+#itemslots 28672
+#blink
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon "Fiery Snout"
+#siegebonus 10
+#blind
+#end
+
+#newmonster
+#name "Magma Dragon"
+#descr "A Distant cousin of what most would call a dragon, the Magma dragon is flightless, but can burrow through the earth with suprising speed. It isn't as intelligent as a true dragon and cannot use magic, but has a hardened shell of rock around its scales giving it extra protection"
+#spr1 "./MorvarchsMagic/MagmaDragon1_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon1_2.tga"
+#size 6
+#hp 20
+#prot 25
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 10
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#secondshape "Cracked Shell Magma Dragon"
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/MagmaDragon2_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon2_2.tga"
+#name "Cracked Shell Magma Dragon"
+#descr "Once the shell of a magma dragon is cracked, it becomes significantly easier to damage. If given time to recuperate after a battle, the dragon will be able to remould itself a shell"
+#prot 18
+#hp 100
+#size 6
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 15
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#secondshape "Inflamed Magma Dragon"
+#firstshape "Magma Dragon"
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/MagmaDragon3_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon3_2.tga"
+#name "Inflamed Magma Dragon"
+#descr "A wounded Magma Dragon becomes enraged, erupting in flames and causing severe burns to any that attack it in close quarters"
+#size 6
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 20
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#prot 15
+#hp 50
+#fireshield 15
+#berserk 3
+#heat 10
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#firstshape "Magma Dragon"
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/LegionArchon_1.tga"
+#spr2 "./MorvarchsMagic/LegionArchon_2.tga"
+#name "Legion Archon"
+#descr "Soldiers of the heavens, Legion Archons appear as heavily armored warriors with wings of bronze. They are supernaturally skilled with armor, even the heaviest of plate does not hinder them at all. They wield great flaming swords and can conjure javelins of fire"
+#size 3
+#mr 15
+#mor 30
+#str 16
+#att 12
+#def 12
+#prec 12
+#ap 10
+#mapmove 20
+#enc 0
+#maxage 4000
+#startage 1340
+#prot 3
+#hp 25
+#flying
+#holy
+#weapon 95
+#weapon 1906
+#armor 9
+#armor 20
+#end
+
+#newmonster 
+#spr1 "./MorvarchsMagic/StarArchon_1.tga"
+#spr2 "./MorvarchsMagic/StarArchon_2.tga"
+#name "Star Archon"
+#descr "Star Archons are the generals of Heaven, having commanded legions from the moment they appear. They are exellent at leading mortal or magical troops, and like their lesser legion cousins can use the heaviest plate with ease"
+#size 3
+#mr 17
+#mor 30
+#str 18
+#att 12
+#def 12
+#prec 12
+#ap 10
+#mapmove 20
+#enc 0
+#maxage 6000
+#startage 4800
+#prot 5
+#hp 30
+#flying
+#holy
+#superiorleader
+#superiormagicleader
+#command 140
+#magiccommand 140
+#inspirational 3
+#weapon 1905
+#armor 19
+#armor 21
+#end
+
+#newmonster
+#copystats 1225
+#spr1 "./MorvarchsMagic/CelestialLibrarian_1.tga"
+#spr2 "./MorvarchsMagic/CelestialLibrarian_2.tga"
+#name "Celestial Librarian"
+#inspiringres 2
+#end
+
+#newmonster
+#copystats 1225
+#spr1 "./MorvarchsMagic/CelestialSage_1.tga"
+#spr2 "./MorvarchsMagic/CelestialSage_1.tga"
+#name "Celestial Sage"
+#clearmagic
+#inspiringres 3
+#magicskill 4 2
+#magicskill 0 2
+#end
+
 -- New Spells --
 
 #newspell 
 #name "Frostfire"
-#descr  "This spell rains down cold flames upon the enemy. It often  "
+#descr  "This spell rains down cold flames upon the enemy. It often sets the enemy on fire"
 #effect 2
 #damage 15
 #spec 576
@@ -617,6 +924,340 @@
 #nreff 2010
 #end
 
+#newspell
+#name "Summon Yrthak"
+#descr "Summons a Yrthak, a deadly predator of the sky that kills its target with concentrated sonic attacks"
+#school 0
+#researchlevel 7
+#path 0 1
+#path 1 0
+#pathlevel 0 5
+#pathlevel 1 2
+#fatiguecost 5000
+#effect 10021
+#nreff 1
+#damagemon "Yrthak"
+#end
+
+#newspell
+#name "Large Area Explosion"
+#effect 2
+#damage 1010
+#spec 549755813952
+#aoe 2002
+#casttime 100
+#end
+
+#newspell
+#copyspell 516
+#name "Fire Bomb"
+#descr "Throws an explosive glob of firey energy, causing extreme burns to the target hit and detonating in a hammer blow of air upon landing"
+#school 2
+#researchlevel 3
+#path 0 0
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 1
+#nextspell "Large Area Explosion"
+#end
+
+#newspell
+#copyspell 516 -- Fireball
+#name "Cluster of Fire"
+#descr "Throws several globs of explosive firey energy at the enemy army"
+#researchlevel 6
+#path 0 0
+#pathlevel 0 4
+#path 1 3
+#pathlevel 1 1
+#nreff 1000
+#precision 2
+#fatiguecost 50
+#nextspell "Large Area Explosion"
+#end
+
+#newspell 7000
+#copyspell 703 -- Disintegrate
+#name "Stone to Lava"
+#descr "Turns the stone of a statue to pure lava, instantly destroying it and causing the remains to erupt out onto nearby allies. Casting this on a non-stone magic being will overload its innate mana, causing a similar effect"
+#path 0 0
+#pathlevel 0 3
+#path 1 3
+#pathlevel 1 2
+#effect 109
+#fatiguecost 40
+#spec 1188967893811855488
+#end
+
+#newspell 7001
+#copyspell 542
+#end
+
+#newspell
+#name "Nova"
+#path 0 0
+#pathlevel 0 4
+#path 1 3
+#pathlevel 1 2
+#school 2
+#researchlevel 9
+#fatiguecost 100
+#damage 1
+#effect 2
+#nreff 1
+#range 75
+#precision -2
+#flyspr 10080
+#casttime 150
+#spec 16544
+#nextspell "Nova Explosion"
+#end
+
+#newspell
+#name "Nova Explosion"
+#effect 2
+#damage 2015
+#aoe 5050
+#spec 16480
+#explspr 10113
+#end
+
+#newspell
+#name "Summon Azer"
+#descr "Summons an Azer, a potent magic item creator skilled in Earth and Fire, and often other magics"
+#school 4
+#researchlevel 7
+#path 0 0
+#path 1 3
+#pathlevel 0 4
+#pathlevel 1 3
+#fatiguecost 3000
+#effect 10021
+#nreff 1
+#damagemon "Azer"
+#end
+
+#newspell
+#name "Summon Magma Giants"
+#descr "Summons a Magma Giant, who will claw their way out the earth to defend the caster from their enemies"
+#school 0
+#researchlevel 5
+#path 0 3
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#fatiguecost 100
+#effect 1
+#damagemon "Magma Giant"
+#end
+
+#newspell
+#name "Summon Magma Giants"
+#descr "Summons a small group of Magma Giants, firey humanoids of immense size that are difficult to kill"
+#school 0
+#researchlevel 6
+#path 0 3
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 3
+#fatiguecost 1500
+#effect 10001
+#nreff 3
+#damagemon "Magma Giant"
+#end
+
+#newspell
+#name "Summon Thoqquas"
+#descr "Summons a group of Thoqquas, firey worm like creatures capable of impaling the front line of the enemy army with their fiery snouts"
+#school 0
+#researchlevel 3
+#path 0 3
+#path 1 0
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 1200
+#effect 10001
+#nreff 1003
+#damagemon "Thoqqua"
+#end
+
+#newspell
+#name "Summon Magma Dragon"
+#descr "Summons a Magma Dragon, a brutish, wingless lizard of fire and stone"
+#school 4
+#researchlevel 7
+#path 0 3
+#path 1 0
+#pathlevel 0 5
+#pathlevel 1 2
+#fatiguecost 3000
+#effect 10021
+#nreff 1
+#damagemon "Magma Dragon"
+#end
+
+#newspell 7002
+#name "Soul Sear"
+#descr "Blasts an area with fire that sears the soul. Souls not firmly attached in a living body are especially vulnerable to this spell"
+#school 2
+#researchlevel 7
+#path 0 0
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#nreff 1
+#aoe 1009
+#effect 24
+#damage 2015
+#range 100
+#fatiguecost 99
+#prec 5
+#spec 1152921504606994496
+#end
+
+#newspell 7003
+#name "Destroy Tethers of Immortality"
+#researchlevel 12
+#school -2
+#effect 11
+#nreff 1
+#damage 1125899906842624 -- Soul Annihilation
+#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
+#end
+
+#newspell 
+#name "Summon Legion Archon"
+#descr "The caster beseeches the heavens for a solider to combat their enemies, and the heavens return in the form of a Legion Archon"
+#school 0
+#researchlevel 5
+#path 0 4
+#path 1 0
+#pathlevel 0 2
+#pathlevel 1 1
+#nreff 1
+#effect 10001
+#fatiguecost 500
+#damagemon "Legion Archon"
+#end
+
+#newspell
+#name "Summon Star Archon"
+#descr "The Caster beseechers the heavens for a general to lead their armies, and the heavens return in the form of a Star Archon"
+#school 0
+#researchlevel 5
+#path 0 4
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#nreff 1
+#effect 10021
+#fatiguecost 2500
+#damagemon "Star Archon"
+#end
+
+#newspell
+#name "Summon Archon Army"
+#descr "The Caster beseechers the heavens for an army, and is transported to a province of their choice, accompanied by a force of legion archons"
+#school 0
+#researchlevel 5
+#path 0 4
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#nreff 1
+#effect 10019
+#fatiguecost 4000
+#provrange 5
+#nextspell "Archon Army"
+#end
+
+#newspell
+#name "Archon Army"
+#researchlevel 12
+#school -2
+#nreff 10
+#effect 10037
+#damagemon "Legion Archon"
+#end
+
+#newspell
+#name "Starburst"
+#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a little fatigue damage"
+#precision -3
+#flightspr 141
+#school 2
+#researchlevel 3
+#path 0 4
+#path 1 0
+#pathlevel 0 2
+#pathlevel 1 1
+#effect 2
+#fatiguecost 40
+#damage 1
+#nreff 2020
+#spec 16512
+#nextspell  "Starburst Fatigue"
+#end
+
+#newspell
+#name "Starbloom"
+#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a little fatigue damage"
+#precision -3
+#flightspr 141
+#school 2
+#researchlevel 6
+#path 0 4
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#effect 2
+#fatiguecost 80
+#damage 1
+#nreff 5050
+#spec 16512
+#nextspell  "Starburst Fatigue"
+#end
+
+#newspell
+#name "Starburst Fatigue"
+#effect 3
+#damage 5
+#researchlevel 12
+#school -2
+#spec 16512
+#end
+
+#newspell
+#name "Summon Celestial Librarian"
+#descr "Summons a Celestial Librarian, a sage of the heavens that specializes in aiding fellow mages in research"
+#school 5
+#researchlevel 5
+#path 0 0
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 3
+#fatiguecost 3000
+#effect 10021
+#nreff 1
+#damagemon "Celestial Librarian"
+#end
+
+#newspell
+#name "Summon Celestial Sage"
+#descr "Summons a Celestial Sage, a greater sage of the heavens capable of leading grand research projects"
+#school 5
+#researchlevel 5
+#path 0 0
+#path 1 4
+#pathlevel 0 5
+#pathlevel 1 3
+#fatiguecost 6000
+#effect 10021
+#nreff 1
+#damagemon "Celestial Sage"
+#end
+
+
 -- New Items --
 
 #newitem
@@ -633,18 +1274,6 @@
 #ethereal
 #glamour
 #ironvul 3
-#end
-
-#selectmonster 201
-#spr1 "./MorvarchsMagic/ClockworkMaiden_1.tga"
-#spr2 "./MorvarchsMagic/ClockworkMaiden_2.tga"
-#drawsize -50
-#end
-
-#selectmonster 199
-#spr1 "./MorvarchsMagic/ClockworkMaiden_1.tga"
-#spr2 "./MorvarchsMagic/ClockworkMaiden_2.tga"
-#drawsize -70
 #end
 
 #end
