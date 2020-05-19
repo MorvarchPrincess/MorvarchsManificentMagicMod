@@ -79,7 +79,7 @@
  #dmg 0
  #att 1
  #len 1
- #nratt 2
+ #nratt 1
  #pierce
  #charge
  #secondaryeffect 216
@@ -99,8 +99,56 @@
  #ammo 30
  #prec 0
  #end
-
-
+ 
+ #newweapon 1907
+ #copyweapon 574
+ #name "Shattering Vines"
+ #len 5
+ #nratt 2
+ #bonus
+ #end
+ 
+ #newweapon 1908
+ #copyweapon 514
+ #name "Ankheg Spit"
+ #ammo 3
+ #end
+ 
+ #newweapon 1909
+ #copyweapon 20
+ #name "Draining Probiscus"
+ #armorpiercing
+ #dt_drain
+ #end
+ 
+ #newweapon 1910
+ #name "Mantis Blades"
+ #dmg 8
+ #att 2
+ #def 6
+ #len 2
+ #nratt 2
+ #slash
+ #magic
+ #armorpiercing
+ #twohanded
+ #end
+ 
+ #newweapon 1911
+ #copyweapon 513
+ #dt_weapondrain
+ #name "Risen Khopesh"
+ #end
+ 
+ #newweapon
+ #copyweapon 257
+ #dmg 10
+ #def 0
+ #att 2
+ #dt_weapondrain
+ #name "Risen Bardiche"
+ #magic
+ #end
   
 -- New Monsters --
   
@@ -501,77 +549,6 @@
 #end
 
 #newmonster
-#name "Magma Dragon"
-#descr "A Distant cousin of what most would call a dragon, the Magma dragon is flightless, but can burrow through the earth with suprising speed. It isn't as intelligent as a true dragon and cannot use magic, but has a hardened shell of rock around its scales giving it extra protection"
-#spr1 "./MorvarchsMagic/MagmaDragon1_1.tga"
-#spr2 "./MorvarchsMagic/MagmaDragon1_2.tga"
-#size 6
-#hp 20
-#prot 25
-#mr 18
-#mor 30
-#str 30
-#att 15
-#def 10
-#prec 12
-#ap 10
-#mapmove 15
-#enc 2
-#itemslots 28672
-#maxage 3000
-#startage 1500
-#blink
-#recuperation
-#forestsurvival
-#mountainsurvival
-#swampsurvival
-#wastesurvival
-#snow
-#swimming
-#weapon 533
-#weapon 20
-#weapon 29
-#weapon 532
-#secondshape "Cracked Shell Magma Dragon"
-#end
-
-#newmonster
-#spr1 "./MorvarchsMagic/MagmaDragon2_1.tga"
-#spr2 "./MorvarchsMagic/MagmaDragon2_2.tga"
-#name "Cracked Shell Magma Dragon"
-#descr "Once the shell of a magma dragon is cracked, it becomes significantly easier to damage. If given time to recuperate after a battle, the dragon will be able to remould itself a shell"
-#prot 18
-#hp 100
-#size 6
-#mr 18
-#mor 30
-#str 30
-#att 15
-#def 10
-#prec 12
-#ap 15
-#mapmove 15
-#enc 2
-#itemslots 28672
-#maxage 3000
-#startage 1500
-#blink
-#recuperation
-#forestsurvival
-#mountainsurvival
-#swampsurvival
-#wastesurvival
-#snow
-#swimming
-#weapon 533
-#weapon 20
-#weapon 29
-#weapon 532
-#secondshape "Inflamed Magma Dragon"
-#firstshape "Magma Dragon"
-#end
-
-#newmonster
 #spr1 "./MorvarchsMagic/MagmaDragon3_1.tga"
 #spr2 "./MorvarchsMagic/MagmaDragon3_2.tga"
 #name "Inflamed Magma Dragon"
@@ -602,10 +579,90 @@
 #fireshield 15
 #berserk 3
 #heat 10
+#siegebonus 100
 #weapon 533
 #weapon 20
 #weapon 29
 #weapon 532
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/MagmaDragon2_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon2_2.tga"
+#name "Cracked Shell Magma Dragon"
+#descr "Once the shell of a magma dragon is cracked, it becomes significantly easier to damage. If given time to recuperate after a battle, the dragon will be able to remould itself a shell"
+#prot 18
+#hp 100
+#size 6
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 15
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#siegebonus 100
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#secondshape "Inflamed Magma Dragon"
+#end
+
+#newmonster
+#name "Magma Dragon"
+#descr "A Distant cousin of what most would call a dragon, the Magma dragon is flightless, but can burrow through the earth with suprising speed. It isn't as intelligent as a true dragon and cannot use magic, but has a hardened shell of rock around its scales giving it extra protection"
+#spr1 "./MorvarchsMagic/MagmaDragon1_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon1_2.tga"
+#size 6
+#hp 20
+#prot 25
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 10
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#siegebonus 100
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#secondshape "Cracked Shell Magma Dragon"
+#end
+
+#selectmonster "Inflamed Magma Dragon"
+#firstshape "Magma Dragon"
+#end
+
+#selectmonster "Cracked Shell Magma Dragon"
 #firstshape "Magma Dragon"
 #end
 
@@ -684,6 +741,341 @@
 #inspiringres 3
 #magicskill 4 2
 #magicskill 0 2
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/ShamblingMound_1.tga"
+#spr2 "./MorvarchsMagic/ShamblingMound_2.tga"
+#copystats 362
+#name "Shambling Mound"
+#clearweapons
+#weapon "Shattering Vines"
+#weapon "Shattering Vines"
+#regeneration 10
+#mr 10
+#prot 10
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/Ankheg_1.tga"
+#spr2 "./MorvarchsMagic/Ankheg_2.tga"
+#name "Ankheg"
+#descr "An ankheg is a subterranean predator that somewhat resembles a giant ant, with great mandibles and the ability to spit steel corroding acid"
+#size 3
+#hp 30
+#prot 14
+#mr 12
+#mor 12
+#str 18
+#att 12
+#def 10
+#prec 10
+#mapmove 15
+#enc 1
+#maxage 100
+#startage 40
+#itemslots 28672
+#blink
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon "Ankheg Spit"
+#weapon 603
+#siegebonus 10
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/Fury_1.tga"
+#spr2 "./MorvarchsMagic/Fury_2.tga"
+#copystats 138
+#name "Fury Soldier"
+#descr "A small select group of Gorgons, rather than study magic instead find their calling in more martial professions. They tend to form small bands for hire, making use of their innate defences to suppliment their martial skill"
+#size 4
+#hp 35
+#mr 16
+#att 13
+#def 11
+#prec 10
+#ap 10
+#startage 35
+#fear 0
+#clearmagic
+#clearweapons
+#weapon 6
+#weapon 38
+#armor 9
+#armor 123
+#armor 209
+#end
+
+#selectmonster 782 -- Giant Spider
+#montag 7000
+#end
+
+#selectmonster 2226 -- Killer Mantis
+#montag 7000
+#end
+
+#selectmonster 2225 -- Fire Ant
+#montag 7000
+#end
+
+#selectmonster 524 -- Scorpion Beast
+#montag 7000
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DreadHornetEgg_1.tga"
+#spr2 "./MorvarchsMagic/DreadHornetEgg_1.tga"
+#name "Dread Hornet Egg"
+#descr "Dread Hornet eggs do very little while still incubating, but if not smashed will later hatch into a new dread hornet"
+#size 2
+#hp 10
+#prot 15
+#mr 5
+#mor 50
+#str 0
+#att 0
+#def 0
+#prec 0
+#ap 0
+#mapmove 0
+#enc 0
+#maxage 1
+#startage 0
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DreadHornet_1.tga"
+#spr2 "./MorvarchsMagic/DreadHornet_2.tga"
+#name "Dread Hornet"
+#descr "An enourmous wasp often mistaken for a demonic creature, Dread Hornets kill their prey and inject eggs into their corpse, which later turn into more hornets"
+#size 4
+#hp 20
+#prot 14
+#mr 10
+#mor 50
+#str 14
+#att 14
+#def 9
+#prec 2
+#ap 16
+#mapmove 20
+#enc 2
+#maxage 10
+#startage 2
+#raiseonkill 50
+#raiseshape "Dread Hornet Egg"
+#flying
+#weapon 144
+#drawsize -25
+#end
+
+#selectmonster "Dread Hornet Egg"
+#firstshape "Dread Hornet"
+#drawsize -50
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/BeetleWarrior_1.tga"
+#spr2 "./MorvarchsMagic/BeetleWarrior_2.tga"
+#name "Great Beetle Warrior"
+#descr "The Warrior species of beetle have multiple sharp claws they use with significantly more grace than expected for a creature of their bulk, however they are not quite as durable as some of their cousins"
+#size 4
+#hp 30
+#prot 20
+#mr 11
+#mor 12
+#str 19
+#att 13
+#def 11
+#prec 5
+#ap 8
+#mapmove 15
+#flying
+#animal
+#maxage 30
+#startage 12
+#weapon 33
+#weapon 20
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/HornedBeetle_1.tga"
+#spr2 "./MorvarchsMagic/HornedBeetle_2.tga"
+#copystats "Great Beetle Warrior"
+#name "Great Horned Beetle"
+#descr "The Horned Beetles are renowned for their great brute strength and massive piecing horn"
+#att 10
+#str 22
+#hp 35
+#def 8
+#clearweapons
+#weapon 33
+#weapon 399
+#montag 7001
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/StagBeetle_1.tga"
+#spr2 "./MorvarchsMagic/StagBeetle_2.tga"
+#copystats "Great Horned Beetle"
+#name "Great Stag Beetle"
+#descr "The Great Stag Beetles often grow slightly thicker plating than their other cousins, though they are not as agile in combat"
+#att 10
+#def 8
+#hp 40
+#prot 22
+#montag 7001
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/BeetleGeneral_1.tga"
+#spr2 "./MorvarchsMagic/BeetleGeneral_2.tga"
+#copystats "Great Beetle Warrior"
+#name "Great Beetle General"
+#descr "A rare few great beetles develop intelligence and motor control beyond any of their lesser bretheren, becoming leaders and wielding curved blades made of the claws of defeated foes"
+#clearweapons
+#ambidextrous 6
+#clearweapons
+#weapon 746
+#weapon 746
+#mr 13
+#goodleader
+#end
+
+#selectmonster "Great Beetle Warrior"
+#montag 7001
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/AssassinBug_1.tga"
+#spr2 "./MorvarchsMagic/AssassinBug_2.tga"
+#name "Assassin Bug"
+#descr "Horrific assassins that are deceptively quiet for their size, assassin bugs will run a target through with their giant probiscus and drain them to a husk"
+#size 4
+#hp 25
+#prot 15
+#mr 12
+#mor 15
+#str 16
+#att 15
+#def 10
+#prec 5
+#ap 15
+#mapmove 20
+#flying
+#animal
+#maxage 30
+#startage 12
+#stealthy 10
+#assassin
+#patience 2
+#weapon "Draining Probiscus"
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DustWarrior.tga"
+#spr2 "./MorvarchsMagic/DustWarrior.tga"
+#copystats 1980
+#name "Risen Warrior"
+#descr "Risen Warriors are ancient dustwalker soldiers, wielding blades that drain the life from their living opponents."
+#clearweapons
+#cleararmor
+#weapon "Risen Khopesh"
+#armor 101
+#armor 127
+#armor 2
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DustArcher.tga"
+#spr2 "./MorvarchsMagic/DustArcher.tga"
+#copystats 1980
+#name "Risen Sharpshooter"
+#descr "The Ancient Dustwalkers worshipped a pantokrator of fire and archery, and as a result the Dustwalkers that recieved archery training were venerated. To this day, enough remnants of that power remain to infuse the sharpshooters with sacred potential"
+#hp 25
+#clearweapons
+#cleararmor
+#weapon 356
+#armor 135
+#armor 136
+#prec 13
+#holy
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DustGeneral.tga"
+#spr2 "./MorvarchsMagic/DustGeneral.tga"
+#copystats 1980
+#name "Risen General"
+#descr "The Generals of the Risen often served for hundreds of years, leading battle after battle. As a result, they have come to be able to command vast hordes of the undead."
+#clearweapons
+#cleararmor
+#weapon "Risen Khopesh"
+#armor 101
+#armor 136
+#armor 2
+#superiorundeadleader
+#goodleader
+#undcommand 340
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/DustKing.tga"
+#spr2 "./MorvarchsMagic/DustKing.tga"
+#copystats 1979
+#name "Risen King"
+#descr "The Kings of the risen, once proud rulers of the enless deserts, have slumbered while their kingdoms eroded into sand. Now awoken, they see backing the side of the awakening god a way to reclaim their lost power. They can locate their former guard, unearthing Risen Warriors to serve them"
+#clearweapons
+#cleararmor
+#weapon "Risen Bardiche"
+#armor 101
+#armor 212
+#armor 2
+#makemonsters2 "Risen Warrior"
+#magicskill 8 1
+#end
+
+#newmonster
+#copyspr 197
+#copystats 197
+#name "Embalming Zombie"
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/InflamedOne_1.tga"
+#spr2 "./MorvarchsMagic/InflamedOne_2.tga"
+#name "Inflamed One"
+#size 5
+#hp 55
+#prot 5
+#mr 15
+#mor 14
+#str 20
+#att 13
+#def 10
+#prec 10
+#ap 15
+#mapmove 20
+#undead
+#maxage 2500
+#startage 1000
+#fireres 25
+#poisonres 25
+#coldres 0
+#firepower 2
+#heat 5
+#enc 0
+#ambidextrous 2
+#troglodyte
+#weapon 80
+#weapon 76
+#armor 100
+#itemslots 15366
 #end
 
 -- New Spells --
@@ -993,6 +1385,16 @@
 #copyspell 542
 #end
 
+
+#newspell
+#name "Nova Explosion"
+#effect 2
+#damage 2015
+#aoe 5050
+#spec 16480
+#explspr 10113
+#end
+
 #newspell
 #name "Nova"
 #path 0 0
@@ -1011,15 +1413,6 @@
 #casttime 150
 #spec 16544
 #nextspell "Nova Explosion"
-#end
-
-#newspell
-#name "Nova Explosion"
-#effect 2
-#damage 2015
-#aoe 5050
-#spec 16480
-#explspr 10113
 #end
 
 #newspell
@@ -1096,6 +1489,16 @@
 #damagemon "Magma Dragon"
 #end
 
+#newspell 7003
+#name "Destroy Tethers of Immortality"
+#researchlevel 12
+#school -2
+#effect 11
+#nreff 1
+#damage 1125899906842624 -- Soul Annihilation
+#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
+#end
+
 #newspell 7002
 #name "Soul Sear"
 #descr "Blasts an area with fire that sears the soul. Souls not firmly attached in a living body are especially vulnerable to this spell"
@@ -1113,16 +1516,6 @@
 #fatiguecost 99
 #prec 5
 #spec 1152921504606994496
-#end
-
-#newspell 7003
-#name "Destroy Tethers of Immortality"
-#researchlevel 12
-#school -2
-#effect 11
-#nreff 1
-#damage 1125899906842624 -- Soul Annihilation
-#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
 #end
 
 #newspell 
@@ -1156,6 +1549,15 @@
 #end
 
 #newspell
+#name "Archon Army"
+#researchlevel 12
+#school -2
+#nreff 10
+#effect 10037
+#damagemon "Legion Archon"
+#end
+
+#newspell
 #name "Summon Archon Army"
 #descr "The Caster beseechers the heavens for an army, and is transported to a province of their choice, accompanied by a force of legion archons"
 #school 0
@@ -1172,12 +1574,12 @@
 #end
 
 #newspell
-#name "Archon Army"
+#name "Starburst Fatigue"
+#effect 3
+#damage 5
 #researchlevel 12
 #school -2
-#nreff 10
-#effect 10037
-#damagemon "Legion Archon"
+#spec 16512
 #end
 
 #newspell
@@ -1219,15 +1621,6 @@
 #end
 
 #newspell
-#name "Starburst Fatigue"
-#effect 3
-#damage 5
-#researchlevel 12
-#school -2
-#spec 16512
-#end
-
-#newspell
 #name "Summon Celestial Librarian"
 #descr "Summons a Celestial Librarian, a sage of the heavens that specializes in aiding fellow mages in research"
 #school 5
@@ -1257,6 +1650,269 @@
 #damagemon "Celestial Sage"
 #end
 
+#newspell
+#copyspell 655
+#name "Cracking Vines"
+#descr "The caster summons a violent burst of vines that worm their way into the stone of a magic being to tear it apart from the inside out"
+#range 75
+#spec 9453696
+#researchlevel 6
+#path 0 0
+#path 1 6
+#pathlevel 1 1
+#end
+
+#newspell
+#name "Crushing Vines"
+#descr "The caster summons a set of shambling mounds, giant plants of animated vines that are especially deadly to stone creatures"
+#school 4
+#researchlevel 6
+#effect 1
+#damagemon "Shambling Mound"
+#fatiguecost 200
+#nreff 3
+#path 0 0
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 2
+#end
+
+#newspell 
+#name "Summon Ankhegs"
+#descr "Summon a group of ankhegs, insectoid subterranean predators with acidic maws"
+#school 0
+#researchlevel 4
+#path 0 0
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#nreff 5
+#effect 10001
+#fatiguecost 1000
+#damagemon "Ankheg"
+#end
+
+#newspell 
+#name "Summon Gorgon Soldiers"
+#descr "Summons a trio of Fury Soldiers, gorgons who have dedicated themselves to warfare over magic"
+#school 0
+#researchlevel 8
+#path 0 0
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 3
+#nreff 3
+#effect 10001
+#fatiguecost 3000
+#damagemon "Fury Soldier"
+#end
+
+#newspell
+#effect 10038
+#name "Destroy Idol"
+#descr "The caster stokes the wrath of the forest, and animates a group of shambling mounds to destroy idols of the false gods in a province"
+#provrange 5
+#school 4
+#researchlevel 6
+#damagemon "Shambling Mound"
+#fatiguecost 2000
+#nreff 5
+#path 0 0
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 2
+#end
+
+#newspell 7004
+#name "Hatching"
+#effect 1
+#damage -7000
+#researchlevel 12
+#school -2
+#end 
+
+#newspell 7003
+#name "Spawning"
+#effect 2
+#damage 999
+#researchlevel 12
+#school -2
+#spec 1152921504606867584
+#end
+
+#newspell
+#name "Infestation"
+#descr "This rather horrific magic spawns a large group of insect eggs within a group of unsuspecting allied soldiers. If they fail a magic resistance check, the eggs will hatch, bursting into large amounts of giant insects and inevitably killing the hosts in the process"
+#effect 13
+#damage 1
+#nextspell "Spawning"
+#path 0 6
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 2
+#fatiguecost 100
+#aoe 10
+#school 4
+#researchlevel 5
+#spec 541081728
+#end
+
+#newspell
+#name "Summon Great Beetles"
+#descr "Summons a small group of Great Beetles, giant beetles of significant strength and stature, with a rudimentary intelligence."
+#effect 10001
+#damage -7001
+#nreff 5
+#fatiguecost 1200
+#path 0 6
+#path 1 0
+#pathlevel 0 3
+#pathlevel 1 2
+#school 0
+#end
+
+
+#newspell
+#name "Summon Beetle General"
+#effect 10021
+#damagemon "Great Beetle General"
+#nreff 1
+#school -2
+#end
+
+#newspell
+#name "Summon Force of Beetles"
+#descr "Summons a large force of Great Beetles led by a General"
+#effect 10001
+#damage -7001
+#nreff 20
+#fatiguecost 3000
+#path 0 6
+#path 1 0
+#pathlevel 0 4
+#pathlevel 1 3
+#school 0
+#researchlevel 7
+#nextspell "Summon Beetle General"
+#end
+
+#newspell
+#name "Chitinous Assassin"
+#effect 10021
+#damagemon "Assassin Bug"
+#descr "Summons a horrifying insectiod Assassin Bug"
+#nreff 1
+#school 4
+#researchlevel 6
+#path 0 6
+#path 1 0
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 2500
+#end
+
+#newspell 
+#copyspell 540
+#name "Flames of Death"
+#descr "The caster unleashes a rain of flames imbued with just enough death magic to cause the charred corpses to rise against their former allies"
+#effect 74
+#school 4
+#researchlevel 6
+#path 1 5
+#pathlevel 1 1
+#fatiguecost 30
+#end
+
+#newspell
+#effect 1
+#name "Unearth Risen Warriors"
+#descr "The caster summons a small group of powerful fiery undead warriors."
+#effect 1
+#school 0
+#researchlevel 3
+#path 0 0
+#pathlevel 0 4
+#path 1 5
+#pathlevel 1 1
+#nreff 2
+#fatiguecost 400
+#damagemon "Risen Warrior"
+#end
+
+#newspell
+#name "Unearth Risen Archer"
+#descr "The caster unearths one of the ancient sacred archers of a pantokrator of old."
+#effect 10001
+#school 0
+#researchlevel 5
+#path 0 0
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 1
+#damagemon "Risen Sharpshooter"
+#fatiguecost 400
+#nreff 1
+#end
+
+#newspell
+#name "Unearth Risen General"
+#effect 10021
+#damagemon "Risen General"
+#descr "Summons an ancient undead General"
+#nreff 1
+#school 0
+#researchlevel 6
+#path 0 0
+#path 1 5
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 1000
+#end
+
+#newspell
+#name "Unearth Risen Monarch"
+#effect 10021
+#damagemon "Risen King"
+#descr "Summons an ancient undead king of the desert"
+#nreff 1
+#school 0
+#researchlevel 8
+#path 0 0
+#path 1 5
+#pathlevel 0 4
+#pathlevel 1 3
+#fatiguecost 4000
+#end
+
+#newspell
+#name "Create Temple of Embalming"
+#descr "The caster raises a horde of zombies to construct a great temple of enbalming. Death mages will be able to enter the tower and be turned into mummies"
+#effect 10084
+#damage 550
+#friendlyench 1
+#spec 0
+#fatiguecost 4000
+#path 0 0
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 3
+#school 5
+#researchlevel 7
+#end
+
+#newspell
+#name "Imbue Inflamed One"
+#descr "The caster unearths an ancient skeleton and imbues it with a spirit of fire."
+#effect 10001
+#damagemon "Inflamed One"
+#fatiguecost 1000
+#path 0 5
+#path 1 0
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 7
+#school 4
+#end
 
 -- New Items --
 
@@ -1264,7 +1920,7 @@
 #name "Djinn Queens Brooch"
 #descr "A precious brooch forged in the likeness of those of the queens of the djinn, worn around the brow, it grants powers similar to that of the djinn, but also the weaknesses as well"
 #type 9
-#constlevel 0
+#constlevel 6
 #mainpath 0
 #mainlevel 1
 #secondarypath 1
@@ -1274,6 +1930,63 @@
 #ethereal
 #glamour
 #ironvul 3
+#end
+
+#newitem
+#name "Mantis Blades"
+#descr "A pair of perfectly balanced blades, designed to only work as a pair. They slice through armor and flesh with equal amounts of ease, and inspire fear in the enemies of the wielder"
+#type 2
+#constlevel 4
+#mainpath 6
+#secondarypath 0
+#mainlevel 1
+#secondarylevel 1
+#spr "./MorvarchsMagic/MantisBlades.tga"
+#weapon "Mantis Blades"
+#fear 5
+#end
+
+#selectnation 5
+#addrecunit "Dread Hornet"
+#end
+
+
+-- New Sites --
+
+#newsite 1900
+#name "Temple of Embalming"
+#path 5
+#rarity 5
+#level 0
+#summon "Embalming Zombie"
+#end
+
+
+-- New Events --
+#newevent
+#rarity 5
+#nation -2
+#msg "A commander has undergone the rite of embalming and become a mummy"
+#nolog
+#req_monster "Embalming Zombie"
+#req_site "Temple of Embalming"
+#req_targorder 50
+#req_targpath1 5
+#req_pop0ok
+#transform 625
+#killmon "Embalming Zombie"
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req_ench 550
+#req_nositenbr 1900 -- Soul Gate
+#req_pop0ok
+#msg "A Temple of Embalming is erected" 
+#notext
+#nolog
+#addsite 1900
 #end
 
 #end
