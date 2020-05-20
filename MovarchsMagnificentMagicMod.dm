@@ -140,7 +140,7 @@
  #name "Risen Khopesh"
  #end
  
- #newweapon
+ #newweapon 1912
  #copyweapon 257
  #dmg 10
  #def 0
@@ -149,7 +149,19 @@
  #name "Risen Bardiche"
  #magic
  #end
-  
+ 
+ #newweapon 1913
+ #name "Supersonic Dagger"
+ #dmg -3
+ #nratt 6
+ #att 0
+ #def 0
+ #sound 7
+ #magic
+ #slash
+ #armorpiercing
+ #end
+ 
 -- New Monsters --
   
 #newmonster
@@ -1078,6 +1090,69 @@
 #itemslots 15366
 #end
 
+#newmonster 
+#copystats 1279
+#spr1 "./MorvarchsMagic/CondorMan_1.tga"
+#spr2 "./MorvarchsMagic/CondorMan_2.tga"
+#name "Condor Man"
+#descr "More Bestial cousins of the Caelumites, the Condor Men have bird heads and can fly at extreme speeds"
+#ap 30
+#mapmove 50
+#clearweapons
+#weapon 6
+#weapon 9
+#ambidextrous 1
+#end
+
+#newmonster 7006
+#copystats 2313
+#spr1 "./MorvarchsMagic/CondorLord_1.tga"
+#spr2 "./MorvarchsMagic/CondorLord_1.tga"
+#name "Condor Lord"
+#descr "More Bestial cousins of the Caelumites, the Condor Men have bird heads and can fly at extreme speeds"
+#ap 30
+#mapmove 50
+#end
+
+#newmonster
+#copystats 1253
+#name "Mist Ronin"
+#descr "A misty horseman, able to fade into the fog"
+#spr1 "./MorvarchsMagic/MistRonin_1.tga"
+#spr2 "./MorvarchsMagic/MistRonin_2.tga"
+#ethereal
+#mr 15
+#mor 15
+#stealthy 40
+#end
+
+#newmonster
+#copystats 1240
+#name "Mist Samurai"
+#descr "A misty glaive wielder, able to fade into the fog"
+#spr1 "./MorvarchsMagic/MistSamurai_1.tga"
+#spr2 "./MorvarchsMagic/MistSamurai_2.tga"
+#ethereal
+#mr 13
+#mor 14
+#montag 7002
+#stealthy 40
+#end
+
+#newmonster
+#copystats 1243
+#name "Mist O-ban"
+#descr "A misty Katana samurai, able to fade into the fog"
+#spr1 "./MorvarchsMagic/MistDaimyo_1.tga"
+#spr2 "./MorvarchsMagic/MistDaimyo_2.tga"
+#ethereal
+#mr 13
+#mor 14
+#montag 7002
+#stealthy 40
+#end
+
+-- End Monsters --
 -- New Spells --
 
 #newspell 
@@ -1247,10 +1322,9 @@
 #pathlevel 1 2
 #effect 10130
 #fatiguecost 2000
-#damage 3341 -- Transform into Janni
+#damage 3341
 #nreff 1
---#nextspell "Transformation Shock"
-#spec 536870912 -- No effect on Lifeless
+#spec 536870912
 #end
 
 #newspell
@@ -1368,7 +1442,7 @@
 #nextspell "Large Area Explosion"
 #end
 
-#newspell 7000
+#newspell
 #copyspell 703 -- Disintegrate
 #name "Stone to Lava"
 #descr "Turns the stone of a statue to pure lava, instantly destroying it and causing the remains to erupt out onto nearby allies. Casting this on a non-stone magic being will overload its innate mana, causing a similar effect"
@@ -1381,7 +1455,7 @@
 #spec 1188967893811855488
 #end
 
-#newspell 7001
+#newspell
 #copyspell 542
 #end
 
@@ -1489,7 +1563,7 @@
 #damagemon "Magma Dragon"
 #end
 
-#newspell 7003
+#newspell
 #name "Destroy Tethers of Immortality"
 #researchlevel 12
 #school -2
@@ -1499,7 +1573,7 @@
 #spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
 #end
 
-#newspell 7002
+#newspell
 #name "Soul Sear"
 #descr "Blasts an area with fire that sears the soul. Souls not firmly attached in a living body are especially vulnerable to this spell"
 #school 2
@@ -1723,7 +1797,7 @@
 #pathlevel 1 2
 #end
 
-#newspell 7004
+#newspell
 #name "Hatching"
 #effect 1
 #damage -7000
@@ -1731,7 +1805,7 @@
 #school -2
 #end 
 
-#newspell 7003
+#newspell
 #name "Spawning"
 #effect 2
 #damage 999
@@ -1914,6 +1988,183 @@
 #school 4
 #end
 
+#newspell
+#name "Supersonic Slash"
+#aoe 1
+#effect 2
+#damage 25
+--#spec 1099512676416
+#spec 1152922604119523392
+#fatiguecost 60
+#school 2
+#researchlevel 6
+#path 0 2
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 2
+#end
+
+#newspell
+#copyspell 186
+#name "Cut Artery"
+#effect 11
+#damage 8192
+#school -2
+#researchlevel 12
+#aoe 0
+#end
+
+#newspell 
+#copyspell "Supersonic Slash"
+#name "Supersonic Wind"
+#aoe 10
+#damage 20
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 8
+#fatiguecost 150
+#end
+
+#newspell
+#copyspell "Cut Artery"
+#name "Cut Arteries"
+#end
+
+#newspell 
+#name "Summon Condor Men"
+#descr "The caster bribes a group of condormen, extremely fast flying bird men"
+#school 0
+#researchlevel 1
+#path 0 2
+#path 1 1
+#pathlevel 0 1
+#pathlevel 1 1
+#nreff 2010
+#effect 10001
+#fatiguecost 500
+#damagemon "Condor Man"
+#end
+
+#newspell
+#name "Summon Condor Lord"
+#descr "The Caster ililicits the services of a condor lord, an extremely fast cousin of the caelumites"
+#school 0
+#researchlevel 3
+#path 0 2
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 1
+#nreff 1
+#effect 10021
+#fatiguecost 500
+#damagemon "Condor Lord"
+#end
+
+#newspell
+#name "Condor Army"
+#researchlevel 12
+#school -2
+#nreff 5050
+#effect 10001
+#damagemon "Condor Man"
+#end
+
+#newspell
+#name "Summon Condor Army"
+#descr "The caster hires the services of a significant force of condor men"
+#school 0
+#researchlevel 5
+#path 0 2
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 1
+#nreff 3
+#effect 10021
+#damagemon "Condor Lord"
+#fatiguecost 2000
+#nextspell "Condor Army"
+#end
+
+#newspell
+#name "Become Condorman"
+#descr "The caster attempts to turn themselves into a condorman, becoming supremely fast in exchange for looking ridiculous"
+#school 1
+#researchlevel 4 
+#path 0 2
+#pathlevel 0 2
+#path 1 1
+#pathlevel 1 1
+#effect 10130
+#fatiguecost 200
+#damage 7006
+#nreff 1
+#spec 536870912
+#end
+
+#newspell
+#copyspell 608
+#name "Shimmering Cloaks"
+#descr "The caster cloaks a small group of soldiers in illusions that will divert attacks"
+#researchlevel 4
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 50
+#aoe 10
+#end
+
+#newspell
+#copyspell 622
+#name "Shield of Mist"
+#descr "The caster turns a small group of soldiers into mist, causing them to be very resistant to non magical attacks"
+#fatiguecost 100
+#researchlevel 4
+#path 1 2
+#pathlevel 0 3
+#pathlevel 1 1
+#aoe 5
+#end
+
+#newspell
+#name "Condense Mist Ronin"
+#descr "The caster forms a cavalryman out of mist."
+#school 4
+#researchlevel 5
+#path 0 1
+#pathlevel 0 2
+#path 1 2
+#pathlevel 1 2
+#fatiguecost 1000
+#effect 10021
+#nreff 1
+#damagemon "Mist Ronin"
+#end
+
+#newspell
+#name "Mist Army"
+#researchlevel 12
+#school -2
+#nreff 1010
+#effect 10001
+#damage -7002
+#end
+
+#newspell
+#name "Condense Mist Army"
+#descr "The caster condenses a small army out of mist"
+#school 0
+#researchlevel 5
+#path 0 1
+#pathlevel 0 3
+#path 1 2
+#pathlevel 1 2
+#nreff 1
+#effect 10021
+#damagemon "Mist Ronin"
+#fatiguecost 2000
+#nextspell "Mist Army"
+#end
+
 -- New Items --
 
 #newitem
@@ -1946,11 +2197,37 @@
 #fear 5
 #end
 
-#selectnation 5
-#addrecunit "Dread Hornet"
+#newitem
+#name "Gale Boots"
+#descr "Constantly surrounded by howling winds, these winged boots allow the wearer to fly at extreme speeds, but constantly buffet the wielder in battle, making it harder to fight"
+#spr "./MorvarchsMagic/GaleBoots.tga"
+#type 7
+#fly
+#mapspeed 30
+#def -3
+#att -3
+#mainpath 2
+#secondarypath 1
+#mainlevel 1
+#secondarylevel 1
+#airshield
+#constlevel 4
 #end
 
+#newitem
+#name "Supersonic Dagger"
+#descr "A dagger enhanced with speed increasing magic, allowing the wielder to attack extremely fast. As a result however it only makes shallower cuts"
+#spr "./MorvarchsMagic/SupersonicDagger.tga"
+#mainpath 2
+#secondarypath 1
+#mainlevel 2
+#secondarylevel 1
+#constlevel 6
+#type 1
+#weapon "Supersonic Dagger"
+#end
 
+-- End Items --
 -- New Sites --
 
 #newsite 1900
