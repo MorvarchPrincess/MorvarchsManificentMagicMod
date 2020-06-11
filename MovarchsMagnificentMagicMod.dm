@@ -162,6 +162,24 @@
  #armorpiercing
  #end
  
+ #newweapon 1914
+ #copyweapon 600
+ #name "Freezing Crab Claw"
+ #secondaryeffect 409
+ #end
+ 
+ #newweapon 1915
+ #copyweapon 189
+ #hardmrneg
+ #name "Brain Spike"
+ #end
+ 
+ #newweapon 1916
+ #copyweapon 90
+ #name "Oceanus Crush"
+ #aoe 1
+ #end
+ 
 -- New Monsters --
   
 #newmonster
@@ -299,6 +317,7 @@
 #ap 9
 #sleepaura 9
 #secondshape 7002
+#drawsize -15
 #end
 
 #newmonster 7002
@@ -331,6 +350,7 @@
 #ap 8
 #sleepaura 8
 #secondshape 7003
+#drawsize -30
 #end
 
 #newmonster 7003
@@ -363,6 +383,7 @@
 #ap 7
 #sleepaura 7
 #secondshape 7004
+#drawsize -45
 #end
 
 #newmonster 7004
@@ -395,6 +416,7 @@
 #ap 6
 #sleepaura 6
 #secondshape 7005
+#drawsize -60
 #end
 
 #newmonster 7005
@@ -426,7 +448,9 @@
 #str 10
 #ap 5
 #sleepaura 5
+#drawsize -75
 #end
+
 
 #newmonster 
 #name "Yrthak"
@@ -1152,6 +1176,756 @@
 #stealthy 40
 #end
 
+#newmonster
+#copystats 2514
+#clearweapons
+#name "Glacier Crab"
+#spr1 "./MorvarchsMagic/IceCrab_1.tga"
+#spr2 "./MorvarchsMagic/IceCrab_2.tga"
+#descr "Relatives of the cave crab, Glacier crabs make their home in frozen glaciers and have developed a biting chill around their carapace and giant claw"
+#weapon "Freezing Crab Claw"
+#iceprot 2
+#prot 19
+#cold 3
+#end
+
+#newmonster 7006
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 8
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 50
+#size 6
+#mr 18
+#str 24
+#ap 14
+#regeneration 20
+#secondshape 7007
+#slimer 6
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7007
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 42
+#size 5
+#mr 17
+#str 21
+#ap 12
+#regeneration 20
+#secondshape 7008
+#slimer 5
+#drawsize -15
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7008
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 34
+#size 4
+#mr 16
+#str 18
+#ap 10
+#regeneration 20
+#secondshape 7009
+#slimer 4
+#drawsize -30
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7009
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 26
+#size 3
+#mr 14
+#str 15
+#ap 8
+#regeneration 20
+#secondshape 7010
+#slimer 3
+#drawsize -45
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7010
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 18
+#size 2
+#mr 14
+#str 12
+#ap 6
+#regeneration 20
+#secondshape 7011
+#slimer 2
+#drawsize -60
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7011
+#name "Mud Elemental"
+#descr "A giant animated mass of cloying, thick mud. The mud elemental kills its victims by engulfing them and drowning them in its grasp. Mud elementals are significantly easier to damage than most elementals, but will quickly reform if not killed"
+#spr1 "./MorvarchsMagic/MudElemental_1.tga"
+#spr2 "./MorvarchsMagic/MudElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 116
+#hp 10
+#size 1
+#mr 13
+#str 12
+#ap 4
+#regeneration 20
+#slimer 1
+#drawsize -75
+#trample
+#trampswallow
+#digest 2
+#end
+
+#newmonster 7012
+#spr1 "./MorvarchsMagic/MudLord_1.tga"
+#spr2 "./MorvarchsMagic/MudLord_2.tga"
+#name "Mud Lord"
+#descr "A Mud lord is an animated lump of mud imbued with the primordial magic of creation. Given time it will seep into the ground around it and create rudimentary soldiers of earth, which can then be corralled by the caster to serve in their forces"
+#djinn
+#size 3
+#str 12
+#prot 5
+#weapon 85 -- Tentacle
+#weapon 85 -- Tentacle
+#poisonres 25
+#coldres 25
+#immobile
+#magicbeing
+#neednoteat
+#aquatic
+#noitem
+#hp 25
+#mor 15
+#mr 12
+#att 10
+#def 7
+#ap 2
+#mapmove 0
+#prec 0
+#enc 0
+#gcost 0
+#rcost 1
+#poorleader
+#poorundeadleader
+#okmagicleader
+#mapmove 2
+#nametype 144
+#startage 1000
+#maxage 5000
+#slimer 5
+#domsummon 817
+#makemonsters1 817
+#end
+
+#newmonster
+#copystats 2514
+#spr1 "./MorvarchsMagic/ExcavatorCrab_1.tga"
+#spr2 "./MorvarchsMagic/ExcavatorCrab_2.tga"
+#name "Excavator Crab"
+#descr "Excavator crabs are giant, crablike beings that make huge burrows underground. They are particularily fond of nesting around metals, and so often new mines can be found by following excavator crab burrows, and they are efficient at destroying castle walls"
+#size 3
+#hp 35
+#mr 8
+#str 15
+#siegebonus 10
+#resources 20
+#end
+
+#newmonster 7015
+#copystats 2855
+#copyspr 2855
+#name "Floating Intellect"
+#ethereal
+#shockres -10
+#amphibian
+#clearmagic
+#magicskill 2 2
+#magicskill 4 2
+#custommagic 2560 100
+#custommagic 2560 200
+#end
+
+#newmonster 7014
+#name "Floating Cortex"
+#spr1 "./MorvarchsMagic/FloatingCortex_1.tga"
+#spr2 "./MorvarchsMagic/FloatingCortex_2.tga"
+#size 3
+#hp 30
+#prot 0
+#str 8
+#att 5
+#def 5
+#mr 15
+#mor 30
+#prec 10
+#ap 4
+#mapmove 12
+#float
+#weapon 269
+#weapon 86
+#poisonres 15
+#shockres -5
+#startage 10
+#maxage 50
+#unsurr 10
+#blind
+#magicbeing
+#amphibian
+#ethereal
+#mindslime 10
+#voidsanity 10
+#speciallook 170
+#neednoteat
+#spiritsight
+#xpshape 150
+#magicskill 2 2
+#magicskill 4 2
+#end
+
+#newmonster 7013
+#name "Floating Neuron"
+#spr1 "./MorvarchsMagic/FloatingSynapse_1.tga"
+#spr2 "./MorvarchsMagic/FloatingSynapse_2.tga"
+#size 1
+#hp 8
+#prot 0
+#str 6
+#att 5
+#def 5
+#mr 12
+#mor 30
+#prec 10
+#ap 4
+#mapmove 12
+#float
+#weapon 269
+#mindslime 5
+#poisonres 10
+#shockres -5
+#startage 0
+#blind
+#unsurr 10
+#magicbeing
+#amphibian
+#ethereal
+#maxage 50
+#neednoteat
+#spiritsight
+#xpshape 50
+#end
+
+
+#newmonster
+#name "Intellect Devourer"
+#spr1 "./MorvarchsMagic/IntellectDevourer_1.tga"
+#spr2 "./MorvarchsMagic/IntellectDevourer_2.tga"
+#descr "A disturbing creature, supposedly created by some mage in a lab in ages past. An intellect devourer is a small brain like being that attacks unsuspecting targets, and replaces their brain"
+#size 1
+#hp 5
+#att 15
+#def 15
+#prot 10
+#str 5
+#mr 12
+#mor 30
+#prec 10
+#ap 15
+#mapmove 15
+#poisonres 15
+#blind
+#spiritsight
+#neednoteat
+#magicbeing
+#stealthy 40
+#assassin
+#patience 2
+#end
+
+#newmonster
+#name "Void Shard"
+#spr1 "./MorvarchsMagic/VoidShard_1.tga"
+#spr2 "./MorvarchsMagic/VoidShard_2.tga"
+#descr "A small shard of some great crystal, a void shard resonates with psionic energy and will lash out at minds nearby"
+#size 1
+#hp 7
+#att 5
+#def 5
+#prot 12
+#str 5
+#mr 13
+#mor 50
+#prec 10
+#ap 5
+#enc 0
+#poisonres 15
+#mapmove 10
+#blind
+#spiritsight
+#neednoteat
+#magicbeing
+#stonebeing
+#inanimate
+#weapon 536
+#reinvigoration -20
+#startage 0
+#maxage 1
+#end
+
+#newmonster
+#name "Void Gem"
+#spr1 "./MorvarchsMagic/VoidCrystal_1.tga"
+#spr2 "./MorvarchsMagic/VoidCrystal_2.tga"
+#descr "A larger shard of a great crystal, a void gem is a larger portion with a rudimentary intelligence, and the ability to split off shards of itself in combat"
+#size 3
+#hp 30
+#att 5
+#def 5
+#prot 15
+#str 5
+#mr 15
+#mor 30
+#prec 10
+#ap 5
+#poisonres
+#mapmove 10
+#enc 0
+#blind
+#spiritsight
+#neednoteat
+#magicbeing
+#stonebeing
+#inanimate
+#weapon 536
+#weapon 597
+#battlesum1 "Void Shard"
+#regeneration 5
+#startage 10
+#maxage 100
+#end
+
+#newmonster
+#name "Intellect Hound"
+#spr1 "./MorvarchsMagic/IntellectHound_1.tga"
+#spr2 "./MorvarchsMagic/IntellectHound_2.tga"
+#descr "A strange, canine like being. Intellect hounds hunt by overloading the minds of their prey before closing in for the kill with powerful jaws. They are unusually quick, and always hunt in packs"
+#size 3
+#hp 22
+#prot 5
+#mr 11
+#mor 13
+#str 15
+#att 13
+#def 13
+#prec 5
+#ap 32
+#mapmove 15
+#enc 2
+#stealthy
+#spiritsight
+#animal
+#weapon 536
+#weapon 20
+#batstartsum3 "Intellect Hound"
+#end
+
+#newmonster
+#name "Kokthynid"
+#descr "Kokthynid river spirits from the rivers of the underworld that take up arms to defend the underworld from invaders from beyond."
+#spr1 "./MorvarchsMagic/KokythiadWarrior_1.tga"
+#spr2 "./MorvarchsMagic/KokythiadWarrior_2.tga"
+#hp 10
+#size 2
+#mr 15
+#mor 12
+#str 10
+#att 11
+#def 13
+#prec 10
+#ap 8
+#mapmove 14
+#okundeadleader
+#okleader
+#fear 5
+#invulnerable 15
+#stealthy 40
+#darkvision 100
+#coldres 5
+#weapon 28
+#armor 100
+#armor 209
+#voidsanity 10
+#end
+
+#newmonster
+#name "Shard of Oceanus"
+#descr "A small portion of the great river that is said to encircle the entire world, a shard of oceanus is a great giant of water that can crush its enemies with giant fists of water"
+#spr1 "./MorvarchsMagic/ShardofOceanus_1.tga"
+#spr2 "./MorvarchsMagic/ShardofOceanus_2.tga"
+#hp 120
+#size 6
+#prot 0
+#mr 18
+#mor 30
+#str 30
+#att 14
+#def 5
+#prec 5
+#ap 18
+#mapmove 22
+#amphibian
+#enc 0
+#startage 5000
+#maxage 9000
+#fireres 15
+#poisonres 25
+#uwregen 20
+#woundfend 99
+#slashres
+#bluntres
+#pierceres
+#magicbeing
+#inanimate
+#neednoteat
+#spiritsight
+#weapon 1916
+#weapon 1916
+#end
+
+#newmonster 7016
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 14
+#def 14
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#illusion
+#weapon 90
+#weapon 90
+#weapon 90
+#weapon 90
+#hp 30
+#size 6
+#mr 18
+#str 14
+#ap 14
+#fireres 30
+#poisonres 25
+#uwregen 20
+#secondshape 7017
+#heat 10
+#end
+
+#newmonster 7017
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 13
+#def 13
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#illusion
+#weapon 90
+#weapon 90
+#weapon 90
+#weapon 90
+#hp 27
+#size 5
+#mr 17
+#str 12
+#ap 12
+#fireres 30
+#poisonres 25
+#secondshape 7018
+#drawsize -15
+#heat 8
+#end
+
+#newmonster 7018
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 12
+#def 12
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 90
+#weapon 90
+#weapon 90
+#illusion
+#hp 24
+#size 4
+#mr 16
+#str 18
+#ap 10
+#fireres 30
+#poisonres 25
+#secondshape 7019
+#drawsize -30
+#heat 6
+#end
+
+#newmonster 7019
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 11
+#def 11
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 90
+#weapon 90
+#illusion
+#hp 21
+#size 3
+#mr 14
+#str 15
+#ap 8
+#regeneration 20
+#secondshape 7020
+#drawsize -45
+#fireres 30
+#poisonres 25
+#heat 4
+#end
+
+#newmonster 7020
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 10
+#def 10
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 90
+#illusion
+#hp 18
+#size 2
+#mr 14
+#str 12
+#ap 6
+#secondshape 7021
+#drawsize -60
+#fireres 30
+#poisonres 25
+#heat 2
+#end
+
+#newmonster 7021
+#name "Phlegethon Elemental"
+#descr "An animated mass of flaming water from the underworld river Phlegethon, Phlegethon elementals are weaker than water elementals, but emit an aura of steam that makes them harder to hit"
+#spr1 "./MorvarchsMagic/PhlegethonElemental_1.tga"
+#spr2 "./MorvarchsMagic/PhlegethonElemental_2.tga"
+#prot 0
+#mor 50
+#att 9
+#def 9
+#prec 3
+#mapmove 4
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#woundfend 99
+#weapon 90
+#illusion
+#hp 15
+#size 1
+#mr 13
+#str 12
+#ap 4
+#drawsize -75
+#fireres 30
+#poisonres 25
+#heat 1
+#end
+
+
 -- End Monsters --
 -- New Spells --
 
@@ -1453,6 +2227,7 @@
 #effect 109
 #fatiguecost 40
 #spec 1188967893811855488
+#range 50
 #end
 
 #newspell
@@ -1481,7 +2256,7 @@
 #damage 1
 #effect 2
 #nreff 1
-#range 75
+#range 100
 #precision -2
 #flyspr 10080
 #casttime 150
@@ -1589,6 +2364,7 @@
 #range 100
 #fatiguecost 99
 #prec 5
+#range 25
 #spec 1152921504606994496
 #end
 
@@ -1672,6 +2448,7 @@
 #damage 1
 #nreff 2020
 #spec 16512
+#range 50
 #nextspell  "Starburst Fatigue"
 #end
 
@@ -1691,6 +2468,7 @@
 #damage 1
 #nreff 5050
 #spec 16512
+#range 50
 #nextspell  "Starburst Fatigue"
 #end
 
@@ -1829,6 +2607,7 @@
 #school 4
 #researchlevel 5
 #spec 541081728
+#range 15
 #end
 
 #newspell
@@ -2002,6 +2781,7 @@
 #path 1 1
 #pathlevel 0 2
 #pathlevel 1 2
+#range 5050
 #end
 
 #newspell
@@ -2111,6 +2891,7 @@
 #pathlevel 1 1
 #fatiguecost 50
 #aoe 10
+#range 5
 #end
 
 #newspell
@@ -2123,6 +2904,7 @@
 #pathlevel 0 3
 #pathlevel 1 1
 #aoe 5
+#range 5
 #end
 
 #newspell
@@ -2165,6 +2947,549 @@
 #nextspell "Mist Army"
 #end
 
+#newspell
+#copyspell 995 -- Astral Window
+#name "Brewing Storm"
+#descr "The caster crushes a butterfly, and in a province of their choice a gigantic storm begins to rage for the next month."
+#researchlevel 5
+#path 0 1
+#pathlevel 0 3
+#path 1 2
+#pathlevel 1 2
+#school 5
+#fatiguecost 500
+#spec 0
+#damage 1 -- Wrathful Skies
+#end
+
+#newspell
+#copyspell 498
+#name "Mud Globs"
+#descr "The caster hurls multiple clumps of sticky mud. Units hit will likely be slowed significantly."
+#researchlevel 4
+#school 4
+#path 0 2
+#path 1 3
+#pathlevel 0 1
+#pathlevel 1 1
+#nreff 5
+#fatiguecost 10
+#end
+
+#newspell
+#copyspell "Mud Globs"
+#name "Mud Barrage"
+#descr "The caster hurls a huge barrage of sticky mud. Units hit will likely be slowed significantly."
+#researchlevel 6
+#pathlevel 0 3
+#aoe 10
+#fatiguecost 50
+#end
+
+#newspell
+#name "Summon Glacier Crabs"
+#descr "Summons a smog elemental, a deadly animate cloud of smoke that slowly suffocates its foes to death"
+#school 0
+#researchlevel 5
+#path 0 2
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 800
+#effect 10001
+#nreff 2
+#damagemon "Glacier Crab"
+#end
+
+#newspell
+#name "Summon Mud Elemental"
+#descr "The caster sprinkles some water on the ground, and animates a great mass of mud to engulf their enemies"
+#school 0
+#researchlevel 5
+#path 0 2
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#fatiguecost 100
+#effect 1
+#nreff 1
+#damage 7006
+#range 5
+#end
+
+#newspell
+#name "Sculpt Mud Lord"
+#descr "The caster sculpts a mud being, filled with the magic of creation, that will create new soldiers of clay for the caster"
+#school 4
+#researchlevel 7
+#path 0 2
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 3
+#fatiguecost 2000
+#effect 10021
+#nreff 1
+#damagemon "Mud Lord"
+#end
+
+#newspell
+#name "Cleansing Mud"
+#descr "The caster immerses themselves in a cleansing mud bath, emerging refreshed and rejuvinated in body"
+#effect 111
+#spec 545783808
+#nreff 1
+#fatiguecost 1000
+#damage 30
+#end
+
+#newspell
+#copyspell 632
+#researchlevel 12
+#school -2
+#name "Calcify Slow"
+#end
+
+#newspell
+#copyspell 630
+#researchlevel 12
+#school -2
+#aoe 1
+#name "Calcify Liquid Form"
+#nextspell "Calcify Slow"
+#end
+
+#newspell
+#copyspell 685
+#name "Calcify"
+#descr "The caster turns the skin of a group of soldiers into stone. This spell, while easier to learn than many similar spells also makes it significantly harder for the affected soldiers to move or defend themselves"
+#researchlevel 2
+#path 0 3
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 1
+#aoe 5
+#nextspell "Calcify Liquid Form"
+#range 5
+#end
+
+#newspell
+#copyspell 635
+#name "Mold Shell"
+#descr "The caster seals a group of soldiers in a layer of stone, improving their resistance to most forms of mundane damage"
+#researchlevel 6
+#path 0 3
+#path 1 2
+#pathlevel 0 4
+#pathlevel 1 1
+#aoe 10
+#fatiguecost 90
+#range 5
+#end
+
+#newspell
+#copyspell 738
+#name "Cluster of Cave Crabs"
+#descr "The Cave Crab resembles an ordinary crab, only larger than a horse instead of a lot smaller than one. It has a thick outer skeleton and one enormous claw that is capable of pinching through just about anything. The Cave Crab is usually not aggressive but wise beings leaves it alone as it scuttles along sideways in the caverns. The crab feeds mainly on fungi and dead cave beings, but if presented with the opportunity it might very well produce a few extra dead cave beings to feed on later. With this ritual the mage summons a group of the giant crabs and makes them ready to be released upon an enemy army."
+#researchlevel 6
+#nreff 10
+#fatiguecost 3000
+#pathlevel 0 2
+#end
+
+#newspell
+#name "Excavator Crabs"
+#descr "The caster divines the location of a set of Excavator crab burrows, which are then corraled and trained to serve the awakening god"
+#damagemon "Excavator Crab"
+#effect 10001
+#school 5
+#researchlevel 4
+#nreff 2
+#fatiguecost 1000
+#path 0 3
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 2
+#end
+
+#newspell
+#name "Mental Slime"
+#descr "The caster spawns a large quantity of mental slime that will overload the minds of the weak willed. The slime will remain for a period of time after it is created"
+#school 1
+#researchlevel 4
+#path 0 2
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#nreff 1
+#effect 5128
+#damage 100
+#range 5010
+#aoe 1005
+#explspr 10141
+#flightspr -1
+#sound 21
+#fatiguecost 60
+#spec 41963520 -- UW Only, Ignores shields
+#end
+
+
+#newspell
+#name "Synaptic Shock"
+#descr "The caster throws a charge of electricity designed to interfere with the minds of their enemies. Those affected by the charge will act oddly unless they resist the effect"
+#effect 109
+#damage 10
+#path 0 2
+#path 1 4
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 2
+#school 2
+#fatiguecost 30
+#flightspr 10307
+#explspr 10219
+#aoe 5d
+#range 5045
+#spec 1152921504606996480
+#end
+
+#newspell
+#copyspell 1013
+#name "Synaptic Confusion"
+#researchlevel 12
+#school -2
+#aoe 0
+#end
+
+#newspell
+#copyspell 892
+#name "Unleashed Will"
+#descr "The caster gathers their mental strength and cloaks a decent group of soldiers in their will, causing attacking soldiers to falter unless they can overcome the caster's power."
+#aoe 10
+#researchlevel 6
+#fatiguecost 100
+#path 0 2
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#range 5
+#end
+
+#newspell
+#copyspell 880
+#name "Telekinetic Flight"
+#aoe 1
+#researchlevel 12
+#school -2
+#end
+
+#newspell
+#copyspell 642
+#name "Phase through Reality"
+#nextspell "Telekinetic Flight"
+#researchlevel 12
+#school -2
+#end
+
+#newspell
+#copyspell "Unleashed Will"
+#name "Psychic Ascension"
+#descr "The caster unleashes a vast amount of mental power, imbuing a small group of nearby troops with significant mental defenses, partially phasing them out of reality, and allowing them to move in all directions as they wish"
+#aoe 5
+#fatiguecost 200
+#researchlevel 9
+#nextspell "Phase through Reality"
+#range 5
+#end
+
+#newspell
+#name "Summon Floating Neuron"
+#descr "The caster summons a floating neuron, an odd spider like being supposedly resembling a small part of the brain in gelatinous form. They feed on experience, and might take a greater form if they live long enough."
+#damagemon "Floating Neuron"
+#effect 10001
+#school 0
+#researchlevel 6
+#nreff 1
+#fatiguecost 700
+#path 0 2
+#path 1 4
+#pathlevel 0 1
+#pathlevel 1 1
+#end
+
+#newspell
+#name "Summon Floating Cortex"
+#descr "The caster summons a floating cortex, a brain like jellyfish that is a potent caster of water and astral. They feed on experience, and might take a greater form if they live long enough."
+#damagemon "Floating Cortex"
+#effect 10021
+#school 0
+#researchlevel 7
+#nreff 2
+#fatiguecost 3000
+#path 0 2
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 3
+#end
+
+#newspell
+#name "Intellect Devourer"
+#descr "The caster breeds an intellect devourer, a nasty little creature skilled in stalking the unawares and taking over their mind by literally replacing it"
+#damagemon "Intellect Devourer"
+#effect 10021
+#school 5
+#researchlevel 8
+#nreff 2
+#fatiguecost 4000
+#path 0 2
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#end
+
+#newspell
+#name "Summon Void Shard"
+#descr "The caster summons a void shard, a small portion of a much larger, more dangerous entity, that lashes out with telepathic force at its enemies"
+#effect 1
+#damagemon "Void Shard"
+#school 0
+#researchlevel 4
+#nreff 1
+#fatiguecost 100
+#path 0 4
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 1
+#range 5
+#end
+
+#newspell
+#name "Summon Void Shard"
+#descr "The caster summons a void gem, a larger crystal that will split off portions of itself as the battle extends and throw mental attacks at enemy soliders"
+#effect 1
+#damagemon "Void Gem"
+#school 0
+#researchlevel 6
+#nreff 1
+#fatiguecost 200
+#path 0 4
+#path 1 2
+#pathlevel 0 4
+#pathlevel 1 3
+#range 5
+#end
+
+#newspell
+#name "Summon Intellect Hound"
+#descr "The caster summons an intellect hound to serve him. Even though only one hound will answer his call, a whole pack will arrive when that leader enters combat"
+#effect 1
+#damagemon "Intellect Hound"
+#school 4
+#researchlevel 5
+#nreff 1
+#fatiguecost 300
+#path 0 4
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 2 
+#end
+
+#newspell
+#name "Create Synaptic Chamber"
+#descr "The caster creates a strange, jelly like chamber. An astral mage will then be able to enter to scry a remote province for a few months"
+#effect 10084
+#damage 551
+#friendlyench 1
+#spec 0
+#fatiguecost 1000
+#path 0 2
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#school 5
+#researchlevel 5
+#end
+
+#newspell
+#name "The Key to the Gate"
+#descr "The caster unlocks the key to the gate, causing an enemy to be sucked into the void unless they resist, though resisting is difficult"
+#school 5
+#researchlevel 6
+#path 0 4
+#path 1 2
+#pathlevel 0 3
+#pathlevel 1 3 
+#nreff 1
+#effect 108
+#range 50
+#precision 100
+#sound 28
+#flightspr -1
+#explspr 10200
+#damage -11
+#fatiguecost 50
+#spec 17592194449536 -- AN, Def Negates, UW ok
+#end
+
+#newspell
+#name "Widen the Cracks"
+#descr "The caster rends open the cracks in reality in a distant, causing enemy wills to be sapped and horrors to take notice"
+#school 5
+#researchlevel 6
+#path 0 4
+#path 1 2
+#pathlevel 0 3
+#pathlevel 1 3 
+#effect 10085
+#damage 100 -- Geoglyphs
+#nreff 1
+#provrange 4
+#fatiguecost 500
+#nextspell 1101
+#end
+
+#newspell
+#copyspell 643
+#name "Aura of Fear"
+#descr "Grants fear 5"
+#researchlevel 12
+#school -2
+#damage 16
+#spec 8405120 -- Ignore armor & shield, UW OK
+#end
+
+#newspell
+#copyspell 643
+#name "Infusion of Cocytus"
+#descr "The caster douses themselves in waters from the river Cocytus, the river of wailing. This will make him resistant to non-magical weapons, and the aura of screaming will strike fear into their enemies"
+#school 1
+#path 0 2
+#path 1 5
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 5
+#nextspell "Aura of Fear"
+#end
+
+#newspell
+#name "Waters of the Styx"
+#descr "The caster douses a nearby group of troops with the waters from the river Styx, river of hate. The effected soldiers will gain increased strength and "
+#damage 384
+#effect 10
+#school 4
+#path 0 2
+#path 1 5
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 4
+#aoe 5
+#range 10
+#end
+
+#newspell
+#name "Cocytus Fear"
+#school -2
+#researchlevel 12
+#effect 97
+#nreff 1
+#aoe 1
+#damage 5
+#spec 17592186060928
+#end
+
+#newspell
+#copyspell 558 -- Cleansing Water
+#name "Waters of Cocytus"
+#descr "The caster releases a torrent of water drawn from Cocytus, the River of Wailing. The water will cause those it strikes to experience horrific screaming that will break the morale of even hardy soldiers."
+#path 1 5
+#pathlevel 1 1
+#researchlevel 4
+#spec 64 -- AP
+#nextspell "Cocytus Fear"
+#end
+
+#newspell
+#name "Acheron Pain"
+#school -1
+#researchlevel 12
+#effect 129
+#nreff 1
+#aoe 1
+#damage 100 -- Stun 1 round
+#spec 17592186060928 -- AN, ignore shields, MR Hard-Negates
+#end
+
+#newspell
+#copyspell 558 -- Cleansing Water
+#name "Water of Acheron"
+#descr "The caster releases a torrent of water drawn from Acheron, the River of Pain. The water will cause those it strikes to experience significant pain, and its almost impossible to concentrate on spells through the pain"
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#damage 15
+#aoe 1005
+#spec 64 -- AP
+#nextspell "Acheron Pain"
+#end
+
+#newspell
+#name "Summon Waters of Phlegethon"
+#descr "The caster calls forth a mass of water from Phlegethon, river of fire"
+#school 0
+#researchlevel 5
+#path 0 2
+#path 1 5
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 100
+#effect 1
+#nreff 1
+#damage 7016
+#range 5
+#end
+
+#newspell
+#name "Splinter Shard of Oceanus"
+#descr "The caster splits off a shard of the great river of oceanus, that circles the entire world. The shard is a giant being of water capable of crushing enemies under a tidal wave of water."
+#school 0
+#researchlevel 7
+#path 0 2
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 3
+#fatiguecost 800
+#effect 10001
+#nreff 1
+#damagemon "Shard of Oceanus"
+#end
+
+#newspell
+#name "Kokthynid Warriors"
+#descr "The caster summons fifteen Kokthynids, warrior Kokythiads that will leave the underworld to defend the above world from otherwordly threats"
+#school 0
+#researchlevel 5
+#path 0 2
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 1
+#fatiguecost 2500
+#effect 10001
+#nreff 15
+#damagemon "Kokthynid"
+#end
+
+#newspell
+#copyspell 1009
+#name "Extract of Lethe"
+#descr "This ritual immerses an undead in a specially prepared pool of waters of lethe, curing it of all mental ills. This is an extremely costly ritual, but will work on great undead"
+#path 0 2
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 3
+#fatiguecost 3000
+#damage 137476702208
+#spec 537001992
+#end
 -- New Items --
 
 #newitem
@@ -2227,6 +3552,34 @@
 #weapon "Supersonic Dagger"
 #end
 
+#newitem
+#name "Resonating Crystal"
+#descr "A strange crystal that grants significant mental prowess when held in one hand, even allowing for a crude form of mental attack"
+#spr "./MorvarchsMagic/ResonatingCrystal.tga"
+#mainpath 4
+#secondarypath 2
+#mainlevel 1
+#secondarylevel 1
+#constlevel 2
+#type 1
+#weapon 536
+#mr 2
+#end
+
+#newitem
+#name "Stygian Flask"
+#descr "A precious brooch forged in the likeness of those of the queens of the djinn, worn around the brow, it grants powers similar to that of the djinn, but also the weaknesses as well"
+#type 9
+#constlevel 6
+#mainpath 2
+#mainlevel 1
+#secondarypath 5
+#secondarylevel 1
+#spr "./MorvarchsMagic/JinnQueensBrooch.tga"
+#invulnerable 15
+#berserk 2
+#str 4
+#end
 -- End Items --
 -- New Sites --
 
@@ -2238,6 +3591,13 @@
 #summon "Embalming Zombie"
 #end
 
+#newsite 1901
+#name "Synaptic Chamber"
+#path 6
+#rarity 5
+#level 0
+#scry 6
+#end
 
 -- New Events --
 #newevent
@@ -2264,6 +3624,18 @@
 #notext
 #nolog
 #addsite 1900
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req_ench 551
+#req_nositenbr 1901 -- Soul Gate
+#req_pop0ok
+#msg "A Synaptic Chamber is Created!" 
+#notext
+#nolog
+#addsite 1901
 #end
 
 #end
