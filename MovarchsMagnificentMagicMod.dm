@@ -180,6 +180,114 @@
  #aoe 1
  #end
  
+ #newweapon 1917
+ #name "Drowned Touch"
+ #nratt 1
+ #mrnegates
+ #armornegating
+ #magic
+ #dmg 0
+ #dt_poison
+ #end
+ 
+ #newweapon 1918
+ #name "Entrancing Wail"
+ #dmg 100
+ #dt_realstun
+ #mrnegates
+ #armornegating
+ #mind
+ #end
+ 
+ #newweapon 1919
+ #name "Song of the Drowned"
+ #damage 2
+ #armornegating
+ #aoe 1
+ #mrnegates
+ #att 10
+ #nratt 1
+ #dt_poison
+ #secondaryeffectalways "Entrancing Wail"
+ #end
+ 
+ #newweapon 1920
+ #name "Sandstorm Blast"
+ #natural
+ #range 30
+ #ammo 15
+ #sound 46
+ #damage 10
+ #slash
+ #armorpiercing
+ #halfstr
+ #aoe 1
+ #prec -2
+ #explspr 10041
+ #nouw
+ #range0
+ #end
+ 
+ #newweapon 1921
+ #copyweapon 611
+ #name "Crystal Spear"
+ #end
+ 
+ #newweapon
+ #copyweapon 25
+ #dt_raise
+ #fullstr
+ #name "Shard Spike"
+ #magic
+ #end
+ 
+ #newweapon
+ #copyweapon 108
+ #name "Astral Greatsword"
+ #secondaryeffect 156
+ #end
+ 
+#newweapon 1867
+#copyweapon 589 -- Tail Slap
+#name "Spiked Tail"
+#dmg 2
+#pierce
+#att -1
+#end
+
+#newweapon
+#copyweapon 108
+#name "Amber Blade"
+#secondaryeffect 748
+#end
+
+#newweapon
+#copyweapon 8
+#name "Invisible Blade"
+#dt_aff 8192
+#end
+
+#newweapon
+#name "Shard Blade"
+#armornegating
+#damage 10
+#slash
+#aoe 1
+#halfstr
+#end
+
+#newweapon
+#name "Shard Soul Death"
+#dt_aff 562949953421312
+#mrnegates
+#mind
+#end
+
+#newweapon
+#copyweapon 21
+#ammo 30
+#name "Javelins"
+#end
 -- New Monsters --
   
 #newmonster
@@ -766,6 +874,8 @@
 #spr2 "./MorvarchsMagic/CelestialLibrarian_2.tga"
 #name "Celestial Librarian"
 #inspiringres 2
+#awe 2
+#maxage 1000
 #end
 
 #newmonster
@@ -777,6 +887,8 @@
 #inspiringres 3
 #magicskill 4 2
 #magicskill 0 2
+#awe 2
+#maxage 1000
 #end
 
 #newmonster
@@ -1923,6 +2035,1718 @@
 #fireres 30
 #poisonres 25
 #heat 1
+#end
+
+#newmonster
+#name "Drowned Soul"
+#descr "A long time ago, a great island fell into the sea, drowning an entire kingdom of people. These spirits can be co-erced back onto land to bring the living back with them to their watery graves. Drowned souls fill the lungs of those they touch with a necrotic liquid neither land dweller nor amphibian can breathe in. If brought underwater they will return to their graves" 
+#spr1 "./MorvarchsMagic/DrownedSoul_1.tga"
+#spr2 "./MorvarchsMagic/DrownedSoul_2.tga"
+#hp 10
+#prot 0
+#mor 30
+#att 10
+#def 10
+#prec 10
+#str 10
+#ap 10
+#mapmove 4
+#enc 0
+#maxage 9000
+#startage 6790
+#undead
+#inanimate
+#neednoteat
+#spiritsight
+#ethereal
+#weapon "Drowned Touch"
+#uwdamage 100
+#end
+
+#newmonster
+#name "Drowned Siren"
+#descr "A long time ago, a great island fell into the sea, drowning an entire kingdom of people. The kingdom was populated by an order of maiden mages, and their spirits sing a haunting, entrancing song that fills the lungs of those nearby with a liquid that not even ampibians can breath" 
+#spr1 "./MorvarchsMagic/DrownedSiren_1.tga"
+#spr2 "./MorvarchsMagic/DrownedSiren_2.tga"
+#hp 10
+#prot 0
+#str 12
+#mor 30
+#att 10
+#def 10
+#prec 10
+#mapmove 4
+#enc 0
+#ap 10
+#maxage 9000
+#startage 6790
+#undead
+#inanimate
+#neednoteat
+#spiritsight
+#ethereal
+#uwdamage 100
+#weapon "Song of the Drowned"
+#end
+
+#newmonster
+#name "Rotting Gigantacean"
+#descr "A giant undead crab, Rotting Gigantaceans are usually mounted with a ballista for ranged fire and sieging forts."
+#spr1 "./MorvarchsMagic/RottingCrustacean_1.tga"
+#spr2 "./MorvarchsMagic/RottingCrustacean_2.tga"
+#hp 110
+#size 6
+#prot 20
+#mr 12
+#mor 50
+#str 22
+#att 8
+#def 8
+#prec 5
+#ap 12
+#mapmove 20
+#amphibian
+#enc 0
+#undead
+#inanimate
+#trample
+#weapon 649
+#weapon 649
+#weapon 206
+#siegebonus 20
+#end
+
+#newmonster
+#copystats 3210
+#name "Boatman"
+#descr "Boatmen are strange apparitions that roam the rivers of the underworld on shadowy barges. While expensive to coerce into service, they can lead a necromancer through the underworld much more safely than otherwise."
+#spr1 "./MorvarchsMagic/Boatman_1.tga"
+#spr2 "./MorvarchsMagic/Boatman_1.tga"
+#clearmagic
+#clearweapons
+#weapon 7
+#armor 158
+#ethereal
+#undead
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/FrostWurm_1.tga"
+#spr2 "./MorvarchsMagic/FrostWurm_2.tga"
+#name "Frost Worm"
+#descr "A subterranean predator of the artic tundras, frost worms regularily hunt and eat mammoths with giant mandibles and breaths of frost"
+#size 6
+#hp 90
+#prot 15
+#iceprot 2
+#mr 14
+#mor 16
+#str 24
+#att 16
+#def 5
+#prec 5
+#cold 8
+#mapmove 15
+#enc 2
+#maxage 300
+#startage 150
+#itemslots 28672
+#blink
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon 19
+#weapon 534
+#siegebonus 20
+#end
+
+#newmonster
+#copystats 2396
+#copyspr 2396
+#clearmagic
+#name "Triton Mage"
+#gcost 0
+#end
+
+#newmonster
+#name "Froghemoth"
+#spr1 "./MorvarchsMagic/Frogemoth_1.tga"
+#spr2 "./MorvarchsMagic/Frogemoth_2.tga"
+#size 5
+#hp 80
+#prot 10
+#mr 14
+#mor 16
+#str 20
+#att 14
+#def 10
+#prec 5
+#mapmove 10
+#amphibian
+#swimming
+#swampsurvival
+#enc 3
+#startage 60
+#maxage 100
+#itemslots 15518
+#unsurr 5
+#pierceres
+#bluntres
+#weapon 628
+#weapon 628
+#weapon 628
+#weapon 628
+#weapon 609
+#weapon 19
+#digest 5
+#shapechange "Waiting Froghemoth"
+#end
+
+#newmonster
+#copystats "Froghemoth"
+#copyspr  "Froghemoth"
+#name "Waiting Froghemoth"
+#mapmove 0
+#stealthy 60
+#shapechange "Froghemoth"
+#end
+
+#newmonster 7022
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 16
+#def 16
+#prec 15
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon "Sandstorm Blast"
+#weapon "Sandstorm Blast"
+#weapon 92
+#weapon 92
+#hp 14
+#size 6
+#mr 18
+#str 15
+#ap 30
+#secondshape 7023
+#end
+
+#newmonster 7023
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 15
+#def 15
+#prec 14
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon "Sandstorm Blast"
+#weapon "Sandstorm Blast"
+#weapon 92
+#weapon 92
+#hp 12
+#size 5
+#mr 17
+#str 13
+#ap 28
+#secondshape 7024
+#drawsize -15
+#end
+
+#newmonster 7024
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 14
+#def 14
+#prec 13
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon "Sandstorm Blast"
+#weapon 92
+#weapon 92
+#hp 10
+#size 4
+#mr 16
+#str 11
+#ap 26
+#secondshape 7025
+#drawsize -30
+#end
+
+#newmonster 7025
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 13
+#def 13
+#prec 12
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon "Sandstorm Blast"
+#weapon 92
+#weapon 92
+#hp 8
+#size 3
+#mr 15
+#str 9
+#ap 24
+#secondshape 7026
+#drawsize -45
+#end
+
+#newmonster 7026
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 12
+#def 12
+#prec 11
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon 92
+#weapon 92
+#hp 6
+#size 2
+#mr 14
+#str 7
+#ap 22
+#secondshape 7027
+#drawsize -60
+#end
+
+#newmonster 7027
+#name "Sandstorm Elemental"
+#descr "A howling cloud of sand, Sandstorm elementals are easier to kill than most elementals, but can throw deadly blasts of churning sound at their foes"
+#spr1 "./MorvarchsMagic/SandstormElemental_1.tga"
+#spr2 "./MorvarchsMagic/SandstormElemental_2.tga"
+#prot 0
+#mor 50
+#att 11
+#def 11
+#prec 10
+#mapmove 34
+#enc 0
+#maxage 2400
+#startage 1000
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#fly
+#ethereal
+#stormimmune
+#stormpower 2
+#woundfend 99
+#weapon 92
+#weapon 92
+#hp 4
+#size 1
+#mr 13
+#str 5
+#ap 20
+#drawsize -75
+#end
+
+#newmonster
+#name "Animated Sword"
+#descr "A well crafted greatsword animated by magic able to autonomously attack the foes of its creator"
+#spr1 "./MorvarchsMagic/DancingSword_1.tga"
+#spr2 "./MorvarchsMagic/DancingSword_2.tga"
+#prot 20
+#hp 3
+#size 1
+#str 14
+#mor 50
+#att 14
+#def 14
+#prec 5
+#mapmove 20
+#enc 0
+#maxage 100
+#startage 0
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#float
+#shockres 10
+#fireres 10
+#coldres 10
+#poisonres 25
+#weapon 11
+#montag 7003
+#end
+
+#newmonster
+#name "Animated Bow"
+#descr "A well crafted yew bow animated by magic able to autonomously attack the foes of its creator"
+#spr1 "./MorvarchsMagic/LivingBow_1.tga"
+#spr2 "./MorvarchsMagic/LivingBow_2.tga"
+#prot 10
+#hp 3
+#size 1
+#str 14
+#mor 50
+#att 10
+#def 10
+#prec 14
+#mapmove 20
+#enc 0
+#maxage 100
+#startage 0
+#magicbeing
+#blind
+#inanimate
+#neednoteat
+#spiritsight
+#float
+#shockres 10
+#fireres 10
+#coldres 10
+#poisonres 25
+#weapon 24
+#weapon 7
+#montag 7003
+#end
+
+#newmonster
+#name "Clockwork Maiden"
+#descr "A great engineer once went to the nations of the world, enquiring how he could improve the humble clockwork soldier. The Smiths of Ulm suggested he clad them in the heaviest of armor, and so he made the Clockwork Maiden. While formiddable, they had trouble damaging tough foes themselves, and so the great engineer moved on."
+#spr1 "./MorvarchsMagic/ClockworkMaiden_1.tga"
+#spr2 "./MorvarchsMagic/ClockworkMaiden_2.tga"
+#drawsize -50
+#prot 22
+#hp 15
+#size 2
+#str 13
+#att 10
+#def 10
+#prec 5
+#ap 10
+#mapmove 15
+#enc 0
+#reinvigoration -4
+#maxage 800
+#startage 360
+#magicbeing
+#inanimate
+#neednoteat
+#mor 30
+#fireres 15
+#coldres 15
+#poisonres 25
+#shockres 15
+#darkvision 100
+#weapon 691
+#armor 69
+#end
+
+#newmonster
+#name "Clockwork Swordmaster"
+#descr "A great engineer once went to the nations of the world, enquiring how he could improve the humble clockwork soldier. The Fencers of Venedia suggested he make them lithe and nimble, and they were almost untouchable by even the best of swordsmen. However, they were weak and feeble, and so the great engineer moved on."
+#spr1 "./MorvarchsMagic/ClockworkSwordmaster_1.tga"
+#spr2 "./MorvarchsMagic/ClockworkSwordmaster_2.tga"
+#drawsize -50
+#prot 10
+#hp 8
+#size 2
+#str 13
+#att 16
+#def 16
+#prec 5
+#ap 10
+#mapmove 15
+#enc 0
+#reinvigoration -4
+#maxage 800
+#startage 360
+#magicbeing
+#inanimate
+#neednoteat
+#mor 30
+#fireres 15
+#coldres 15
+#poisonres 25
+#shockres 15
+#darkvision 100
+#weapon 99
+#end
+
+#newmonster
+#name "Singing Stone" 
+#descr "Throughout most of the land, strange stones can be found set out in odd geometric patterns. Noone knows who placed them there, or why they seem to suddenly appear sometimes where there were none previous, but mages have found they have a strange form of sentience, and will naturally join communions established near by those they consider friendly"
+#hp 20
+#size 3
+#prot 17
+#mr 13
+#mor 30
+#str 10
+#att 5
+#def 0
+#prec 5
+#ap 2
+#mapmove 0
+#enc 0
+#maxage 1000
+#poisonres 25
+#eyes 0
+#blind
+#slashres
+#pierceres
+#inanimate
+#amphibian
+#neednoteat
+#spiritsight
+#noleader
+#stonebeing
+#miscshape
+#itemslots 4096
+#comslave
+#weapon 118
+#deathcurse
+#end
+
+
+#newmonster
+#name "Resonant Crystal"
+#descr "A shard of some ineffable crystalline entity, these beings will instinctively synchronize themselves to a magical communion or sabbath. They are otherwise not particularily effective at defending themselves"
+#spr1 "./MorvarchsMagic/ResonatingCrystal.tga"
+#size 1
+#hp 10
+#att 5
+#def 5
+#prot 12
+#str 5
+#mr 13
+#mor 50
+#prec 10
+#ap 5
+#enc 0
+#poisonres 15
+#mapmove 10
+#blind
+#spiritsight
+#neednoteat
+#magicbeing
+#stonebeing
+#inanimate
+#weapon 306
+#startage 0
+#maxage 1
+#end
+
+#newmonster
+#name "Faceted"
+#descr "Corpses infested by a virulent crystalline growth, Faceted wield a spike made of a similar material that spreads the infection to those they kill, slowly growing their numbers over time. The crystals however are vulnerable to sudden changes in temperature, and either extreme heat or extreme cold will often shatter them."
+#spr1 "./MorvarchsMagic/CrystalLegionaire_1.tga"
+#spr2 "./MorvarchsMagic/CrystalLegionaire_2.tga"
+#size 2
+#hp 12
+#prot 15
+#att 11
+#def 11
+#str 12
+#mr 12
+#mor 50
+#prec 10
+#ap 9
+#enc 0
+#poisonres 25
+#coldres -5
+#fireres -5
+#spiritsight
+#neednoteat
+#undead
+#magicbeing
+#amphibian
+#inanimate
+#raiseonkill 100
+#raiseshape "Faceted"
+#weapon "Crystal Spear"
+#end
+
+#newmonster
+#name "Shard Thrower"
+#descr "A crystalline growth animated with a force of its own, they take the shape of giant scorpions that launch salvos of infected spikes at their foes"
+#spr1 "./MorvarchsMagic/ShardThrower_1.tga"
+#spr2 "./MorvarchsMagic/ShardThrower_2.tga"
+#size 5
+#hp 40
+#prot 20
+#mr 13
+#mor 30
+#str 16
+#att 12
+#def 7
+#prec 10
+#ap 8
+#enc 2
+#startage 700
+#maxage 8392
+#raiseonkill 100
+#raiseshape "Faceted"
+#poisonres 25
+#coldres -5
+#fireres -5
+#spiritsight
+#neednoteat
+#magicbeing
+#amphibian
+#stonebeing
+#weapon "Shard Spike"
+#weapon 29
+#weapon 144
+#end
+
+#newmonster
+#copystats 2855
+#name "Astral Titan"
+#descr "Astral"
+#spr1 "./MorvarchsMagic/CrystallineTitan_1.tga"
+#spr2 "./MorvarchsMagic/CrystallineTitan_2.tga"
+#clearweapons
+#clearmagic
+#size 6
+#hp 100
+#prot 20
+#mr 16
+#mor 30
+#str 25
+#att 10
+#def 10
+#prec 5
+#ap 10
+#enc 0
+#fireres 5
+#coldres 5
+#poisonres 25
+#shockres 5
+#startage 1080
+#maxage 3600
+#amphibian
+#neednoteat
+#magicbeing
+#inanimate
+#spiritsight
+#stonebeing
+#mindslime 5
+#bonusspells 0
+#slashres
+#magicskill 4 3
+#magicskill 3 2
+#itemslots 31878
+#weapon "Astral Greatsword"
+#startitem "Astral Bubble"
+#end
+
+#newmonster 
+#name "Crystalline Nexus"
+#spr1 "./MorvarchsMagic/CrystallineSlasher_1.tga"
+#spr2 "./MorvarchsMagic/CrystallineSlasher_2.tga"
+#size 4
+#hp 30
+#prot 20
+#mr 16
+#mor 30
+#str 20
+#att 12
+#def 10
+#prec 10
+#ap 8
+#enc 0
+#startage 700
+#maxage 8392
+#raiseonkill 100
+#raiseshape "Faceted"
+#poisonres 25
+#coldres -5
+#fireres -5
+#spiritsight
+#neednoteat
+#magicbeing
+#amphibian
+#stonebeing
+#expertmagicleader
+#goodundeadleader
+#magicskill 4 3
+#magicskill 3 3
+#end
+
+#newmonster
+#name "Fossilized Spiker"
+#descr "Occasionally huge bones are found protruding from the earth after earthquakes or during mining excavations. The bones can be animated and are difficult to destroy, clubbing enemies with giant spike covered tails"
+#spr1 "./MorvarchsMagic/SpikerFossil_1.tga"
+#spr2 "./MorvarchsMagic/SpikerFossil_2.tga"
+#size 5
+#hp 35
+#prot 20
+#mr 14
+#mor 50
+#str 20
+#att 12
+#def 10
+#prec 5
+#ap 16
+#mapmove 22
+#enc 0
+#startage 187
+#maxage 500
+#fireres 5
+#coldres 5
+#poisonres 25
+#darkvision 100
+#pooramphibian
+#pierceres
+#undead
+#magicbeing
+#inanimate
+#neednoteat
+#noheal
+#stonebeing
+#weapon "Spiked Tail"
+#end
+
+#selectmonster 2124
+#montag 7004
+#end
+
+#selectmonster 3361
+#montag 7004
+#end
+
+#newmonster
+#name "Swamp Troll"
+#descr "Vile cousins of the common troll, swamp trolls exude a cloud of poisonous gas, but arn't as tough or brave as their stonier cousins"
+#spr1 "./MorvarchsMagic/SwampTroll_1.tga"
+#spr2 "./MorvarchsMagic/SwampTroll_2.tga"
+#size 3
+#hp 30
+#prot 12
+#mr 14
+#mor 10
+#str 20
+#att 10
+#def 9
+#prec 8
+#ap 13
+#enc 4
+#regeneration 10
+#fireres -10
+#darkvision 50
+#neednoteat
+#poisonres 50
+#poisoncloud 6
+#weapon 165
+#armor 44
+#end
+
+#newmonster
+#copystats "Swamp Troll"
+#name "Swamp Troll Shaman"
+#descr "The leaders of the swamp trolls are often significantly more cunning than the rest of their tribe, learned in the arts of earth and death"
+#spr1 "./MorvarchsMagic/SwampTrollShaman_1.tga"
+#spr2 "./MorvarchsMagic/SwampTrollShaman_2.tga"
+#hp 40
+#mr 16
+#mor 13
+#magicskill 3 2
+#magicskill 5 2
+#end
+
+#newmonster
+#copystats 212
+#name "Red Robber"
+#descr "The Red Robber is a mythological figure of magic and mystery, capable of producing great wealth, the Red Robber spreads magic whereever they go."
+#spr1 "./MorvarchsMagic/RedRobber_1.tga"
+#spr2 "./MorvarchsMagic/RedRobber_2.tga"
+#clearweapons
+#cleararmor
+#weapon 749
+#armor 15
+#armor 120
+#stealthy 100
+#incscale 6
+#gold 100
+#spy
+#end
+
+#newmonster
+#name "Treant Warrior"
+#descr "Treants are giant, tree like figures that live deep in the forests of the world. They are tough and hardy, but susceptible to poisons and hard to convince to serve the awakening god. Treant warriors wield swords and are competant fighters"
+#spr1 "./MorvarchsMagic/TreantKnight_1.tga"
+#spr2 "./MorvarchsMagic/TreantKnight_2.tga"
+#size 5
+#hp 60
+#prot 15
+#mr 12
+#mor 13
+#str 20
+#att 10
+#def 9
+#prec 8
+#ap 15
+#mapmove 22
+#enc 3
+#startage 120
+#maxage 300
+#pooramphibian
+#forestsurvival
+#bluntres
+#pierceres
+#magicbeing
+#neednoteat
+#poisonres -5
+#plant
+#weapon 8
+#end
+
+#newmonster
+#copystats "Treant Warrior"
+#name "Treant Sharpshooter"
+#descr "Treants are giant, tree like figures that live deep in the forests of the world. They are tough and hardy, but susceptible to poisons and hard to convince to serve the awakening god. Treant sharpshooters wield great bows that fire arrows that can piece an elephant through"
+#spr1 "./MorvarchsMagic/TreantMarksman_1.tga"
+#spr2 "./MorvarchsMagic/TreantMarksman_2.tga"
+#str 18
+#prec 11
+#hp 55
+#mor 12
+#clearweapons 
+#weapon 266
+#end
+
+#newmonster
+#copystats "Treant Warrior"
+#name "Treant Knight"
+#descr "Treants are giant, tree like figures that live deep in the forests of the world. They are tough and hardy, but susceptible to poisons and hard to convince to serve the awakening god. Treant knights wield great amber blades that can petrify enemies with a touch"
+#spr1 "./MorvarchsMagic/TreantGeneral_1.tga"
+#spr2 "./MorvarchsMagic/TreantGeneral_2.tga"
+#hp 65
+#prot 16
+#mr 13
+#mor 14
+#str 22
+#att 11
+#def 10
+#clearweapons 
+#weapon "Amber Blade"
+#end
+
+#newmonster
+#copystats "Treant Knight"
+#name "Treant Lord"
+#descr "Treants are giant, tree like figures that live deep in the forests of the world. They are tough and hardy, but susceptible to poisons and hard to convince to serve the awakening god. Treant Lords are powerful casters and leaders of their bretheren"
+#spr1 "./MorvarchsMagic/TreantLord_1.tga"
+#spr2 "./MorvarchsMagic/TreantLord_2.tga"
+#hp 70
+#prot 17
+#mr 16
+#mor 16
+#str 23
+#att 12
+#magicskill 6 1
+#magicskill 3 1
+#custommagic 13824 100
+#custommagic 13824 100
+#custommagic 13824 10
+#goodmagicleader
+#goodleader
+#end
+
+#newmonster
+#name "Giant Wurm"
+#descr "A great burrowing beast of pure instinct, every hungry for prey. Giant worms burst out of the ground to devour entire troops, but are uncontrollable to all known magic."
+#spr1 "./MorvarchsMagic/GiantWurm_1.tga"
+#spr2 "./MorvarchsMagic/GiantWurm_2.tga"
+#size 4
+#hp 45
+#prot 13
+#mr 8
+#mor 50
+#str 18
+#att 15
+#def 5
+#prec 5
+#ap 5
+#enc 2
+#startage 110
+#maxage 500
+#mapmove 10
+#blink
+#swampsurvival
+#forestsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon 20
+#trample
+#trampswallow
+#digest 5
+#animal
+#end
+
+#newmonster 
+#name "Great Wurm"
+#descr "Sometimes a giant wurm manages to live long enough, and gorge headily enough, to grow to truly monstrous proportions. Such wurms are truly difficult to put down, and will devour entire towns whole"
+#spr1 "./MorvarchsMagic/GreatWurm_1.tga"
+#spr2 "./MorvarchsMagic/GreatWurm_2.tga"
+#size 6
+#hp 150
+#prot 15
+#mr 16
+#mor 50
+#str 30
+#att 15
+#def 2
+#prec 5
+#ap 5
+#enc 2
+#startage 640
+#maxage 2000
+#mapmove 10
+#blink
+#swampsurvival
+#forestsurvival
+#wastesurvival
+#snow
+#swimming
+#weapon 20
+#trample
+#trampswallow
+#digest 5
+#animal
+#end
+
+#newmonster
+#copystats 279
+#copyspr 279
+#name "Phantasmal Giant"
+#descr "The phantasmal giant is an illusion of a great northern giant. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 81
+#copyspr 81
+#name "Phantasmal Magma Man"
+#descr "The phantasmal giant is an illusion of a fiery humanoid of magma. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 129
+#copyspr 129
+#name "Phantasmal Birdman"
+#descr "The phantasmal giant is an illusion of a humanoid warrior with wings. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 366
+#copyspr 366
+#name "Phantasmal Crusader"
+#descr "The phantasmal giant is an illusion of a holy warrior wielding a flaming sword. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 428
+#copyspr 428
+#name "Phantasmal Assassin"
+#descr "The phantasmal giant is an illusion of a deadly assassin. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 346
+#copyspr 346
+#name "Mirror Mage"
+#descr "The phantasmal giant is an illusion of a potent mage, the illusion is capable of casting magic but is as vulnerable as any other phantasm. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#researchbonus -8
+#end
+
+#newmonster
+#copystats 538
+#copyspr 538
+#name "Phantasmal Communicant"
+#descr "The phantasmal communicant is an illusion of a supplicant mage. The phantasm will join as a communion slave, but quickly disappate if the magic energy powering it is drained. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats 427
+#copyspr 427
+#name "Phantasmal Spy"
+#descr "The phantasmal spy is an illusion of a skilled spy. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
+#hp 1
+#mor 50
+#clearweapons
+#cleararmor
+#weapon 67
+#enc 0
+#poisonres 25
+#magicbeing
+#inanimate
+#ethereal
+#illusion
+#amphibian
+#spiritsight
+#end
+
+#newmonster
+#copystats "Animated Sword"
+#copyspr "Animated Sword"
+#name "Invisible Blade"
+#descr "An invisible blade of force, incredible sharp, that is near impossible to see. Invisible blades can remove the head from a man before he even realises its there"
+#clearweapons
+#weapon "Invisible Blade"
+#invisible
+#end
+
+#newmonster
+#name "Doppleganger"
+#spr1 "./MorvarchsMagic/Doppleganger_1.tga"
+#spr2 "./MorvarchsMagic/Doppleganger_2.tga"
+#descr "A featureless humanoid being that can take the form of any human or elf. Dopplegangers can be located and convinced to serve as potent spies, assassins or seducers of many forms. They are untrusted however, and soldiers are reluctant to follow them into battle"
+#hp 20
+#size 2
+#prot 5
+#mr 15
+#mor 10
+#str 13
+#att 13
+#def 13
+#prec 12
+#ap 15
+#mapmove 14
+#startage 1
+#maxage 2440
+#weapon 29
+#stealthy 100
+#assassin
+#patience 3
+#shapechange "Strange Troubadour"
+#spy
+#noleader
+#end
+
+#newmonster
+#name "Strange Troubadour"
+#copyspr 2107
+#descr "A strange troubadour of unearthly but oddly manufactured beauty."
+#hp 20
+#size 3
+#prot 5
+#mr 15
+#mor 10
+#str 13
+#att 13
+#def 13
+#prec 12
+#ap 15
+#mapmove 14
+#startage 1
+#maxage 2440
+#weapon 29
+#stealthy 100
+#seduce 2
+#shapechange "Strange Dryad"
+#secondshape "Doppleganger"
+#spy
+#noleader
+#end
+
+#newmonster
+#name "Strange Dryad"
+#copyspr 237
+#descr "A strange Dryad of unearthly but oddly manufactured beauty."
+#hp 20
+#size 3
+#prot 5
+#mr 15
+#mor 10
+#str 13
+#att 13
+#def 13
+#prec 12
+#ap 15
+#mapmove 14
+#startage 1
+#maxage 2440
+#weapon 29
+#stealthy 100
+#seduce 2
+#female
+#shapechange "Doppleganger"
+#secondshape "Doppleganger"
+#spy
+#noleader
+#end
+
+#newmonster
+#name "Ethereal Marauder"
+#spr1 "./MorvarchsMagic/EtherealMarauder_1.tga"
+#spr2 "./MorvarchsMagic/EtherealMarauder_2.tga"
+#descr "Ethereal marauders are carnivores from another plane that can move between that plane and elysium to ambush prey. They are strong and maneuverable, but cowardly and quite stupid"
+#size 3
+#hp 30
+#prot 7
+#mr 5
+#mor 10
+#str 14
+#att 13
+#def 6
+#prec 5
+#ap 7
+#mapmove 100
+#enc 5
+#startage 22
+#maxage 50
+#blink
+#ethereal
+#weapon 19
+#teleport
+#magicbeing
+#animal
+#end
+
+#newmonster
+#name "Githyanki Gish"
+#spr1 "./MorvarchsMagic/Gish_1.tga"
+#spr2 "./MorvarchsMagic/Gish_2.tga"
+#descr "The Githyanki are a race of humanoids hailing from another plane. They roam the endless bounds of this plane in giant skyships, and can slice through the fabric of the world to move from place to place in a blink of an eye. Gish are extremely skilled warriors mages, as adept with spellcasting as they are with a blade."
+#hp 15
+#size 2
+#prot 0
+#mr 18
+#mor 14
+#goodleader
+#goodmagicleader
+#str 13
+#att 15
+#def 17
+#prec 14
+#ap 16
+#mapmove 99
+#enc 3
+#startage 300
+#maxage 750
+#darkvision 50
+#bonusspells 1
+#combatcaster
+#blink
+#teleport
+#weapon 106
+#armor 49
+#armor 223
+#magicskill 4 2
+#magicskill 1 2
+#magicbeing
+#end
+
+
+#newmonster
+#copystats 1790
+#copyspr 1790
+#name "Court Warrior"
+#end
+
+#newmonster
+#copystats 1790
+#name "Summer Court Warrior"
+#spr1 "./MorvarchsMagic/SummerWarrior.tga"
+#clearweapons
+#cleararmor
+#weapon 675
+#weapon 675
+#armor 142
+#armor 135
+#ambidextrous 2
+#sunawe 1
+#mor 15
+#def 14
+#mr 13
+#fireres 5
+#end
+
+#newmonster
+#copystats 1790
+#name "Winter Court Warrior"
+#spr1 "./MorvarchsMagic/WinterWarrior.tga"
+#clearweapons
+#weapon 675
+#coldres 5
+#mor 13
+#def 18
+#iceprot 1
+#end
+
+#newmonster
+#copystats 1790
+#name "Autumn Court Warrior"
+#spr1 "./MorvarchsMagic/AutumnWarrior.tga"
+#clearweapons
+#cleararmor
+#weapon 698
+#armor 142
+#armor 135
+#att 17
+#hp 11
+#darkpower 1
+#shockres 5
+#end
+
+#newmonster
+#copystats 1790
+#name "Spring Court Warrior"
+#spr1 "./MorvarchsMagic/SpringWarrior.tga"
+#descr ""
+#clearweapons
+#cleararmor
+#weapon 644
+#weapon 21
+#armor 142
+#armor 135
+#armor 3
+#hp 18
+#str 10
+#recuperation
+#poisonres 5
+#end
+
+#newmonster
+#copystats 1790
+#copyspr 1790
+#name "Court Archer"
+#end
+
+#newmonster 
+#copystats 1790
+#name "Summer Court Archer"
+#spr1 "./MorvarchsMagic/SummerBowman.tga"
+#clearweapons
+#cleararmor
+#weapon "Javelins"
+#armor 142
+#armor 135
+#sunawe 1
+#mor 15
+#def 14
+#mr 13
+#fireres 5
+#end
+
+#newmonster
+#copystats 1790
+#name "Winter Court Archer"
+#spr1 "./MorvarchsMagic/WinterBowman.tga"
+#clearweapons
+#weapon 264
+#coldres 5
+#mor 13
+#def 18
+#iceprot 1
+#end
+
+#newmonster
+#copystats 1790
+#copyspr 1790
+#name "Court Lord"
+#end
+
+#newmonster
+#copystats 1790
+#name "Summer Court Lord"
+#spr1 "./MorvarchsMagic/SummerLord.tga"
+#weapon 615
+#ambidextrous 2
+#berserk 2
+#mor 15
+#mr 16
+#def 14
+#sunawe 2
+#fireres 10
+#heat 5
+#mounted
+#magicskill 0 2
+#greatleader
+#end
+
+#newmonster
+#copystats 1790
+#name "Winter Court Lord"
+#spr1 "./MorvarchsMagic/WinterLord.tga"
+#clearweapons
+#weapon 675
+#coldres 10
+#mor 14
+#mr 16
+#def 19
+#iceprot 2
+#mounted
+#magicskill 2 2
+#weapon 236
+#weapon 237
+#greatleader
+#end
+
+#newmonster
+#copystats 1790
+#copyspr 1790
+#name "Court lady"
+#end
+
+#newmonster
+#copystats 1790
+#name "Summer Court Lady"
+#spr1 "./MorvarchsMagic/SummerLady.tga"
+#mr 17
+#mor 15
+#def 14
+#fireres 10
+#sunawe 2
+#clearweapons 
+#weapon 645
+#magicskill 0 2
+#magicskill 1 2
+#poorleader
+#end
+
+#newmonster
+#copystats 1790
+#name "Winter Court Lady"
+#spr1 "./MorvarchsMagic/WinterLady.tga"
+#coldres 10
+#mr 17
+#def 18
+#iceprot 2
+#magicskill 2 2
+#magicskill 1 2
+#mounted
+#clearweapons
+#weapon 354
+#weapon 675
+#poorleader
+#end
+
+#newmonster
+#copystats 1790
+#name "Wild Hunt Warrior"
+#spr1 "./MorvarchsMagic/WildHuntWarrior_1.tga"
+#spr2 "./MorvarchsMagic/WildHuntWarrior_2.tga"
+#clearweapons
+#weapon 644
+#weapon 634
+#berserk 3
+#str 14
+#def 14
+#poisonarmor 5
+#incunrest 1
+#pillagebonus 2
+#end
+
+#newmonster
+#copystats 1790
+#name "Wild Hunt Archer"
+#spr1 "./MorvarchsMagic/WildHuntArcher_1.tga"
+#spr2 "./MorvarchsMagic/WildHuntArcher_2.tga"
+#clearweapons
+#weapon 264
+#weapon 634
+#berserk 3
+#str 14
+#def 14
+#poisonarmor 5
+#incunrest 1
+#pillagebonus 2
+#end
+
+#newmonster
+#copystats 1790
+#name "Wild Hunt Lord"
+#spr1 "./MorvarchsMagic/WildHuntLord_1.tga"
+#spr2 "./MorvarchsMagic/WildHuntLord_2.tga"
+#clearweapons
+#weapon 14
+#weapon 634
+#berserk 3
+#str 14
+#def 14
+#mr 16
+#greatleader
+#poisonarmor 5
+#incunrest 10
+#pillagebonus 10
+#magicskill 5 2
+#end
+
+#newmonster
+#copystats 1790
+#name "Wild Hunt Lady"
+#spr1 "./MorvarchsMagic/WildHuntLady_1.tga"
+#spr2 "./MorvarchsMagic/WildHuntLady_2.tga"
+#clearweapons
+#weapon 238
+#weapon 634
+#cleararmor
+#armor 15
+#armor 121
+#str 14
+#def 14
+#mr 17
+#poorleader
+#poisonarmor 5
+#incunrest 10
+#pillagebonus 5
+#magicskill 5 2
+#magicskill 1 2
+#end
+
+#newmonster
+#copystats 1225
+#name "Celestial Cleric"
+#spr1 "./MorvarchsMagic/CelestialCleric_1.tga"
+#spr2 "./MorvarchsMagic/CelestialCleric_2.tga"
+#clearmagic
+#awe 2
+#holy
+#autohealer 1
+#startitem "Celestial Staff"
+#end
+
+#newmonster
+#copystats 1225
+#name "Celestial Healer"
+#spr1 "./MorvarchsMagic/CelestialHealer_1.tga"
+#spr2 "./MorvarchsMagic/CelestialHealer_2.tga"
+#clearmagic
+#awe 2
+#holy
+#autohealer 3
+#autodishealer 3
+#startitem "Celestial Ankh"
+#end
+
+#newmonster
+#name "Kaftar Warrior"
+#spr1 "./MorvarchsMagic/Kaftar_Warrior.tga"
+#hp 20
+#size 3
+#prot 8
+#mr 11
+#mor 14
+#str 14
+#att 13
+#def 13
+#prec 12
+#ap 13
+#mapmove 18
+#enc 3
+#wastesurvival
+#mountainsurvival
+#animal
+#darkvision 50
+#formationfighter 3
+#weapon 6
+#weapon 264
+#armor 2
+#armor 5
+#armor 5
+#end
+
+#newmonster
+#copystats "Kaftar Warrior"
+#name "Kaftar Shaman"
+#spr1 "./MorvarchsMagic/Kaftar_Shaman.tga"
+#startage 40
+#clearweapons
+#cleararmor
+#armor 158
+#weapon 7
+#magicskill 4 1
+#magicskill 6 1
+#custommagic 10240 100
+#custommagic 10240 100
+#end
+
+#newmonster
+#name "Nightskitter"
+#spr1 "./MorvarchsMagic/NightSkitter_1.tga"
+#spr2 "./MorvarchsMagic/NightSkitter_2.tga"
+#size 4
+#hp 32
+#prot 0
+#invulnerable 10
+#mr 12
+#mor 30
+#str 12
+#att 12
+#def 9
+#prec 10
+#ap 14
+#mapmove 18
+#enc 2
+#startage 1000
+#maxage 6000
+#undead
+#fear 5
+#weapon 65
+#weapon 261
+#weapon 262
+#spiritsight
+#darkpower 4
+#end
+
+#newmonster
+#name "Nightwing"
+#spr1 "./MorvarchsMagic/NightWing_1.tga"
+#spr2 "./MorvarchsMagic/NightWing_2.tga"
+#size 4
+#hp 40
+#prot 0
+#invulnerable 10
+#mr 13
+#mor 30
+#str 14
+#att 12
+#def 11
+#prec 5
+#ap 15
+#mapmove 28
+#enc 2
+#startage 1500
+#maxage 6000
+#undead
+#fear 5
+#weapon 29
+#weapon 19
+#spiritsight
+#flying
+#darkpower 4
+#end
+
+#newmonster
+#name "Nightwalker"
+#spr1 "./MorvarchsMagic/NightWalker_1.tga"
+#spr2 "./MorvarchsMagic/NightWalker_2.tga"
+#size 4
+#hp 70
+#prot 0
+#invulnerable 15
+#mr 14
+#mor 30
+#str 15
+#att 13
+#def 12
+#prec 10
+#ap 10
+#mapmove 15
+#startage 2000
+#maxage 9000
+#undead
+#fear 10
+#weapon 63
+#weapon 63
+#spiritsight
+#darkpower 5
+#magicskill 5 3
+#end
+
+
+#newmonster
+#name "Nightwave"
+#spr1 "./MorvarchsMagic/NightWave_1.tga"
+#spr2 "./MorvarchsMagic/NightWave_2.tga"
+#size 6
+#hp 150
+#prot 0
+#invulnerable 20
+#mr 18
+#mor 20
+#str 25
+#att 14
+#def 8
+#prec 5
+#ap 22
+#mapmove 28
+#enc 2
+#startage 3000
+#maxage 9000
+#undead
+#fear 10
+#weapon 20
+#weapon 63
+#spiritsight
+#darkpower 6
+#cold 10
+#flying
+#magicskill 5 4
 #end
 
 
@@ -3490,6 +5314,1680 @@
 #damage 137476702208
 #spec 537001992
 #end
+
+#newspell
+#name "Wails of the Drowned"
+#descr "The caster summons a group of drowned souls from the deeps, spiritlike undead that can drown with a touch"
+#path 0 5
+#path 1 2
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 4
+#effect 1
+#nreff 1005
+#damagemon "Drowned Soul"
+#school 4
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#copyspell "Wails of the Drowned"
+#name "Streams of the Drowned"
+#descr "The caster summons a flood of drowned souls from the deeps, spiritlike undead that can drown with a touch"
+#pathlevel 0 3
+#pathlevel 1 3
+#researchlevel 6
+#nreff 2015
+#end
+
+#newspell
+#name "Call of the Deeps"
+#descr "The caster summons a small group of drowned sirens, haunting singers of the deep that drown men with their songs"
+#effect 10001
+#path 0 5
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 4
+#nreff 5
+#fatiguecost 1000
+#damagemon "Drowned Siren"
+#school 0
+#end
+
+#newspell
+#copyspell "Call of the Deeps"
+#name "Chorus of the Deeps"
+#descr "The caster summons a large force of drowned sirens, haunting singers of the deep that drown men with their songs"
+#effect 10001
+#pathlevel 0 3
+#pathlevel 1 3
+#researchlevel 7
+#nreff 30
+#fatiguecost 6000
+#end
+
+#newspell
+#name "Summon Boatman"
+#descr "The caster summons a small group of drowned sirens, haunting singers of the deep that drown men with their songs"
+#effect 10021
+#path 0 5
+#path 1 2
+#pathlevel 0 4
+#pathlevel 1 2
+#researchlevel 6
+#nreff 1
+#fatiguecost 2000
+#damagemon "Boatman"
+#school 0
+#end
+
+#newspell
+#name "Seed Growth"
+#descr "The caster attempts to grow the seeds present in the stomach of an enemy. If successful, this will cause the roots to burst out of the victims chest and animate"
+#school 5
+#researchlevel 3
+#path 0 2
+#path 1 6
+#pathlevel 0 1
+#pathlevel 1 1
+#effect 2
+#spec 1188950302162686080
+#damage 10
+#fatiguecost 40
+#nreff 1
+#range 30
+#end
+
+#newspell
+#name "Seed Spawning"
+#researchlevel 12
+#school -2
+#effect 1
+#damage 361
+#nreff 1
+#end
+
+#newspell
+#name "Summon Frost Worm"
+#descr "The caster summons frost worm, a giant ice predator well suited to hunting even the largest of prey in the cold"
+#effect 10021
+#path 0 2
+#path 1 6
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 7
+#nreff 1
+#fatiguecost 1500
+#damagemon "Frost Worm"
+#school 0
+#end
+
+#newspell
+#name "Become Triton"
+#descr "The caster attempts to turn themselves into the form of a triton, becoming able to swim quickly."
+#school 1
+#researchlevel 3
+#path 0 2
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 1
+#effect 10130
+#fatiguecost 200
+#damagemon "Triton Mage"
+#nreff 1
+#spec 536870912
+#end
+
+#newspell
+#copyspell 528
+#name "Frost Cloud"
+#researchlevel 12
+#school -2
+#spec 576
+#damage 5
+#end
+
+#newspell
+#copyspell 712
+#name "Northern Vines"
+#path 1 2
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#nextspell "Frost Cloud"
+#aoe 5
+#fatiguecost 30
+#end
+
+#newspell
+#name "Lure Froghemoth"
+#descr "The caster lures in a Froghemoth with the promise of food, binding it to server the caster."
+#path 0 6
+#path 1 2
+#pathlevel 0 3
+#pathlevel 1 1
+#researchlevel 6
+#school 0
+#effect 10001
+#damagemon "Froghemoth"
+#end
+
+#newspell
+#name "Sand Blast"
+#descr "The caster churns up a cloud of biting sand and blasts it at their enemy"
+#effect 2
+#damage 1012
+#school 2
+#researchlevel 2
+#path 0 3
+#path 1 1
+#pathlevel 0 1
+#pathlevel 1 1
+#aoe 5
+#range 1007
+#fatiguecost 10
+#casttime 50
+#spec 1099511627840
+#end
+
+#newspell
+#copyspell "Sand Blast"
+#name "Whirling Sands"
+#descr "The caster churns up a localised storm cloud of biting sand that will rage for a short while"
+#effect 5002
+#damage 1005
+#pathlevel 0 2
+#range 30
+#fatiguecost 25
+#casttime 100
+#researchlevel 4
+#end
+
+#newspell
+#name "Flensing"
+#descr "The caster channels a violent burst of sand, scouring a small area clean of anything not as hard as stone"
+#effect 2
+#damage 1025
+#school 2
+#researchlevel 7
+#path 0 3
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 2
+#aoe 3
+#range 5050
+#fatiguecost 10
+#casttime 100
+#spec 1099511627840
+#end
+
+#newspell
+#copyspell "Whirling Sands"
+#name "Scouring Winds"
+#descr "The caster churns up a large storm cloud of biting sand that will rage for a short while"
+#aoe 15
+#pathlevel 0 3
+#pathlevel 1 3
+#researchlevel 6
+#end
+
+#newspell
+#copyspell "Sandstorm"
+#descr "The caster churns up a huge storm of biting sand that will rage across the entire battlefield for a short while"
+#aoe 666
+#damage 1010
+#effect 9002
+#pathlevel 0 4
+#pathlevel 0 3
+#researchlevel 7
+#end
+
+#newspell
+#name "Summon Sandstorm Elemental"
+#descr "The caster calls forth a sandstorm elemental, a writing mass of sand that can strip flesh from bone"
+#school 0
+#researchlevel 6
+#path 0 3
+#path 1 1
+#pathlevel 0 3
+#pathlevel 1 2
+#fatiguecost 300
+#effect 1
+#nreff 10001
+#damage 7022
+#range 5
+#end
+
+#newspell
+#effect 1
+#name "Animate Armaments"
+#damagemon "Animated Sword"
+#school 2
+#researchlevel 12
+#nreff 2
+#end
+
+#newspell
+#copyspell 736-- Cheat Fate
+#name "Martial Animation"
+#descr "The caster animates his weapons and armor, allowing him to move with great speed and strike with great skill. This will also animate a pair of swords to fight along side the caster"
+#school 4
+#researchlevel 2
+#path 0 1
+#path 1 3
+#pathlevel 0 1
+#pathlevel 1 1
+#damage 33554432 -- Unholy Power
+#aoe 1
+#fatiguecost 25
+#spec 12730368 -- UW OK, Ignore shields, Friendlies only, Mindless immune.
+#nextspell "Animate Armaments"
+#end
+
+#newspell
+#copyspell 883
+#name "Animate Cohort"
+#descr "The caster animates the shields of a small squad of soldiers, empowering them to defend their wielders with striking skill"
+#researchlevel 5
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 50
+#aoe 5
+#range 5
+#end
+
+#newspell 
+#name "Animate Blades"
+#descr "The caster animates a pile of specially forged blades, that will attempt to cut the down the caster's enemies"
+#effect 1
+#school 3
+#researchlevel 5
+#damagemon "Animated Sword"
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 100
+#nreff 1005
+#range 5
+#end
+
+#newspell 
+#name "Animate Bows"
+#descr "The caster animates a pile of specially crafted bows, that will rain arrows down on the caster's enemies"
+#effect 1
+#school 3
+#researchlevel 5
+#damagemon "Animated Bow"
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 1
+#fatiguecost 100
+#nreff 1005
+#range 5
+#end
+
+#newspell
+#name "Sonic Deconstruction"
+#researchlevel 12
+#school -2
+#effect 2
+#damage 2
+#spec 128
+#end
+
+#newspell
+#name "Sonic Boom"
+#descr "The caster rends the air, creating an almighty sound that leaves those close to the source stunned and wounded"
+#effect 128
+#damage 5
+#path 0 1
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#fatiguecost 40
+#nreff 1
+#range 50
+#aoe 10
+#school 2
+#nextspell "Sonic Deconstruction"
+#end
+
+#newspell
+#copyspell "Animate Cohort"
+#name "Animate Phalanx"
+#descr "The caster animates the shields of a large group of soldiers, empowering them to defend their wielders with finesse"
+#researchlevel 7
+#pathlevel 0 3
+#fatiguecost 100
+#aoe 25
+#range 5
+#end
+
+#newspell
+#name "Animate Armamants"
+#descr "The caster infuses a group of weapons with life, causing them, to animate to fight the enemies of the caster"
+#effect 10001
+#damage -7003
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#nreff 30
+#school 3
+#researchlevel 3
+#fatiguecost 2000
+#end
+
+#newspell
+#name "Animate Clockwork Maidens"
+#descr "The caster animates a group of Clockwork Maidens, hardened clockwork soldiers designed in the likeness of ulmish warriors"
+#effect 10001
+#damagemon "Clockwork Maiden"
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#nreff 5
+#school 3
+#researchlevel 5
+#fatiguecost 1000
+#end
+
+#newspell
+#name "Animate Clockwork Swordmasters"
+#descr "The caster animates a group of Clockwork swordmasters, graceful clockwork soldiers created to mimic the fabled fencers of Venedia"
+#effect 10001
+#damagemon "Clockwork Swordmaster"
+#path 0 1
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#nreff 5
+#school 3
+#researchlevel 5
+#fatiguecost 1000
+#end
+
+#newspell
+#effect 1
+#name "Animate Saints Armaments"
+#damagemon "Animated Sword"
+#school -2
+#researchlevel 12
+#nreff 3
+#end
+
+#newspell
+#name "Crystalline Paralysis"
+#effect 66
+#damage 10
+#school -2
+#end
+
+#newspell
+#copyspell 616
+#name "Crystal Grasp"
+#nextspell "Crystalline Paralysis"
+#path 1 4
+#path 1 1
+#researchlevel 4
+#fatiguecost 30
+#end
+
+#newspell 
+#name "Gather Singing Stones"
+#descr "The caster approaches an alightment of singing stones, strange semi sentient rocks that can aid a communion of mages in combat. The stones are bribed to be placed under the command of a mage, and will aid in defending the province from intruders"
+#effect 10001
+#school 5
+#researchlevel 4
+#path 0 3
+#pathlevel 0 2
+#path 1 4
+#pathlevel 1 2
+#nreff 4
+#fatiguecost 800
+#end
+
+#newspell
+#name "Form Resonant Crystals"
+#effect 1
+#descr "The caster crystallizes vis into the form of a floating being capable of taking some of the burden of casting"
+#nreff 2
+#fatiguecost 2
+#path 0 4
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#school 5
+#researchlevel 3
+#end
+
+#newspell
+#copyspell 739
+#name "Summon Crystal Power"
+#descr "The caster floods the battlefield with an immense surge of magic, causing all mages on the battlefield to become more powerful"
+#aoe 666
+#fatiguecost 500
+#researchlevel 9
+#end
+
+#newspell
+#name "Crystallized Bones"
+#effect 1
+#descr "The caster infects a few copses below the ground with a virulent crystal, which will then tear their way out of the gound to spread their curse to others"
+#damagemon "Faceted"
+#path 0 4
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#school 1
+#researchlevel 6
+#fatiguecost 200
+#nreff 1007
+#range 5
+#end
+
+#newspell
+#name "Call Shard Thrower"
+#descr "The caster lays out crystals in a geometric pattern, that form into a strange scorpion like beast that can shoot sharpened shards from its tail"
+#effect 10001
+#school 0
+#path 0 4
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 4
+#nreff 1
+#fatiguecost 700
+#end
+
+#newspell
+#name "Call Astral Titan"
+#descr "The caster forms a great statue out of an aquatic crystal and enchants it with magic. These so created titans are capable of interrupting astral travel in their vicinity, and wield huge crystal greatswords that will sever a mage from their magic"
+#effect 10021
+#school 0
+#path 0 4
+#path 1 3
+#pathlevel 0 5
+#pathlevel 0 3
+#researchlevel 8
+#nreff 1
+#damagemon "Astral Titan"
+#fatiguecost 5000
+#end
+
+#newspell
+#name "Crystalline Nexus"
+#descr "The caster infests a great geode with a virulent crystal, animating a potent intelligence that is magically skilled in astral and earth, and able to spread its infection to those it kills"
+#effect 10021
+#school 0
+#path 0 4
+#path 1 3
+#pathlevel 0 5
+#pathlevel 0 3
+#researchlevel 8
+#nreff 1
+#fatiguecost 3500
+#damagemon "Crystalline Nexus"
+#end
+
+#newspell
+#name "Scatter Shards"
+#descr "The caster sends a hail of crystal shards to impact in a province of their choice, where they will quickly spread to nearby villages and infect a group."
+#effect 10038
+#damagemon "Faceted"
+#nreff 2010
+#school 5
+#path 0 4
+#path 1 3
+#pathlevel 0 3
+#pathlevel 0 2
+#researchlevel 6
+#fatiguecost 1500
+#range 5
+#end
+
+#newspell
+#copyspell 194
+#name "Baneful Shards"
+#descr "The caster hurls several whirling blades infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less hearty units and will often cause their victims to start rapidly aging"
+#spec 1152922604120571968
+#path 1 5
+#pathlevel 1 1
+#researchlevel 2
+#end
+
+#newspell
+#copyspell 980
+#researchlevel 12
+#school -2
+#end
+
+#newspell
+#copyspell 535
+#name "Baneful Wind"
+#descr "The caster hurls many whirling blades infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less hearty units and will often cause their victims to start rapidly aging"
+#spec 1152922604120571968
+#path 1 5
+#pathlevel 1 2
+#researchlevel 6
+#end
+
+#newspell
+#copyspell 980
+#researchlevel 12
+#school -2
+#end
+
+#newspell
+#copyspell 788
+#name "Skeletal Grasp"
+#descr "The caster animates skeletal hands from below the earth to grab at their foes, rooting them in place and draining them of their energy"
+#path 1 5
+#pathlevel 1 1
+#school 1
+#nextspell 616
+#end
+
+#newspell
+#copyspell 685
+#name "Fossilize"
+#descr "The caster solidifies the skin of a small group of soldiers in stone. This spell is easy to cast, but rushed, and will often turn more than just the skin into stone, leaving nothing but statues"
+#researchlevel 3
+#nextspell "Calcilfy"
+#path 1 5
+#pathlevel 1 1
+#end
+
+#newspell
+#copyspell 635
+#name "Calcilfy"
+#researchlevel 12
+#school -2
+#nextspell 671
+#end
+
+#newspell
+#name "Bones Limp"
+#copyspell 108
+#aoe 1
+#nextspell "Bones Cripple"
+#end
+
+#newspell
+#name "Bones Cripple"
+#copyspell 109
+#aoe 1
+#end
+
+#newspell
+#copyspell 1106
+#name "Empower Bones"
+#descr "The caster rapidly increases the strength of the bones of the army, causing effected soldiers to strike with great force. This does not improve the hardness of the bones, and unlucky soldiers might "
+#school 4
+#researchlevel 7
+#path 0 3
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 2
+#nextspell "Bones Limp"
+#end
+
+#newspell
+#name "Unbury Spiker"
+#descr ""
+#effect 10001
+#path 0 3
+#path 1 5
+#pathlevel 0 3
+#pathlevel 1 1
+#damagemon "Fossilized Spiker"
+#fatiguecost 600
+#nreff 1
+#end
+
+#newspell
+#name "Unbury the dead"
+#descr "The caster pulses a dirge for the dead through the ground, causing the bones of long dead warriors to rise and join the battle. The risen warriors will likely emerge from all over the battlefield"
+#effect 43
+#damage -7004
+#nreff 1515
+#fatiguecost 100
+#path 0 5
+#path 1 3
+#pathlevel 0 2 
+#pathlevel 0 1
+#school 5
+#researchlevel 5
+#range 5
+#end
+
+#newspell
+#name "Confusion Spores"
+#descr "The caster blankets an area with spores, causing damage and confusion when inhaled by the living"
+#effect 3007
+#damage 5
+#path 0 5
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#fatiguecost 30
+#aoe 1010
+#school 2
+#researchlevel 4
+#range 45
+#spec 1188950301625835648
+#end
+
+#newspell
+#copyspell 1013
+#name "Confusing Growths"
+#researchlevel 12
+#school -2
+#aoe 0
+#spec 17592723062784
+#end
+
+#newspell
+#copyspell "Confusion Spores"
+#name "Hypnosis Spores"
+#descr "The caster blankets a area with deadly spores that worm their way into the minds of those effected, attempting to control them to the side of the caster"
+#pathlevel 0 3
+#fatiguecost 40
+#aoe 1
+#researchlevel 6
+#school 5
+#range 45
+#end
+
+#newspell
+#copyspell 1025
+#name "Hypnosis Growths"
+#researchlevel 12
+#school -2
+#aoe 0
+#spec 17592723062784
+#end
+
+#newspell
+#name "Contact Swamp Trolls"
+#descr "The caster contacts a group of swamp trolls, vile cousins of the common troll surrounded by an aura of poison gas"
+#effect 10001
+#damagemon "Swamp Troll"
+#path 0 5
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 5
+#school 0
+#nreff 1005
+#fatiguecost 1400
+#end
+
+#newspell
+#name "Contact Swamp Troll Tribe"
+#descr "The caster contacts an entire tribe of swamp trolls, led by a powerful troll mage of death and earth"
+#effect 10021
+#damagemon "Swamp Troll Shaman"
+#path 0 5
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#school 0
+#researchlevel 6
+#fatiguecost 4000
+#nextspell "Contact Swamp Trolls"
+#end
+
+#newspell
+#name "Supression Spores"
+#descr "The caster scatters mushroom spores to the wind and directs them to a province of their choice, the population of the province will be lulled into civility, but will also become listless and unproductive"
+#effect 10086
+#damage 552
+#friendlyench 0
+#hiddenench 1
+#spec 0
+#fatiguecost 1000
+#path 0 5
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#school 5
+#researchlevel 4
+#end
+
+#newspell
+#name "Contact Red Robber"
+#descr "The caster contacts an elusive figure known as the Red Robber, a strange being who can spread magic"
+#effect 10021
+#damagemon "Red Robber"
+#path 0 5
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#school 0
+#researchlevel 8
+#fatiguecost 3000
+#end
+
+#newspell
+#name "Contact Treant Warriors"
+#descr "The caster travels deep into the forest to contact a small band of Treant Warriors, great soldiers resembling animated trees"
+#onlygeosrc 128
+#effect 10001
+#damagemon "Treant Warrior"
+#path 0 6
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 1500
+#nreff 3
+#end
+
+#newspell
+#name "Contact Treant Sharpshooters"
+#descr "The caster travels deep into the forest to contact a copse of Treant Sharpshooter, skilled archers wielding greatbows the size of a man"
+#onlygeosrc 128
+#effect 10001
+#damagemon "Treant Sharpshooter"
+#path 0 6
+#path 1 3
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 1500
+#nreff 3
+#end
+
+#newspell
+#name "Contact Treant Knights"
+#descr "The caster travels deep into the forest to contact a pair of Treant Knights, ancient soldiers that have defended the deep woods for centuries"
+#onlygeosrc 128
+#effect 10001
+#damagemon "Treant Knight"
+#path 0 6
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#fatiguecost 1600
+#nreff 2
+#end
+
+#newspell
+#name "Contact Treant Lord"
+#descr "The caster travels deep into the forest to contact a Treant Lord, an ancient mage resembling an animated tree"
+#onlygeosrc 128
+#effect 10021
+#damagemon "Treant Lord"
+#path 0 6
+#path 1 3
+#pathlevel 0 4
+#pathlevel 1 2
+#researchlevel 7
+#school 0
+#fatiguecost 2500
+#nreff 1
+#end
+
+#newspell
+#copyspell 678
+#name "Heroes of Gaia"
+#descr "The caster infuses a small group of soldiers with the strength of Gaia, causing them to grow in size and rapidly heal wounds they recieve"
+#aoe 5
+#nextspell 895
+#pathlevel 1 3
+#pathlevel 1 2
+#researchlevel 3
+#range 5
+#fatiguecost 100
+#end
+
+#newspell
+#copyspell 678
+#name "Champions of Gaia"
+#descr "The caster infuses the entire battlefield with the strength of Gaia, causing them to grow in size and rapidly heal wounds they recieve"
+#aoe 666
+#nextspell 895
+#pathlevel 0 5
+#path 1 3
+#pathlevel 1 3
+#researchlevel 9
+#fatiguecost 400
+#end
+
+#newspell
+#copyspell 769
+#aoe 666
+#name "Overflow of Gaia"
+#researchlevel 12
+#school -2
+#end
+
+#newspell
+#copyspell 619
+#aoe 0
+#name "Avatar of Gaia"
+#descr "The caster infuses themselves with an incredible amount of power drawn from the earth. This will empower him, and also cause the entire battlefield to gain in the power of nature"
+#nextspell "Overflow of Gaia"
+#school 0
+#researchlevel 9
+#path 1 3
+#pathlevel 0 5 
+#pathlevel 1 2
+#fatiguecost 500
+#end
+
+#newspell
+#name "Signal Wurm"
+#descr "The caster signals a giant worm, causing one from nearby to tunnel up to the surface to hunt for food. The worm may appear anywhere, and will not be under the control of the caster"
+#effect 126
+#path 0 3
+#path 1 6
+#pathlevel 0 3
+#pathlevel 1 1
+#damagemon "Giant Wurm"
+#researchlevel 6
+#school 0
+#nreff 1
+#fatiguecost 100
+#end
+
+#newspell
+#name "Wurm Beacon"
+#descr "The caster signals a great worm, causing one of the horrific beasts from nearby to tunnel up to the surface to hunt for food. The worm may appear anywhere, and will not be under the control of the caster"
+#effect 126
+#path 0 3
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 1
+#damagemon "Great Wurm"
+#researchlevel 9
+#school 0
+#nreff 1
+#fatiguecost 300
+#end
+
+#newspell
+#name "Become Treant"
+#descr "The caster attempts to turn themselves into the form of a noble treant, gaining great physical power"
+#school 4
+#researchlevel 6
+#path 0 6
+#path 1 3
+#pathlevel 0 3
+#pathlevel 1 2
+#effect 10130
+#fatiguecost 1500
+#damagemon "Treant Lord"
+#nreff 1
+#spec 536870912
+#end
+
+#newspell
+#name "Become Gorgon"
+#descr "The caster attempts to turn themselves into the form of a horrific gorgon, gaining strange new abilities"
+#school 4
+#researchlevel 6
+#path 0 3
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 2
+#effect 10130
+#fatiguecost 1500
+#damage 138
+#nreff 1
+#spec 536870912
+#end
+
+#newspell
+#name "Plant Mystical Field"
+#descr "The caster plants a small group of earth gems in the ground, empowering them with natural power. If done correctly in the spring, in fall a harvest of nature gems will be harvestable from the blooms that grow"
+#effect 10086
+#damage 553
+#friendlyench 1
+#hiddenench 1
+#spec 0
+#school 5
+#path 0 3
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 4
+#fatiguecost 500
+#range 0
+#nogeosrc 6212
+#end
+
+#newspell
+#name "Phantasmal Archers"
+#descr "The caster creates a group of phantasmal archers that will rain semi real arrows down on the enemy army"
+#effect 1
+#damage 3233
+#nreff 1010
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 2
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Giants"
+#descr "The caster creates a small group of phantasmal giants that will attack the enemy"
+#effect 1
+#damagemon "Phantasmal Giant"
+#nreff 505
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 3
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Magma-men"
+#descr "The caster creates a small group of phantasmal abyssians that will attack the enemy"
+#effect 1
+#damagemon "Phantasmal Magma Man"
+#nreff 505
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 5
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Bird-men"
+#effect 1
+#damagemon "Phantasmal Birdman"
+#descr "The caster creates a group of phantasmal caelians that will fly and attack the enemy"
+#nreff 1010
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 4
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Cavalry"
+#effect 1
+#damage 696
+#descr "The caster creates a small group of phantasmal knights that will charge the enemy"
+#nreff 505
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel
+#fatiguecost 100
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Horde"
+#descr "The caster summons a small horde of phantasmal warriors. The resonant nature of this magic should cause it to spawn additional hordes for each communion slave aiding a master who casts it"
+#effect 1043
+#damage 297
+#nreff 5005
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#fatiguecost 300
+#range 5
+#end
+
+#newspell
+#name "Phantasmal Crusaders"
+#effect 10001
+#damagemon "Phantasmal Crusader"
+#nreff 505
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 6
+#fatiguecost 500
+#end
+
+#newspell
+#name "Phantasmal Assassin"
+#effect 10021
+#damagemon "Phantasmal Assassin"
+#nreff 1
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 4
+#fatiguecost 300
+#end
+
+#newspell
+#name "Phantasmal Mage"
+#effect 10021
+#damagemon "Mirror Mage"
+#nreff 1
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#fatiguecost 400
+#end
+
+#newspell
+#name "Phantasmal Communicants"
+#effect 10001
+#damagemon "Phantasmal Communicant"
+#nreff 505
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 5
+#fatiguecost 500
+#end
+
+#newspell
+#name "Phantasmal Spy"
+#effect 10119
+#damagemon "Phantasmal Spy"
+#nreff 1
+#school 1
+#path 0 1
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 2
+#fatiguecost 600
+#end
+
+#newspell
+#effect 5002
+#aoe 5
+#damage 1005
+#name "Field of Razors"
+#descr "The caster forms a field of near invisible razors of force, causing those in the area to be sliced and torn by blades they can barely see, though heavy armor will protect most soldiers"
+#spec 1100585369664
+#path 0 4
+#path 1 1
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 5
+#school 2
+#range 45
+#fatiguecost 60
+#end
+
+#newspell
+#effect 1
+#damagemon "Invisible Blade"
+#name "Form Invisible Blades"
+#descr "The caster forms a pair of invisible, autonomous blades of force that will strike with deadly force against his enemies"
+#nreff 2
+#fatiguecost 100
+#path 0 4
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#end
+
+#newspell
+#effect 5002
+#aoe 1001
+#damage 25
+#name "Shard Strike"
+#descr "The caster lashes out with a quickly formed blade of force, severing foes nearby"
+#spec 1100585369664
+#path 0 4
+#path 1 1
+#pathlevel 0 1
+#pathlevel 1 1
+#researchlevel 6
+#school 2
+#range 1
+#fatiguecost 60
+#casttime 50
+#nreff 1
+#end
+
+#newspell
+#name "Locate Doppleganger"
+#effect 10021
+#damagemon "Doppleganger"
+#descr "The caster uses a series of scrying to locate a doppleganger and convince them to serve the awakening god. Doppegangers are skilled assassins, spies and seducers able to change their shape at will"
+#path 0 4
+#path 1 1
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 4
+#school 5
+#fatiguecost 1500
+#end
+
+#newspell
+#name "Contact Gish"
+#effect 10021
+#damagemon "Githyanki Gish"
+#descr "The caster sends a signalling pulse through the barriers in the veil, calling for the services of a Githyanki Gish, a skilled astral and age mage and swordsperson"
+#path 0 4
+#path 1 1
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 7
+#school 0
+#fatiguecost 3000
+#end
+
+#newspell
+#name "Become Gish"
+#descr "The caster attempts to turn themselves into the form of a elusive gish, gaining the ability to slip between the gaps in the world and move great distances in a step"
+#school 4
+#researchlevel 7
+#path 0 4
+#path 1 1
+#pathlevel 0 3
+#pathlevel 1 2
+#effect 10130
+#fatiguecost 2000
+#damagemon "Githyanki Gish"
+#nreff 1
+#spec 536870912
+#end
+
+#newspell
+#copyspell 606 -- Resist Cold
+#name "Gift of Pixie's Luck"
+#descr "With this spell a small group of enemies will be afflicted with bad luck. For the next 5 turns they will be more likely to be hit and to suffer high damage in combat"
+#researchlevel 2
+#path 0 1
+#path 1 6
+#pathlevel 0 1
+#pathlevel 1 1
+#damage 255
+#aoe 10
+#range 50
+#fatiguecost 30
+#sound 23 -- Doom
+#spec 8667136 -- Use UW, enemies only, ignores shields
+#end
+
+#newspell
+#copyspell "524"
+#name "Celestial Soothing"
+#researchlevel 12
+#path -2
+#aoe 10
+#damage 3
+#fatiguecost 0
+#end
+
+#newspell
+#copyspell "524"
+#name "Celestial Healing"
+#researchlevel 12
+#path -2
+#aoe 25
+#damage 6
+#fatiguecost 0
+#end
+
+#newspell
+#copyspell 608
+#name "Fey Protection"
+#descr "The caster bestows the luck of the fey onto a group of nearby soliders, granting them illusionary duplicates to confuse would be attackers and luck to deflect killing blows"
+#aoe 10
+#range 10
+#nextspell 628
+#fatiguecost 100
+#path 0 1
+#path 1 6
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 7
+#school 5
+#end
+
+#newspell
+#name "Recruit Court Warriors"
+#effect 10001
+#damagemon "Court Warrior"
+#descr "The caster strikes a bargain with a group of warriors from one of the fey courts, gaining their services. Depending on the time of year different units will answer the call"
+#path 0 1
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 2000
+#end
+
+#newspell
+#name "Recruit Court Archers"
+#effect 10001
+#damagemon "Court Archer"
+#descr "The caster strikes a bargain with a group of archers from one of the fey courts, gaining their services. Depending on the time of year different units will answer the call"
+#path 0 1
+#path 1 6
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 2000
+#end
+
+#newspell
+#name "Recruit Court Lord"
+#effect 10001
+#damagemon "Court Lord"
+#descr "The caster strikes a bargain with a lord of one of the fey courts, gaining their services. Depending on the time of year a different commander will answer the call. The lord will be accompanied by a small band of soldiers"
+#path 0 1
+#path 1 6
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#fatiguecost 4000
+#nextspell "Recruit Court Warriors"
+#end
+
+#newspell
+#name "Recruit Court Lady"
+#effect 10001
+#damagemon "Court lady"
+#descr "The caster strikes a bargain with a lady of one of the fey courts, gaining their services. Depending on the time of year a different commander will answer the call"
+#path 0 1
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 7
+#school 0
+#fatiguecost 2500
+#end
+
+#newspell
+#name "Recruit Wild Hunt Warriors"
+#effect 10001
+#damagemon "Wild Hunt Warrior"
+#descr "The caster bargains for the services of a group of wild hunt Warriors, savage fey hunters that pay allegiance to no court and cause discontent wherever they go"
+#path 0 6
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 2000
+#nreff 10
+#end
+
+#newspell
+#name "Recruit Wild Hunt Archers"
+#effect 10001
+#damagemon "Wild Hunt Archer"
+#descr "The caster bargains for the services of a group of wild hunt Archers, savage fey hunters that pay allegiance to no court and cause discontent wherever they go"
+#path 0 6
+#path 1 1
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 2000
+#nreff 10
+#end
+
+#newspell
+#name "Recruit Wild Hunt Lord"
+#effect 10021
+#damagemon "Wild Hunt Lord"
+#descr "The caster bargains for the services of a Lord of the Wild Hunt, a savage fey hunter that pay allegiance to no court but their own and cause discontent wherever they go"
+#path 0 6
+#path 1 1
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#fatiguecost 4000
+#nextspell "Recruit Wild Hunt Warriors"
+#end
+
+#newspell
+#name "Recruit Wild Hunt Lady"
+#effect 10021
+#damagemon "Wild Hunt Lady"
+#descr "The caster bargains for the services of a group of a Lady of the Wild Hunt, a canny fey hunter and mage that pays allegiance only to their lords court"
+#path 0 6
+#path 1 1
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 7
+#school 0
+#fatiguecost 2500
+#end
+
+#newspell
+#copyspell 503
+#name "Healers Rebuke"
+#damage 10
+#aoe 9
+#nreff 1
+#researchlevel 12
+#school -2
+#spec 278656
+#end
+
+#newspell
+#copyspell 524
+#name "Light of Judgement"
+#descr "The caster shines purifying light down on a wounded ally, healing them and injuring any foes that stand nearby"
+#nextspell "Healers Rebuke"
+#researchlevel 4
+#pathlevel 0 2
+#fatiguecost 30
+#end
+
+#newspell
+#copyspell 678 -- Army of Giants
+#name "Shielded Form"
+#researchlevel 12
+#school -2
+#aoe 1
+#damage 72704 -- 
+#spec 545275904
+#end
+
+#newspell
+#copyspell 524
+#damage 30
+#name "Boon of the Shielded"
+#descr "The caster casts a powerful protection on a small group of allies, healing them immensely and granting significant protection for the remainder of the battle"
+#nextspell "Shielded Form"
+#aoe 10
+#fatiguecost 100
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 7
+#school 5
+#end
+
+#newspell
+#name "Beseech Celestial Cleric"
+#effect 10021
+#damagemon "Celestial Cleric"
+#descr "The caster bargains for the aid of a celestial cleric, a being from an organization of healers that can cure the wounded and sick, and even wield healing magic in combat"
+#path 0 4
+#path 1 6
+#pathlevel 0 3
+#pathlevel 1 3
+#researchlevel 5
+#school 0
+#fatiguecost 1500
+#end
+
+#newspell
+#name "Beseech Celestial Healer"
+#effect 10021
+#damagemon "Celestial Healer"
+#descr "The caster bargains for the aid of a celestial healer, a being from an organization of healers that can cure the wounded and sick with great efficiency, and even wield potent healing magic in combat"
+#path 0 4
+#path 1 6
+#pathlevel 0 4
+#pathlevel 1 4
+#researchlevel 7
+#school 0
+#fatiguecost 3500
+#end
+
+#newspell
+#name "Innate Power"
+#descr "The caster empowers the innate magical strength of a group of magical beings, causing them to gain great speed and skill in combat"
+#effect 23
+#damage 33554432
+#spec 4210704
+#aoe 5
+#range 5
+#path 0 6
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#researchlevel 4
+#school 5
+#end
+
+#newspell
+#copyspell 678
+#name "Swell in Power"
+#descr "The caster causes all magic beings on the battlefield to grow in size, gaining hit points and strength"
+#spec 4210704
+#aoe 666
+#path 0 6
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#school 5
+#researchlevel 8
+#end
+
+#newspell
+#name "Recruit Kaftar Warriors"
+#effect 10001
+#damagemon "Kaftar Warrior"
+#descr "The caster bargains for the services of a group of kaftar warriors. Hyena headed men that study combat as an artform and are very skilled"
+#path 0 6
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 2
+#researchlevel 4
+#school 0
+#fatiguecost 2000
+#nreff 20
+#end
+
+#newspell
+#name "Recruit Kaftar Shaman"
+#effect 10021
+#damagemon "Kaftar Shaman"
+#descr "The caster bargains for the services of a kaftar shaman, a wisened leader of a kaftar cackle"
+#path 0 6
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#fatiguecost 2500
+#nreff 1
+#end
+
+#newspell
+#copyspell "Recruit Kaftar Warriors"
+#name "Cackle Warriors"
+#researchlevel 12
+#school -2
+#nreff 40
+#end
+
+#newspell
+#name "Recruit Kaftar Cackle"
+#effect 10021
+#damagemon "Kaftar Shaman"
+#descr "The caster bargains for the services of an entire kaftar cackle. Hyena headed men that study combat as an artform and are very skilled, lead by two shamans"
+#path 0 6
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 3
+#researchlevel 7
+#school 0
+#fatiguecost 7000
+#nreff 2
+#nextspell "Cackle Warriors"
+#end
+
+#newspell
+#copyspell 574
+#name "Nether Storm"
+#descr "The mage fires a large surge of dark energies towards his enemies. Those who survive the darts may become feebleminded by the strange energies they release."
+#nreff 3030
+#fatiguecost 100
+#pathlevel 0 3
+#pathlevel 1 3
+#researchlevel 8
+#end
+
+#newspell
+#name "Soul Slash"
+#descr "The caster slashes at an enemies soul, dealing potent damage and removing any ability to return from death"
+#effect 2
+#range 50
+#explspr 10206
+#prec 0
+#damage 20
+#path 0 5
+#path 1 4
+#pathlevel 0 2
+#pathlevel 1 1
+#school 6
+#researchlevel 7
+#spec 3458765613332299840
+#end
+
+#newspell
+#name "Soul Severance"
+#researchlevel 0
+#school -1
+#effect 11
+#nreff 1
+#damage 1125899906842624 -- Soul Annihilation
+#spec 36028797018980480 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
+#end
+
+#newspell
+#name "Reanimate Body"
+#effect 74
+#damage 999
+#researchlevel 12
+#school -2
+#spec 1152921504623624192
+#end
+
+#newspell
+#name "Reanimate Soul"
+#effect 1
+#damage 674
+#researchlevel 12
+#school -2
+#end 
+
+#newspell
+#name "Soul Seperation"
+#descr "The caster forcefully splits the soul and body of several nearby soldiers, while pumping both full of necromantic energy. This will kill the weak willed and turn them into a reanimated spirit and corpse"
+#effect 13
+#damage 1
+#nextspell "Reanimate Body"
+#path 0 5
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 3
+#fatiguecost 100
+#aoe 25
+#school 4
+#researchlevel 6
+#spec 541081728
+#range 25
+#end
+
+#newspell
+#name "Summon Nightskitter"
+#effect 10001
+#damagemon "Nightskitter"
+#descr "The caster summons a nightskitter, a horrifying spider like undead being that can fling webs of darkness at its enemies. Like other nightshades, nightskitters gain significant power in the dark"
+#path 0 5
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 4
+#school 0
+#fatiguecost 1000
+#nreff 1
+#end
+
+#newspell
+#name "Summon Nightwing"
+#effect 10001
+#damagemon "Nightwing"
+#descr "The caster summons a nightwing, a horrifying bat like undead being that can swoop down on its enemius. Like other nightshades, nightwings gain significant power in the dark"
+#path 0 5
+#path 1 4
+#pathlevel 0 3
+#pathlevel 1 2
+#researchlevel 5
+#school 0
+#fatiguecost 1000
+#nreff 1
+#end
+
+#newspell
+#name "Summon Nightwalker"
+#effect 10001
+#damagemon "Nightwalker"
+#descr "The caster summons a nightwalker, a horrifying humanoid like undead being that can drain life from its foes. Like other nightshades, nightwalkers gain significant power in the dark"
+#path 0 5
+#path 1 4
+#pathlevel 0 4
+#pathlevel 1 2
+#researchlevel 6
+#school 0
+#fatiguecost 1500
+#nreff 1
+#end
+
+#newspell
+#name "Summon Nightwave"
+#effect 10001
+#damagemon "Nightwave"
+#descr "The caster summons a nightwave, a horrifying shark like undead being that can fly through the air and is surrounded by the chill of the deep ocean. Like other nightshades, nightwaves gain significant power in the dark"
+#path 0 5
+#path 1 4
+#pathlevel 0 5
+#pathlevel 1 3
+#researchlevel 8
+#school 0
+#fatiguecost 3000
+#nreff 1
+#end
 -- New Items --
 
 #newitem
@@ -3568,17 +7066,95 @@
 
 #newitem
 #name "Stygian Flask"
-#descr "A precious brooch forged in the likeness of those of the queens of the djinn, worn around the brow, it grants powers similar to that of the djinn, but also the weaknesses as well"
-#type 9
+#descr "A specially treated flask of water from the river Styx, drunk before combat it grants invulnerability, increased strength, and a beserk rage when "
+#type 8
 #constlevel 6
 #mainpath 2
 #mainlevel 1
 #secondarypath 5
 #secondarylevel 1
-#spr "./MorvarchsMagic/JinnQueensBrooch.tga"
+#spr "./MorvarchsMagic/StygianFlask.tga"
 #invulnerable 15
 #berserk 2
 #str 4
+#end
+
+#newitem
+#name "Elixer of the Sword Saints"
+#type 8
+#constlevel 4
+#mainpath 1
+#secondarypath 3
+#mainlevel 2
+#secondarylevel 1
+#spr "./MorvarchsMagic/StygianFlask.tga"
+#str 5
+#att 10
+#slashres
+#curse
+#autospell "Animate Saints Armaments"
+#end
+
+#newitem 
+#copyitem 308
+#spr "./MorvarchsMagic/ResonatingCrystal.tga"
+#name "Astral Bubble"
+#descr "Allows an amphibious construct to walk the land unhindered"
+#constlevel 12
+#mainpath 3
+#mainlevel 1
+#type 8
+#end
+
+#newitem
+#spr "./MorvarchsMagic/AstralArmor.tga"
+#name "Astral Armor"
+#descr "Armor infused with the strange properties of the astral plane. It allows its user to move in the blink of an eye, and somewhat shields them against hostile magic"
+#blink
+#mr 2
+#constlevel 6
+#mainpath 4
+#secondarypath 1
+#mainlevel 2
+#secondarylevel 2
+#armor 206
+#type 5
+#end
+
+#newitem
+#spr "./MorvarchsMagic/AstralArmor.tga"
+#name "Shard Blade"
+#descr "A blade of crystal, shard blades are effortless to swing and ignore unliving material near entirely. shard blades sever the soul on slice, causing immediate death unless the soul can resist"
+#blink
+#constlevel 6
+#mainpath 4
+#secondarypath 1
+#mainlevel 2
+#secondarylevel 2
+#armor 206
+#type 1
+#end
+
+#newitem 
+#copyspr 82
+#name "Celestial Staff"
+#descr "Healing Staff"
+#constlevel 12
+#mainpath 3
+#mainlevel 1
+#type 2
+#spell "Celestial Soothing"
+#end
+
+#newitem 
+#copyspr 383
+#name "Celestial Ankh"
+#descr "Healing Ankh"
+#constlevel 12
+#mainpath 3
+#mainlevel 1
+#type 1
+#spell "Celestial Healing"
 #end
 -- End Items --
 -- New Sites --
@@ -3599,6 +7175,12 @@
 #scry 6
 #end
 
+#newsite 1902
+#name "Mystic Field"
+#path 3
+#rarity 5
+#level 0
+#end
 -- New Events --
 #newevent
 #rarity 5
@@ -3638,4 +7220,215 @@
 #addsite 1901
 #end
 
+#newevent
+#nation -2
+#rarity 5
+#req_ench 552
+#req_pop0ok
+#msg "The population of this province has become suddenly extremely docile."
+#incscale3
+#unrest -100
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req_ench 552
+#req_pop0ok
+#msg "Even more Docile"
+#incscale3
+#notext
+#nolog
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req_ench 553
+#req_pop0ok
+#msg "A mystic field has been sowed"
+#req_season 0
+#addsite 1902
+#nolog
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req_pop0ok
+#msg "A mystic field has been harvested"
+#req_season 2
+#req_site 1902
+#removesite 1902
+#nolog
+#4d6vis 6
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Warrior"
+#killmon "Court Warrior"
+#3d6units "Summer Court Warrior"
+#req_season 1
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Warrior"
+#killmon "Court Warrior"
+#3d6units "Summer Court Warrior"
+#req_season 0
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Warrior"
+#killmon "Court Warrior"
+#3d6units "Winter Court Warrior"
+#req_season 2
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Warrior"
+#killmon "Court Warrior"
+#3d6units "Winter Court Warrior"
+#req_season 3
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Archer"
+#killmon "Court Archer"
+#3d6units "Summer Court Archer"
+#req_season 1
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Archer"
+#killmon "Court Archer"
+#3d6units "Summer Court Archer"
+#req_season 0
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Archer"
+#killmon "Court Archer"
+#3d6units "Winter Court Archer"
+#req_season 2
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Archer"
+#killmon "Court Archer"
+#3d6units "Winter Court Archer"
+#req_season 3
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Lord"
+#killmon "Court Lord"
+#3d6units "Summer Court Lord"
+#req_season 1
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Lord"
+#killmon "Court Lord"
+#3d6units "Summer Court Lord"
+#req_season 0
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Lord"
+#killmon "Court Lord"
+#3d6units "Winter Court Lord"
+#req_season 2
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#req
+#req_pop0ok
+#msg "A group of Court Warriors has been spawned!" 
+#notext
+#nolog
+#req_monster "Court Lord"
+#killmon "Court Lord"
+#3d6units "Winter Court Lord"
+#req_season 3
+#end
 #end
