@@ -3,6 +3,7 @@
 #icon "./DomEnhanced/Banner.tga"
 #version 1.00
 
+-- Compatability stuff that needs defining before everything else because uuurgh
 
 -- New Weapons --
 
@@ -186,7 +187,7 @@
  #mrnegates
  #armornegating
  #magic
- #dmg 0
+ #dmg 5
  #dt_poison
  #end
  
@@ -2172,6 +2173,10 @@
 #end
 
 #newmonster
+#name "Waiting Froghemoth"
+#end
+
+#newmonster
 #name "Froghemoth"
 #spr1 "./MorvarchsMagic/Frogemoth_1.tga"
 #spr2 "./MorvarchsMagic/Frogemoth_2.tga"
@@ -2205,10 +2210,9 @@
 #shapechange "Waiting Froghemoth"
 #end
 
-#newmonster
+#selectmonster "Waiting Froghemoth"
 #copystats "Froghemoth"
 #copyspr  "Froghemoth"
-#name "Waiting Froghemoth"
 #mapmove 0
 #stealthy 60
 #shapechange "Froghemoth"
@@ -2718,7 +2722,7 @@
 #magicskill 3 2
 #itemslots 31878
 #weapon "Astral Greatsword"
-#startitem "Astral Bubble"
+#startitem 700
 #end
 
 #newmonster 
@@ -3170,6 +3174,14 @@
 #end
 
 #newmonster
+#name "Strange Troubadour"
+#end
+
+#newmonster
+#name "Strange Dryad"
+#end
+
+#newmonster
 #name "Doppleganger"
 #spr1 "./MorvarchsMagic/Doppleganger_1.tga"
 #spr2 "./MorvarchsMagic/Doppleganger_2.tga"
@@ -3196,8 +3208,7 @@
 #noleader
 #end
 
-#newmonster
-#name "Strange Troubadour"
+#selectmonster "Strange Troubadour"
 #copyspr 2107
 #descr "A strange troubadour of unearthly but oddly manufactured beauty."
 #hp 20
@@ -3222,8 +3233,7 @@
 #noleader
 #end
 
-#newmonster
-#name "Strange Dryad"
+#selectmonster "Strange Dryad"
 #copyspr 237
 #descr "A strange Dryad of unearthly but oddly manufactured beauty."
 #hp 20
@@ -3366,7 +3376,7 @@
 #copystats 1790
 #name "Spring Court Warrior"
 #spr1 "./MorvarchsMagic/SpringWarrior.tga"
-#descr ""
+#descr "X"
 #clearweapons
 #cleararmor
 #weapon 644
@@ -3577,7 +3587,7 @@
 #awe 2
 #holy
 #autohealer 1
-#startitem "Celestial Staff"
+#startitem 701
 #end
 
 #newmonster
@@ -3590,7 +3600,7 @@
 #holy
 #autohealer 3
 #autodishealer 3
-#startitem "Celestial Ankh"
+#startitem 702
 #end
 
 #newmonster
@@ -4071,7 +4081,7 @@
 #newspell
 #name "Nova"
 #path 0 0
-#pathlevel 0 4
+#pathlevel 0 5
 #path 1 3
 #pathlevel 1 2
 #school 2
@@ -4104,7 +4114,7 @@
 #end
 
 #newspell
-#name "Summon Magma Giants"
+#name "Summon Magma Giant"
 #descr "Summons a Magma Giant, who will claw their way out the earth to defend the caster from their enemies"
 #school 0
 #researchlevel 5
@@ -4163,16 +4173,6 @@
 #end
 
 #newspell
-#name "Destroy Tethers of Immortality"
-#researchlevel 12
-#school -2
-#effect 11
-#nreff 1
-#damage 1125899906842624 -- Soul Annihilation
-#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
-#end
-
-#newspell
 #name "Soul Sear"
 #descr "Blasts an area with fire that sears the soul. Souls not firmly attached in a living body are especially vulnerable to this spell"
 #school 2
@@ -4184,12 +4184,22 @@
 #nreff 1
 #aoe 1009
 #effect 24
-#damage 2015
+#damage 2005
 #range 100
 #fatiguecost 99
 #prec 5
 #range 25
 #spec 1152921504606994496
+#end
+
+#newspell
+#name "Destroy Tethers of Immortality"
+#researchlevel 12
+#school -2
+#effect 11
+#nreff 1
+#damage 1125899906842624 -- Soul Annihilation
+#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
 #end
 
 #newspell 
@@ -4235,7 +4245,7 @@
 #name "Summon Archon Army"
 #descr "The Caster beseechers the heavens for an army, and is transported to a province of their choice, accompanied by a force of legion archons"
 #school 0
-#researchlevel 5
+#researchlevel 6
 #path 0 4
 #path 1 0
 #pathlevel 0 4
@@ -4446,6 +4456,7 @@
 #pathlevel 0 3
 #pathlevel 1 2
 #school 0
+#researchlevel 5
 #end
 
 
@@ -4699,7 +4710,7 @@
 #path 1 1
 #pathlevel 1 1
 #effect 10130
-#fatiguecost 200
+#fatiguecost 500
 #damage 7006
 #nreff 1
 #spec 536870912
@@ -4812,7 +4823,7 @@
 
 #newspell
 #name "Summon Glacier Crabs"
-#descr "Summons a smog elemental, a deadly animate cloud of smoke that slowly suffocates its foes to death"
+#descr "Summons a pair of Glacier crabs, icey animal thats already hard carapace grows harder in the cold"
 #school 0
 #researchlevel 5
 #path 0 2
@@ -4864,6 +4875,12 @@
 #nreff 1
 #fatiguecost 1000
 #damage 30
+#researchlevel 3
+#school 5
+#path 0 2
+#path 1 3
+#pathlevel 0 1
+#pathlevel 1 1
 #end
 
 #newspell
@@ -5087,7 +5104,7 @@
 #end
 
 #newspell
-#name "Summon Void Shard"
+#name "Summon Void Gem"
 #descr "The caster summons a void gem, a larger crystal that will split off portions of itself as the battle extends and throw mental attacks at enemy soliders"
 #effect 1
 #damagemon "Void Gem"
@@ -5369,9 +5386,24 @@
 #end
 
 #newspell
+#name "Rotting Shell"
+#descr "The caster summons the great carcass of a great crab. A large ballista will be mounted to its back, and a soulless employed to operate it."
+#researchlevel 6
+#school 4
+#fatiguecost 1000
+#effect 10001
+#pathlevel 0
+#path 0 5
+#path 1 2
+#pathlevel 0 3
+#pathlevel 1 1
+#damagemon "Rotting Gigantacean"
+#end
+
+#newspell
 #name "Summon Boatman"
 #descr "The caster summons a small group of drowned sirens, haunting singers of the deep that drown men with their songs"
-#effect 10021
+#effect 10001
 #path 0 5
 #path 1 2
 #pathlevel 0 4
@@ -5471,6 +5503,7 @@
 #researchlevel 6
 #school 0
 #effect 10001
+#fatiguecost 25
 #damagemon "Froghemoth"
 #end
 
@@ -5534,7 +5567,8 @@
 #end
 
 #newspell
-#copyspell "Sandstorm"
+#copyspell "Scouring Winds"
+#name "Sandstorm"
 #descr "The caster churns up a huge storm of biting sand that will rage across the entire battlefield for a short while"
 #aoe 666
 #damage 1010
@@ -5655,6 +5689,7 @@
 #range 50
 #aoe 10
 #school 2
+#researchlevel 7
 #nextspell "Sonic Deconstruction"
 #end
 
@@ -5735,7 +5770,7 @@
 #name "Crystal Grasp"
 #nextspell "Crystalline Paralysis"
 #path 1 4
-#path 1 1
+#pathlevel 1 1
 #researchlevel 4
 #fatiguecost 30
 #end
@@ -5766,6 +5801,8 @@
 #pathlevel 1 2
 #school 5
 #researchlevel 3
+#damagemon "Resonant Crystal"
+#fatiguecost 1
 #end
 
 #newspell
@@ -5775,6 +5812,10 @@
 #aoe 666
 #fatiguecost 500
 #researchlevel 9
+#path 0 4
+#path 1 3
+#pathlevel 0 6
+#pathlevel 1 3
 #end
 
 #newspell
@@ -5815,7 +5856,7 @@
 #path 0 4
 #path 1 3
 #pathlevel 0 5
-#pathlevel 0 3
+#pathlevel 1 3
 #researchlevel 8
 #nreff 1
 #damagemon "Astral Titan"
@@ -5830,7 +5871,7 @@
 #path 0 4
 #path 1 3
 #pathlevel 0 5
-#pathlevel 0 3
+#pathlevel 1 3
 #researchlevel 8
 #nreff 1
 #fatiguecost 3500
@@ -5847,7 +5888,7 @@
 #path 0 4
 #path 1 3
 #pathlevel 0 3
-#pathlevel 0 2
+#pathlevel 1 2
 #researchlevel 6
 #fatiguecost 1500
 #range 5
@@ -5856,7 +5897,7 @@
 #newspell
 #copyspell 194
 #name "Baneful Shards"
-#descr "The caster hurls several whirling blades infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less hearty units and will often cause their victims to start rapidly aging"
+#descr "The caster hurls several stones infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less hearty units and will often cause their victims to start rapidly aging"
 #spec 1152922604120571968
 #path 1 5
 #pathlevel 1 1
@@ -5891,8 +5932,17 @@
 #descr "The caster animates skeletal hands from below the earth to grab at their foes, rooting them in place and draining them of their energy"
 #path 1 5
 #pathlevel 1 1
+#path 0 3
 #school 1
 #nextspell 616
+#end
+
+#newspell
+#copyspell 635
+#name "Stiffen"
+#researchlevel 12
+#school -2
+#nextspell 671
 #end
 
 #newspell
@@ -5900,30 +5950,22 @@
 #name "Fossilize"
 #descr "The caster solidifies the skin of a small group of soldiers in stone. This spell is easy to cast, but rushed, and will often turn more than just the skin into stone, leaving nothing but statues"
 #researchlevel 3
-#nextspell "Calcilfy"
+#nextspell "Stiffen"
 #path 1 5
 #pathlevel 1 1
 #end
 
 #newspell
-#copyspell 635
-#name "Calcilfy"
-#researchlevel 12
-#school -2
-#nextspell 671
+#copyspell 109
+#name "Bones Cripple"
+#aoe 1
 #end
 
 #newspell
-#name "Bones Limp"
 #copyspell 108
+#name "Bones Limp"
 #aoe 1
 #nextspell "Bones Cripple"
-#end
-
-#newspell
-#name "Bones Cripple"
-#copyspell 109
-#aoe 1
 #end
 
 #newspell
@@ -5941,7 +5983,7 @@
 
 #newspell
 #name "Unbury Spiker"
-#descr ""
+#descr "X"
 #effect 10001
 #path 0 3
 #path 1 5
@@ -5949,6 +5991,8 @@
 #pathlevel 1 1
 #damagemon "Fossilized Spiker"
 #fatiguecost 600
+#school 0
+#researchlevel 4
 #nreff 1
 #end
 
@@ -5962,7 +6006,7 @@
 #path 0 5
 #path 1 3
 #pathlevel 0 2 
-#pathlevel 0 1
+#pathlevel 1 1
 #school 5
 #researchlevel 5
 #range 5
@@ -6146,7 +6190,7 @@
 #descr "The caster infuses a small group of soldiers with the strength of Gaia, causing them to grow in size and rapidly heal wounds they recieve"
 #aoe 5
 #nextspell 895
-#pathlevel 1 3
+#path 1 3
 #pathlevel 1 2
 #researchlevel 3
 #range 5
@@ -6344,7 +6388,7 @@
 #path 1 4
 #pathlevel 0 1
 #pathlevel 1 1
-#researchlevel
+#researchlevel 5
 #fatiguecost 100
 #range 5
 #end
@@ -6548,7 +6592,7 @@
 #end
 
 #newspell
-#copyspell "524"
+#copyspell 524
 #name "Celestial Soothing"
 #researchlevel 12
 #path -2
@@ -6558,7 +6602,7 @@
 #end
 
 #newspell
-#copyspell "524"
+#copyspell 524
 #name "Celestial Healing"
 #researchlevel 12
 #path -2
@@ -6879,7 +6923,7 @@
 #path 1 4
 #pathlevel 0 2
 #pathlevel 1 1
-#school 6
+#school 2
 #researchlevel 7
 #spec 3458765613332299840
 #end
@@ -7095,10 +7139,11 @@
 #autospell "Animate Saints Armaments"
 #end
 
-#newitem 
+
+#selectitem 700
+#name "Astral Bubble"
 #copyitem 308
 #spr "./MorvarchsMagic/ResonatingCrystal.tga"
-#name "Astral Bubble"
 #descr "Allows an amphibious construct to walk the land unhindered"
 #constlevel 12
 #mainpath 3
@@ -7135,7 +7180,7 @@
 #type 1
 #end
 
-#newitem 
+#selectitem 701
 #copyspr 82
 #name "Celestial Staff"
 #descr "Healing Staff"
@@ -7146,7 +7191,7 @@
 #spell "Celestial Soothing"
 #end
 
-#newitem 
+#selectitem 702
 #copyspr 383
 #name "Celestial Ankh"
 #descr "Healing Ankh"
