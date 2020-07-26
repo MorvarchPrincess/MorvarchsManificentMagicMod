@@ -1,13 +1,13 @@
 #modname "Morvarch's Magnificent Magic Mod"
 #description "Adds a multitude of new spells to Dominions, mostly focusing around making all the crosspaths more fleshed out"
-#icon "./DomEnhanced/Banner.tga"
+#icon "./MorvarchsMagic/iconMMMM.tga"
 #version 1.00
 
 -- Compatability stuff that needs defining before everything else because uuurgh
 
 -- New Weapons --
 
-#newweapon 1901
+#newweapon -- 1901 -- This caused an ID conflict, fixed. 
 #name "Frostfire"
 #dmg 5
 #armornegating
@@ -294,9 +294,10 @@
 #newmonster
 #name "Frostfire Wraith"
 #nametype 101
-#descr "A ghostly figure, cloaked in burning ice"
 #spr1 "./MorvarchsMagic/frostfirewraith_1.tga"
 #spr2 "./MorvarchsMagic/frostfirewraith_2.tga"
+--#descr "A ghostly figure, cloaked in burning ice"
+#descr "This is the spirit of a fallen warrior who has been consumed by Frostfire. The spirit has returned to avenge itself upon the living, and the ethereal flames that surround it consume the warmth of the living."
 #hp 15
 #str 15
 #att 12
@@ -317,6 +318,8 @@
 #cold 3
 #coldres 25
 #poisonres 25
+#custommagic 4736 100
+#custommagic 640 10
 #ethereal
 #neednoteat
 #mountainsurvival
@@ -329,7 +332,8 @@
 #copystats "Frostfire Wraith"
 #copyspr "Frostfire Wraith"
 #name "Frostfire Spectre"
-#descr "A ghostly figure, cloaked in burning ice, with magic"
+--#descr "A ghostly figure, cloaked in burning ice, with magic"
+#descr "This is the spirit of a fallen mage who has been consumed by Frostfire. The spirit has returned to avenge itself upon the living, and the ethereal flames that surround it consume the warmth of the living."
 #magicskill 0 2
 #magicskill 2 1
 #custommagic 4736 100
@@ -338,9 +342,10 @@
 
 #newmonster
 #name "Shrieking Mauler"
-#descr "An angry beasty"
 #spr1 "./MorvarchsMagic/ShockTrooper_1.tga"
 #spr2 "./MorvarchsMagic/ShockTrooper_2.tga"
+--#descr "An angry beasty"
+#descr "This strange being is similar to a Draconian but where Draconians have blood that runs cold and appearance of a Wyvern, the Bestial Maulers have blood that runs like fire and the form of a bat. Their rage is intense and even if slain their death throes unleash a great explosion." 
 #hp 25
 #size 4
 #prot 5
@@ -357,6 +362,37 @@
 #startage 30
 #fly
 #berserk 3
+#deathfire 7
+#fireres 15
+#weapon 166
+#weapon 166
+#weapon 20
+#end
+
+#newmonster
+#name "Shrieking Mauler Chief"
+#spr1 "./MorvarchsMagic/ShockTrooper_1.tga"
+#spr2 "./MorvarchsMagic/ShockTrooper_2.tga"
+--#descr "An angry beasty"
+#descr "This strange being is similar to a Draconian but where Draconians have blood that runs cold and appearance of a Wyvern, the Bestial Maulers have blood that runs like fire and the form of a bat. Their rage is intense and even if slain their death throes unleash a great explosion. This one appears slightly more in control of itself, and leads other Maulers." 
+#hp 25
+#size 4
+#prot 5
+#mr 12
+#mor 15
+#str 18
+#att 12
+#def 10
+#prec 8
+#ap 20
+#mapmove 20
+#enc 3
+#maxage 100
+#startage 30
+#makemonsters1 "Shrieking Mauler"
+#fly
+#okleader
+#berserk 1
 #deathfire 5
 #fireres 15
 #weapon 166
@@ -366,9 +402,9 @@
 
 #newmonster 7000
 #name "Smog Elemental"
-#descr "Foggy"
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #prot 0
 #mor 50
 #att 10
@@ -390,7 +426,7 @@
 #hp 20
 #size 6
 #mr 18
-#sleepaura 10
+#sleepaura 5
 #str 20
 #ap 10
 #secondshape 7001
@@ -398,7 +434,7 @@
 
 #newmonster 7001
 #name "Smog Elemental"
-#descr "Foggy"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
 #prot 0
@@ -424,14 +460,14 @@
 #mr 17
 #str 18
 #ap 9
-#sleepaura 9
+#sleepaura 4
 #secondshape 7002
 #drawsize -15
 #end
 
 #newmonster 7002
 #name "Smog Elemental"
-#descr "Foggy"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
 #prot 0
@@ -457,14 +493,14 @@
 #mr 16
 #str 16
 #ap 8
-#sleepaura 8
+#sleepaura 3
 #secondshape 7003
 #drawsize -30
 #end
 
 #newmonster 7003
 #name "Smog Elemental"
-#descr "Foggy"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
 #prot 0
@@ -490,14 +526,14 @@
 #mr 15
 #str 14
 #ap 7
-#sleepaura 7
+#sleepaura 2
 #secondshape 7004
 #drawsize -45
 #end
 
 #newmonster 7004
 #name "Smog Elemental"
-#descr "Foggy"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
 #prot 0
@@ -523,14 +559,14 @@
 #mr 14
 #str 12
 #ap 6
-#sleepaura 6
+#sleepaura 2
 #secondshape 7005
 #drawsize -60
 #end
 
 #newmonster 7005
 #name "Smog Elemental"
-#descr "Foggy"
+#descr "Elementals are projections of raw elemental power given life through strong magic. All elementals shrink in size and power when severely damaged. Smog elementals are difficult to damage and will suffocate those around them."
 #spr1 "./MorvarchsMagic/SmogElemental_1.tga"
 #spr2 "./MorvarchsMagic/SmogElemental_2.tga"
 #prot 0
@@ -556,16 +592,16 @@
 #mr 13
 #str 10
 #ap 5
-#sleepaura 5
+#sleepaura 2
 #drawsize -75
 #end
 
 
 #newmonster 
 #name "Yrthak"
-#descr "Spoopy sonic"
 #spr1 "./MorvarchsMagic/Yrthak_1.tga"
 #spr2 "./MorvarchsMagic/Yrthak_2.tga"
+#descr "A yrthak is blind. It senses sound and movement by means of a special organ on its long tongue. It emits powerfully focused beams of sound from the protrusion on its head. Despite their intelligence, yrthaks do not speak."
 #size 6
 #hp 150
 #prot 22
@@ -580,12 +616,13 @@
 #enc 2
 #maxage 3000
 #startage 1800
-#poorleader
-#poormagicleader
+#noleader
+#nomagicleader
 #fear 10
 #shockres 25
 #flying
 #bird
+#blind
 #itemslots 28672
 #magicbeing
 #stormimmune
@@ -641,7 +678,7 @@
 #spr2 "./MorvarchsMagic/MagmaGiant_2.tga"
 #size 6
 #hp 120
-#prot 20
+#prot 18
 #mr 15
 #mor 14
 #str 30
@@ -666,10 +703,10 @@
 #spr2 "./MorvarchsMagic/thoqqua_2.tga"
 #size 4
 #hp 50
-#prot 18
+#prot 16
 #mr 14
 #mor 15
-#str 20
+#str 18
 #att 12
 #def 5
 #prec 4
@@ -691,6 +728,78 @@
 #weapon "Fiery Snout"
 #siegebonus 10
 #blind
+#end
+
+#newmonster
+#name "Magma Dragon"
+#descr "A Distant cousin of what most would call a dragon, the Magma dragon is flightless, but can burrow through the earth with suprising speed. It isn't as intelligent as a true dragon and cannot use magic, but has a hardened shell of rock around its scales giving it extra protection"
+#spr1 "./MorvarchsMagic/MagmaDragon1_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon1_2.tga"
+#size 6
+#hp 170
+#prot 25
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 10
+#mapmove 15
+#enc 3
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#siegebonus 100
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#shrinkhp 150
+#end
+
+#newmonster
+#spr1 "./MorvarchsMagic/MagmaDragon2_1.tga"
+#spr2 "./MorvarchsMagic/MagmaDragon2_2.tga"
+#name "Cracked Shell Magma Dragon"
+#descr "Once the shell of a magma dragon is cracked, it becomes significantly easier to damage. If given time to recuperate after a battle, the dragon will be able to remould itself a shell"
+#prot 18
+#hp 150
+#size 6
+#mr 18
+#mor 30
+#str 30
+#att 15
+#def 10
+#prec 12
+#ap 15
+#mapmove 15
+#enc 2
+#itemslots 28672
+#maxage 3000
+#startage 1500
+#blink
+#recuperation
+#forestsurvival
+#mountainsurvival
+#swampsurvival
+#wastesurvival
+#snow
+#swimming
+#siegebonus 100
+#weapon 533
+#weapon 20
+#weapon 29
+#weapon 532
+#shrinkhp 100
 #end
 
 #newmonster
@@ -720,7 +829,7 @@
 #snow
 #swimming
 #prot 15
-#hp 50
+#hp 150
 #fireshield 15
 #berserk 3
 #heat 10
@@ -729,78 +838,7 @@
 #weapon 20
 #weapon 29
 #weapon 532
-#end
-
-#newmonster
-#spr1 "./MorvarchsMagic/MagmaDragon2_1.tga"
-#spr2 "./MorvarchsMagic/MagmaDragon2_2.tga"
-#name "Cracked Shell Magma Dragon"
-#descr "Once the shell of a magma dragon is cracked, it becomes significantly easier to damage. If given time to recuperate after a battle, the dragon will be able to remould itself a shell"
-#prot 18
-#hp 100
-#size 6
-#mr 18
-#mor 30
-#str 30
-#att 15
-#def 10
-#prec 12
-#ap 15
-#mapmove 15
-#enc 2
-#itemslots 28672
-#maxage 3000
-#startage 1500
-#blink
-#recuperation
-#forestsurvival
-#mountainsurvival
-#swampsurvival
-#wastesurvival
-#snow
-#swimming
-#siegebonus 100
-#weapon 533
-#weapon 20
-#weapon 29
-#weapon 532
-#secondshape "Inflamed Magma Dragon"
-#end
-
-#newmonster
-#name "Magma Dragon"
-#descr "A Distant cousin of what most would call a dragon, the Magma dragon is flightless, but can burrow through the earth with suprising speed. It isn't as intelligent as a true dragon and cannot use magic, but has a hardened shell of rock around its scales giving it extra protection"
-#spr1 "./MorvarchsMagic/MagmaDragon1_1.tga"
-#spr2 "./MorvarchsMagic/MagmaDragon1_2.tga"
-#size 6
-#hp 20
-#prot 25
-#mr 18
-#mor 30
-#str 30
-#att 15
-#def 10
-#prec 12
-#ap 10
-#mapmove 15
-#enc 2
-#itemslots 28672
-#maxage 3000
-#startage 1500
-#blink
-#recuperation
-#forestsurvival
-#mountainsurvival
-#swampsurvival
-#wastesurvival
-#snow
-#swimming
-#siegebonus 100
-#weapon 533
-#weapon 20
-#weapon 29
-#weapon 532
-#secondshape "Cracked Shell Magma Dragon"
+#growhp 101
 #end
 
 #selectmonster "Inflamed Magma Dragon"
@@ -874,8 +912,9 @@
 #spr1 "./MorvarchsMagic/CelestialLibrarian_1.tga"
 #spr2 "./MorvarchsMagic/CelestialLibrarian_2.tga"
 #name "Celestial Librarian"
-#inspiringres 2
+#inspiringres 1
 #awe 2
+#researchbonus 10
 #maxage 1000
 #end
 
@@ -889,6 +928,7 @@
 #magicskill 4 2
 #magicskill 0 2
 #awe 2
+#researchbonus 25
 #maxage 1000
 #end
 
@@ -901,7 +941,7 @@
 #weapon "Shattering Vines"
 #weapon "Shattering Vines"
 #regeneration 10
-#mr 10
+#mr 8
 #prot 10
 #end
 
@@ -941,16 +981,16 @@
 #spr2 "./MorvarchsMagic/Fury_2.tga"
 #copystats 138
 #name "Fury Soldier"
-#descr "A small select group of Gorgons, rather than study magic instead find their calling in more martial professions. They tend to form small bands for hire, making use of their innate defences to suppliment their martial skill"
+#descr "A select group of Gorgons, rather than study magic instead find their calling in more martial professions. They tend to form small bands for hire, making use of their innate defences to suppliment their martial skill"
 #size 4
 #hp 35
 #mr 16
-#att 13
-#def 11
+#att 14
+#def 12
 #prec 10
 #ap 10
 #startage 35
-#fear 0
+#fear 5
 #clearmagic
 #clearweapons
 #weapon 6
@@ -1150,6 +1190,7 @@
 #clearweapons
 #cleararmor
 #weapon 356
+#weapon 9
 #armor 135
 #armor 136
 #prec 13
@@ -1187,12 +1228,6 @@
 #armor 2
 #makemonsters2 "Risen Warrior"
 #magicskill 8 1
-#end
-
-#newmonster
-#copyspr 197
-#copystats 197
-#name "Embalming Zombie"
 #end
 
 #newmonster
@@ -1241,7 +1276,7 @@
 #ambidextrous 1
 #end
 
-#newmonster 7006
+#newmonster 7031
 #copystats 2313
 #spr1 "./MorvarchsMagic/CondorLord_1.tga"
 #spr2 "./MorvarchsMagic/CondorLord_1.tga"
@@ -1260,7 +1295,7 @@
 #ethereal
 #mr 15
 #mor 15
-#stealthy 40
+#stealthy 10
 #end
 
 #newmonster
@@ -1273,7 +1308,7 @@
 #mr 13
 #mor 14
 #montag 7002
-#stealthy 40
+#stealthy 10
 #end
 
 #newmonster
@@ -1286,7 +1321,7 @@
 #mr 13
 #mor 14
 #montag 7002
-#stealthy 40
+#stealthy 10
 #end
 
 #newmonster
@@ -1576,7 +1611,9 @@
 #magicskill 2 2
 #magicskill 4 2
 #custommagic 2560 100
-#custommagic 2560 200
+#custommagic 2560 100
+#custommagic 2560 100
+#maxage 1000
 #end
 
 #newmonster 7014
@@ -1587,8 +1624,8 @@
 #hp 30
 #prot 0
 #str 8
-#att 5
-#def 5
+#att 7
+#def 9
 #mr 15
 #mor 30
 #prec 10
@@ -1600,13 +1637,14 @@
 #poisonres 15
 #shockres -5
 #startage 10
-#maxage 50
+#maxage 200
 #unsurr 10
 #blind
 #magicbeing
 #amphibian
 #ethereal
-#mindslime 10
+#mindslime 9
+#saltvul 3
 #voidsanity 10
 #speciallook 170
 #neednoteat
@@ -1624,8 +1662,8 @@
 #hp 8
 #prot 0
 #str 6
-#att 5
-#def 5
+#att 9
+#def 13
 #mr 12
 #mor 30
 #prec 10
@@ -1633,7 +1671,8 @@
 #mapmove 12
 #float
 #weapon 269
-#mindslime 5
+#saltvul 3
+#mindslime 6
 #poisonres 10
 #shockres -5
 #startage 0
@@ -1759,6 +1798,30 @@
 #animal
 #weapon 536
 #weapon 20
+#end
+
+#newmonster
+#name "Intellect Hound Alpha"
+#spr1 "./MorvarchsMagic/IntellectHound_1.tga"
+#spr2 "./MorvarchsMagic/IntellectHound_2.tga"
+#descr "A strange, canine like being. Intellect hounds hunt by overloading the minds of their prey before closing in for the kill with powerful jaws. They are unusually quick, and always hunt in packs"
+#size 3
+#hp 24
+#prot 5
+#mr 12
+#mor 17
+#str 16
+#att 14
+#def 13
+#prec 7
+#ap 32
+#mapmove 15
+#enc 2
+#stealthy
+#spiritsight
+#animal
+#weapon 536
+#weapon 20
 #batstartsum3 "Intellect Hound"
 #end
 
@@ -1781,7 +1844,7 @@
 #okleader
 #fear 5
 #invulnerable 15
-#stealthy 40
+#stealthy
 #darkvision 100
 #coldres 5
 #weapon 28
@@ -2180,6 +2243,7 @@
 #name "Froghemoth"
 #spr1 "./MorvarchsMagic/Frogemoth_1.tga"
 #spr2 "./MorvarchsMagic/Frogemoth_2.tga"
+#descr "A Froghemoth is a terrible and ravenous beast that can swallow a horse whole. They lurk in swamps or other marshy locations, mostly beneath the water, and await prey to pass them by before swallowing them whole."
 #size 5
 #hp 80
 #prot 10
@@ -2460,7 +2524,6 @@
 #coldres 10
 #poisonres 25
 #weapon 11
-#montag 7003
 #end
 
 #newmonster
@@ -2491,7 +2554,7 @@
 #coldres 10
 #poisonres 25
 #weapon 24
-#weapon 7
+#weapon 153
 #montag 7003
 #end
 
@@ -2538,7 +2601,7 @@
 #size 2
 #str 13
 #att 16
-#def 16
+#def 14
 #prec 5
 #ap 10
 #mapmove 15
@@ -2616,6 +2679,7 @@
 #magicbeing
 #stonebeing
 #inanimate
+#comslave
 #weapon 306
 #startage 0
 #maxage 1
@@ -2623,16 +2687,16 @@
 
 #newmonster
 #name "Faceted"
-#descr "Corpses infested by a virulent crystalline growth, Faceted wield a spike made of a similar material that spreads the infection to those they kill, slowly growing their numbers over time. The crystals however are vulnerable to sudden changes in temperature, and either extreme heat or extreme cold will often shatter them."
+#descr "Corpses infested by a virulent crystalline growth, Faceted wield a spike made of a similar material that spreads the infection to those they kill, slowly growing their numbers over time. The crystals while hard are brittle and vulnerable to sudden changes in temperature, and either extreme heat or extreme cold will often shatter them. For some reason, their movement is interupted by other crystals, this can even cause them damage."
 #spr1 "./MorvarchsMagic/CrystalLegionaire_1.tga"
 #spr2 "./MorvarchsMagic/CrystalLegionaire_2.tga"
 #size 2
-#hp 12
-#prot 15
-#att 11
-#def 11
-#str 12
-#mr 12
+#hp 6
+#prot 12
+#att 9
+#def 9
+#str 14
+#mr 9
 #mor 50
 #prec 10
 #ap 9
@@ -2646,14 +2710,15 @@
 #magicbeing
 #amphibian
 #inanimate
-#raiseonkill 100
+#raiseonkill 25
 #raiseshape "Faceted"
+#saltvul 1
 #weapon "Crystal Spear"
 #end
 
 #newmonster
 #name "Shard Thrower"
-#descr "A crystalline growth animated with a force of its own, they take the shape of giant scorpions that launch salvos of infected spikes at their foes"
+#descr "A crystalline growth animated with a force of its own, they take the shape of giant scorpions that launch salvos of infected spikes at their foes. For some reason, their movement is interupted by other crystals, this can even cause them damage."
 #spr1 "./MorvarchsMagic/ShardThrower_1.tga"
 #spr2 "./MorvarchsMagic/ShardThrower_2.tga"
 #size 5
@@ -2669,7 +2734,7 @@
 #enc 2
 #startage 700
 #maxage 8392
-#raiseonkill 100
+#raiseonkill 75
 #raiseshape "Faceted"
 #poisonres 25
 #coldres -5
@@ -2682,14 +2747,15 @@
 #weapon "Shard Spike"
 #weapon 29
 #weapon 144
+#saltvul 1
 #end
 
 #newmonster
 #copystats 2855
 #name "Astral Titan"
-#descr "Astral"
 #spr1 "./MorvarchsMagic/CrystallineTitan_1.tga"
 #spr2 "./MorvarchsMagic/CrystallineTitan_2.tga"
+#descr "A massive being of resonant energy, the Astral Titan prevents enemy teleport, and is a powerful mage of the spheres; both terran and celestial. It would be difficult to beat in combat, but for some reason its movement is interupted by crystals, this can even cause it damage."
 #clearweapons
 #clearmagic
 #size 6
@@ -2723,12 +2789,14 @@
 #itemslots 31878
 #weapon "Astral Greatsword"
 #startitem 700
+#saltvul 1
 #end
 
 #newmonster 
 #name "Crystalline Nexus"
 #spr1 "./MorvarchsMagic/CrystallineSlasher_1.tga"
 #spr2 "./MorvarchsMagic/CrystallineSlasher_2.tga"
+#descr "A mass of infectious crystal. This being is a powerful mage of the spheres; both terran and celestial. It causes those it kills to rise as horrid crystaline abominations. THe only hope for the mortal is that its movement is interupted by other crystals, this can even cause it damage."
 #size 4
 #hp 30
 #prot 20
@@ -2742,7 +2810,7 @@
 #enc 0
 #startage 700
 #maxage 8392
-#raiseonkill 100
+#raiseonkill 75
 #raiseshape "Faceted"
 #poisonres 25
 #coldres -5
@@ -2756,6 +2824,8 @@
 #goodundeadleader
 #magicskill 4 3
 #magicskill 3 3
+#saltvul 1
+#raredomsummon "Faceted"
 #end
 
 #newmonster
@@ -2802,9 +2872,10 @@
 
 #newmonster
 #name "Swamp Troll"
-#descr "Vile cousins of the common troll, swamp trolls exude a cloud of poisonous gas, but arn't as tough or brave as their stonier cousins"
+#descr "Vile cousins of the common troll, swamp trolls exude a cloud of poisonous gas, but arn't as tough or brave as their stonier cousins. THey still require payment, and lots of it."
 #spr1 "./MorvarchsMagic/SwampTroll_1.tga"
 #spr2 "./MorvarchsMagic/SwampTroll_2.tga"
+#gcost 45
 #size 3
 #hp 30
 #prot 12
@@ -2829,7 +2900,7 @@
 #newmonster
 #copystats "Swamp Troll"
 #name "Swamp Troll Shaman"
-#descr "The leaders of the swamp trolls are often significantly more cunning than the rest of their tribe, learned in the arts of earth and death"
+#descr "The leaders of the swamp trolls are often significantly more cunning than the rest of their tribe, learned in the arts of earth and death."
 #spr1 "./MorvarchsMagic/SwampTrollShaman_1.tga"
 #spr2 "./MorvarchsMagic/SwampTrollShaman_2.tga"
 #hp 40
@@ -3020,6 +3091,7 @@
 #illusion
 #amphibian
 #spiritsight
+#gcost 0
 #end
 
 #newmonster
@@ -3040,6 +3112,7 @@
 #illusion
 #amphibian
 #spiritsight
+#gcost 0
 #end
 
 #newmonster
@@ -3060,6 +3133,7 @@
 #illusion
 #amphibian
 #spiritsight
+#gcost 0
 #end
 
 #newmonster
@@ -3080,6 +3154,7 @@
 #illusion
 #amphibian
 #spiritsight
+#gcost 0
 #end
 
 #newmonster
@@ -3100,6 +3175,7 @@
 #illusion
 #amphibian
 #spiritsight
+#gcost 0
 #end
 
 #newmonster
@@ -3112,6 +3188,7 @@
 #clearweapons
 #cleararmor
 #weapon 67
+#weapon 287
 #enc 0
 #poisonres 25
 #magicbeing
@@ -3120,7 +3197,8 @@
 #illusion
 #amphibian
 #spiritsight
-#researchbonus -8
+#researchbonus -99
+#gcost 0
 #end
 
 #newmonster
@@ -3171,6 +3249,10 @@
 #clearweapons
 #weapon "Invisible Blade"
 #invisible
+#end
+
+#selectmonster "Animated Sword"
+#montag 7003
 #end
 
 #newmonster
@@ -3343,6 +3425,7 @@
 #def 14
 #mr 13
 #fireres 5
+#summerpower 10
 #end
 
 #newmonster
@@ -3353,8 +3436,9 @@
 #weapon 675
 #coldres 5
 #mor 13
-#def 18
+#def 16
 #iceprot 1
+#winterpower 10
 #end
 
 #newmonster
@@ -3403,6 +3487,7 @@
 #clearweapons
 #cleararmor
 #weapon "Javelins"
+#weapon 264
 #armor 142
 #armor 135
 #sunawe 1
@@ -3410,6 +3495,7 @@
 #def 14
 #mr 13
 #fireres 5
+#summerpower 10
 #end
 
 #newmonster
@@ -3418,10 +3504,12 @@
 #spr1 "./MorvarchsMagic/WinterBowman.tga"
 #clearweapons
 #weapon 264
+#weapon 674 -- Bronze Dagger
 #coldres 5
 #mor 13
-#def 18
+#def 16
 #iceprot 1
+#winterpower 10
 #end
 
 #newmonster
@@ -3446,6 +3534,7 @@
 #mounted
 #magicskill 0 2
 #greatleader
+#summerpower 10
 #end
 
 #newmonster
@@ -3457,13 +3546,14 @@
 #coldres 10
 #mor 14
 #mr 16
-#def 19
+#def 16
 #iceprot 2
 #mounted
 #magicskill 2 2
 #weapon 236
 #weapon 237
 #greatleader
+#winterpower 10
 #end
 
 #newmonster
@@ -3486,6 +3576,7 @@
 #magicskill 0 2
 #magicskill 1 2
 #poorleader
+#summerpower 10
 #end
 
 #newmonster
@@ -3494,7 +3585,7 @@
 #spr1 "./MorvarchsMagic/WinterLady.tga"
 #coldres 10
 #mr 17
-#def 18
+#def 16
 #iceprot 2
 #magicskill 2 2
 #magicskill 1 2
@@ -3503,6 +3594,7 @@
 #weapon 354
 #weapon 675
 #poorleader
+#winterpower 10
 #end
 
 #newmonster
@@ -3583,6 +3675,7 @@
 #name "Celestial Cleric"
 #spr1 "./MorvarchsMagic/CelestialCleric_1.tga"
 #spr2 "./MorvarchsMagic/CelestialCleric_2.tga"
+#descr "A gifted healer who can heal injured soldiers."
 #clearmagic
 #awe 2
 #holy
@@ -3595,6 +3688,7 @@
 #name "Celestial Healer"
 #spr1 "./MorvarchsMagic/CelestialHealer_1.tga"
 #spr2 "./MorvarchsMagic/CelestialHealer_2.tga"
+#descr "A gifted healer who can heal injured soldiers."
 #clearmagic
 #awe 2
 #holy
@@ -3606,6 +3700,7 @@
 #newmonster
 #name "Kaftar Warrior"
 #spr1 "./MorvarchsMagic/Kaftar_Warrior.tga"
+#descr "An accomplished warrior of the Kaftar clans."
 #hp 20
 #size 3
 #prot 8
@@ -3634,6 +3729,7 @@
 #copystats "Kaftar Warrior"
 #name "Kaftar Shaman"
 #spr1 "./MorvarchsMagic/Kaftar_Shaman.tga"
+#descr "A Shaman of the Kaftar clans."
 #startage 40
 #clearweapons
 #cleararmor
@@ -3649,6 +3745,7 @@
 #name "Nightskitter"
 #spr1 "./MorvarchsMagic/NightSkitter_1.tga"
 #spr2 "./MorvarchsMagic/NightSkitter_2.tga"
+#descr "A horrifying spider like undead being that can fling webs of darkness at its enemies. Like other nightshades, nightskitters gain significant power in the dark."
 #size 4
 #hp 32
 #prot 0
@@ -3677,6 +3774,7 @@
 #name "Nightwing"
 #spr1 "./MorvarchsMagic/NightWing_1.tga"
 #spr2 "./MorvarchsMagic/NightWing_2.tga"
+#descr "This horrifying bat like undead can swoop down on its enemies. Like other nightshades, nightwings gain significant power in the dark."
 #size 4
 #hp 40
 #prot 0
@@ -3704,7 +3802,8 @@
 #newmonster
 #name "Nightwalker"
 #spr1 "./MorvarchsMagic/NightWalker_1.tga"
-#spr2 "./MorvarchsMagic/NightWalker_2.tga"
+#spr2 "./MorvarchsMagic/NightWalker_2.tga" 
+#descr "A horrifying humanoid like undead being that can drain life from its foes. Like other nightshades, nightwalkers gain significant power in the dark. Nightwalkers would be potent death mages if freed of the shackles that bind them to their summoner."
 #size 4
 #hp 70
 #prot 0
@@ -3733,6 +3832,7 @@
 #name "Nightwave"
 #spr1 "./MorvarchsMagic/NightWave_1.tga"
 #spr2 "./MorvarchsMagic/NightWave_2.tga"
+#descr "A horrifying shark like undead being that can fly through the air and is surrounded by the chill of the deep ocean. Like other nightshades, nightwaves gain significant power in the dark. Unlike most, Nightwaves would be potent death mages if freed of the shackles that bind them to their summoner."
 #size 6
 #hp 150
 #prot 0
@@ -3759,11 +3859,405 @@
 #magicskill 5 4
 #end
 
+-- Jacob spells
+
+#newmonster
+#name "Absence Squid Spawnling"
+#spr1 "./MorvarchsMagic/unitAbsenceSquid.tga"
+#spr2 "./MorvarchsMagic/unitAbsenceSquid2.tga"
+#descr "The youngest of Abscense squids can still be summoned and bargained with beings of a terrestrial scale. With an offering of gems and a promise of constant consumption, one of these Children has been bound into service, but the alien being may leave at any time. Creatures of the Abscense constantly hunger, and their very touch drains the vitality of being of the terrestial sphere. Their scale in unimaginably large, and only the smallest of them can be safely summoned. They are used to more hostile environs than these, and are unperturbed by storms or seas."
+#gcost 0
+#hp 500
+#att 16
+#def 8
+#str 40
+#prec 12
+#prot 16
+#size 6
+#mr 20
+#mor 30
+#enc 1
+#mapmove 40
+#ap 10
+#eyes 2
+#voidsanity 25
+#miscshape
+#itemslots 61440
+#supplybonus -222
+#magicbeing
+#stormimmune
+#amphibian
+#flying
+#stormimmune
+#bluntres
+#pierceres
+#ambidextrous 8
+#spiritsight
+#siegebonus 50
+#popkill 50
+#fear 25
+#coldres 25
+#poisonres 25
+#voidret 100
+#allret 33
+#shockres 10
+#nametype 139
+#deserter 1
+#noleader
+#weapon 550
+#weapon 550
+#weapon 550
+#weapon 550
+#weapon 550
+#weapon 609
+#weapon 609
+#weapon 461 -- Swallow
+#clearmagic
+#custommagic 4352 100
+#custommagic 4352 100
+#custommagic 6400 100
+#custommagic 6400 100
+#startage 1000
+#maxage 50000
+#end
+
+#newmonster
+#name "Absence Levithan"
+#spr1 "./MorvarchsMagic/unitAbsenceLeviathan.tga"
+#spr2 "./MorvarchsMagic/unitAbsenceLeviathan.tga"
+#descr "Creatures of the Abscense constantly hunger, and their very touch drains the vitality of being of the terrestial sphere. Their scale in unimaginably large, and only the smallest of them can be safely summoned. They are used to more hostile environs than these, and are unperturbed by storms or seas. This Abscence Leviathan is a favoriote snack of the Abscence squids; or at least their children. It will serve in return for a constant supply of food, and safely from the greater beings out in the Absence. In the terrestial sphere it will use its great bulk to crush lesser beings and absorb their essence. It's hide is extremly thick, evolved for resisting the grasping clutches of being more potent than those found here."
+#gcost 0
+#hp 200
+#att 14
+#def 12
+#str 40
+#prec 12
+#prot 24
+#size 6
+#mr 18
+#mor 30
+#enc 1
+#mapmove 40
+#ap 10
+#eyes 4
+#voidsanity 20
+#supplybonus -80
+#miscshape
+#magicbeing
+#stormimmune
+#amphibian
+#flying
+#spiritsight
+#siegebonus 25
+#popkill 5
+#coldres 25
+#poisonres 25
+#voidret 100
+#allret 25
+#shockres 10
+#nametype 139
+#noleader
+#weapon 306 -- Weakness
+#weapon 306 -- Weakness
+#weapon 461 -- Swallow
+#trample
+#trampswallow
+#aciddigest 8
+#end
+
+#newmonster
+#name "Doom Spider"
+#spr1 "./MorvarchsMagic/unitDoomSpider.tga"
+#spr2 "./MorvarchsMagic/unitDoomSpider.tga"
+#drawsize -50
+#descr "The Doom Spider is a monstrous spider from an earlier era, when monsters and giants roamed the world. Fearsome, cunning and patient it claims to be lord of all spiders and can strike from the darkness with strong webs and lethal poison. Spiders come to serve it in allied dominion."
+#quadruped
+#gcost 0
+#hp 120
+#size 6
+#prot 16
+#mr 18
+#mor 30
+#str 18
+#att 15
+#def 13
+#prec 8
+#enc 2
+#mapmove 22
+#ap 24
+#noleader
+#maxage 5000
+#poisonres 25
+#eyes 8
+#forestsurvival
+#itemslots 12288
+#weapon 65 -- fangs
+#weapon 261 -- web
+#weapon 262 -- web spit
+#twiceborn 5769 -- Wight Beast
+#assassin
+#patience 2
+#scalewalls
+#stealthy 20
+#fear 10
+#darkvision 100
+#unsurr 2
+#nametype 126 -- machaka male
+#domsummon 2223
+#domsummon2 782
+#domsummon20 884
+#end
+
+#newmonster
+#name "Tentacle Portal"
+#spr1 "./MorvarchsMagic/unitTentacle.tga"
+#spr2 "./MorvarchsMagic/unitTentacle.tga"
+#descr "An elder being from the Absence has had its attention drawn to this battle. While the power used to attract it has not drawn its conscious interest, some of the smallest of its tentacles have come to seek prey. Because its attention is elsewhere, the tentacles use some eldritch manner of finding prey."
+#drawsize -50
+#gcost 0
+#hp 80
+#att 10
+#def 8
+#str 20
+#prec 0
+#prot 12
+#size 6
+#mr 20
+#mor 50
+#enc 1
+#mapmove 1
+#ap 10
+#supplybonus -20
+#blind
+#voidsanity 25
+#miscshape
+#magicbeing
+#stormimmune
+#amphibian
+#bluntres
+#pierceres
+#spiritsight
+#coldres 5
+#poisonres 25
+#voidret 100
+#allret 100
+#shockres 10
+#nametype 139
+#noleader
+#blink
+#weapon 550
+#weapon 609
+#end
+
+#newmonster
+#name "Absence Plasmid"
+#spr1 "./MorvarchsMagic/unitAbsenceJelly.tga"
+#spr2 "./MorvarchsMagic/unitAbsenceJelly2.tga"
+#descr "Creatures of the Abscense constantly hunger, and their very touch drains the vitality of being of the terrestial sphere. Their scale in unimaginably large, and only the smallest of them can be safely summoned. They are used to more hostile environs than these, and are unperturbed by storms or seas. This Abscence Plasmid ussually drifts through the empyreal seas, snagging what scraps it can. Being nearly mindless, it is easily drawn to the terrestial sphere and pressed into service. "
+#drawsize -70
+#gcost 0
+#hp 33
+#att 12
+#def 8
+#str 33
+#prec 0
+#prot 12
+#size 4
+#mr 14
+#mor 30
+#enc 1
+#mapmove 2
+#ap 10
+#supplybonus -20
+#blind
+#voidsanity 10
+#miscshape
+#magicbeing
+#stormimmune
+#amphibian
+#bluntres
+#pierceres
+#spiritsight
+#coldres 25
+#poisonres 25
+#voidret 100
+#allret 25
+#shockres 10
+#nametype 139
+#noleader
+#weapon 550
+#weapon 609
+#trample
+#montag 7005
+#end
+
+#newmonster
+#name "Absence  Plasmid"
+#spr1 "./MorvarchsMagic/unitAbsenceJellyTwo.tga"
+#spr2 "./MorvarchsMagic/unitAbsenceJellyTwo2.tga"
+#descr "Creatures of the Abscense constantly hunger, and their very touch drains the vitality of being of the terrestial sphere. Their scale in unimaginably large, and only the smallest of them can be safely summoned. They are used to more hostile environs than these, and are unperturbed by storms or seas. This Abscence Plasmid ussually drifts through the empyreal seas, snagging what scraps it can. Being nearly mindless, it is easily drawn to the terrestial sphere and pressed into service. "
+#drawsize -70
+#gcost 0
+#hp 33
+#att 12
+#def 8
+#str 33
+#prec 0
+#prot 12
+#size 4
+#mr 14
+#mor 30
+#enc 1
+#mapmove 2
+#ap 10
+#supplybonus -20
+#blind
+#voidsanity 10
+#miscshape
+#magicbeing
+#stormimmune
+#amphibian
+#bluntres
+#pierceres
+#spiritsight
+#coldres 25
+#poisonres 25
+#voidret 100
+#allret 25
+#shockres 10
+#nametype 139
+#noleader
+#weapon 550
+#weapon 609
+#trample
+#montag 7005
+#end
+
+#newmonster
+#name "Absence   Plasmid"
+#spr1 "./MorvarchsMagic/unitAbsenceJellyThree.tga"
+#spr2 "./MorvarchsMagic/unitAbsenceJellyThree2.tga"
+#descr "Creatures of the Abscense constantly hunger, and their very touch drains the vitality of being of the terrestial sphere. Their scale in unimaginably large, and only the smallest of them can be safely summoned. They are used to more hostile environs than these, and are unperturbed by storms or seas. This Abscence Plasmid usually drifts through the empyreal seas, snagging what scraps it can. Being nearly mindless, it is easily drawn to the terrestial sphere and pressed into service. "
+#drawsize -70
+#gcost 0
+#hp 33
+#att 12
+#def 8
+#str 33
+#prec 0
+#prot 12
+#size 4
+#mr 14
+#mor 30
+#enc 1
+#mapmove 2
+#ap 10
+#blind
+#voidsanity 10
+#miscshape
+#magicbeing
+#stormimmune
+#amphibian
+#bluntres
+#pierceres
+#spiritsight
+#coldres 25
+#poisonres 25
+#voidret 100
+#allret 25
+#shockres 10
+#nametype 139
+#noleader
+#weapon 550
+#weapon 609
+#trample
+#montag 7005
+#end
+
+-- Jacob Spells
+
+#newspell
+#copyspell 724 -- Pack of Wolves
+#name "Attract Plasmids"
+#descr "The caster opens a portal to a place of darkness, cold, and unimaginable hunger. They attract a few prey creatures and bind them to service, promising food and protection in return for service."
+#researchlevel 7
+#nreff 505
+#fatiguecost 2000
+#damage -7005
+#path 0 1
+#pathlevel 0 3 
+#path 1 5
+#pathlevel 1 1
+#end
+
+#newspell
+#copyspell 724 -- Pack of Wolves
+#name "Attract Abscence Leviathan"
+#descr "The caster opens a portal to a place of darkness, cold, and unimaginable hunger. They bargain with a being with-in, mighty in stature. The bargain requires food, lives, gems, and... protection?"
+#researchlevel 8
+#nreff 1
+#fatiguecost 3000
+#damagemon "Absence Levithan"
+#path 0 1
+#pathlevel 0 4
+#path 1 5
+#pathlevel 1 2
+#end
+
+#newspell
+#copyspell 91 -- Kill Caster
+#name "Kill Caster Defence Negates"
+#spec 36028797020012672 -- AN, Internal damage, Def Negates
+#end
+
+#newspell
+#copyspell 742 -- Revive Bane
+#name "Unleash Child of the Absence"
+#descr "The caster opens a portal to a place of darkness, cold, and unimaginable hunger. They beseech a great predator for a boon. The terrible being that emerges demands sacrifices from the Awakening God, but will consume their enemies in return for great sacrifices of flesh and food. The being starts with their summoner, unless the summoner can avoid their grasping tentacles quickly enough."
+#researchlevel 9
+#nreff 1
+#fatiguecost 9900
+#damagemon "Absence Squid Spawnling"
+#path 0 1
+#pathlevel 0 7
+#path 1 5
+#pathlevel 1 3
+#nextspell "Kill Caster Defence Negates"
+#end
+
+#newspell
+#copyspell 1094 -- Call horror
+#name "Attract Predator from Beyond"
+#descr "The caster calls to a place of darkness, cold, and unimaginable hunger. They attract a glimer of notice, and from portals emerge the grasping tentacles of some greater being; eager to feed upon all they find."
+#school 1
+#researchlevel 6
+#nreff 5
+#fatiguecost 300
+#damagemon "Tentacle Portal"
+#path 0 1
+#pathlevel 0 3
+#path 1 5
+#pathlevel 1 1
+#end
+
+#newspell
+#copyspell 742 -- Revive Bane
+#name "Doom Upon Eight Legs"
+#descr "The caster bargains with an ancient spider and strikes a deal for its service. The terrible creature can easily strike at the foes of the caster from the shadows, and commands all beings of 8 legs."
+#researchlevel 8
+#nreff 1
+#fatiguecost 3000
+#damagemon "Doom Spider"
+#path 0 6
+#pathlevel 0 5
+#path 1 0
+#pathlevel 1 4
+#end
 
 -- End Monsters --
 -- New Spells --
 
-#newspell 
+#newspell
 #name "Frostfire"
 #descr  "This spell rains down cold flames upon the enemy. It often sets the enemy on fire"
 #effect 2
@@ -3779,30 +4273,31 @@
 #pathlevel 0 3
 #path 1 2
 #pathlevel 1 1 
-#damage 15
+#damage 2014
 #school 2
 #researchlevel 6
 #nextspell 605
 #end
 
-#newspell
-#name "Ice Tornado"
-#descr  "Ice tornado for the Elemental Tornado"
-#effect 2
-#school -1
-#aoe 1
-#precision 5
-#nreff 1
-#casttime 100
-#fatiguecost 0
-#range 50
-#spec 576
-#damage 50
-#end
+-- #newspell
+-- #name "Ice Tornado"
+-- #descr  "Ice tornado for the Elemental Tornado"
+-- #effect 2
+-- #school -1
+-- #aoe 1
+-- #precision 5
+-- #nreff 1
+-- #casttime 100
+-- #fatiguecost 0
+-- #range 50
+-- #spec 576
+-- #damage 50
+-- #end
+
 
 #newspell
 #name  "Elemental Tornado"
-#descr  "Unleashes a Howling tornado of ice anf flame, engulfing a single space in elemental fury"
+#descr  "Unleashes a Howling tornado of virulent energy, engulfing a single space in elemental fury. The blast will spread to nearby targets who may erupt into frozen flames."
 #effect 2
 #researchlevel 7
 #school 2
@@ -3816,9 +4311,9 @@
 #casttime 100
 #fatiguecost 50
 #range 50
-#spec 96
-#damage 50
-#nextspell "Ice Tornado"
+#spec 2656
+#damage 150
+#nextspell "Frostfire"
 #end
 
 #newspell
@@ -3830,9 +4325,9 @@
 #path 1 2
 #pathlevel 0 2
 #pathlevel 1 1
-#fatiguecost 500
+#fatiguecost 800
 #effect 10001
-#nreff 5
+#nreff 506
 #damagemon "Frostfire Wraith"
 #end
 
@@ -3840,14 +4335,14 @@
 #name "Frostfire Wraith Haunt"
 #descr "Summons a large group of Frostfire Wraiths, ghostly figures cloaked in burning cold, wielding deadly axes"
 #school 0
-#researchlevel 7
+#researchlevel 8
 #path 0 0
 #path 1 2
 #pathlevel 0 4
 #pathlevel 1 3
 #fatiguecost 2500
 #effect 10001
-#nreff 30
+#nreff 2017
 #damagemon "Frostfire Wraith"
 #end
 
@@ -3870,7 +4365,7 @@
 #copyspell 608
 #name "Jinn Illusions"
 #school -1
-#aoe 1
+#aoe 0
 #end
 
 #newspell
@@ -3879,7 +4374,7 @@
 #descr "Breaks targets armor, aoe 1"
 #school -1
 #researchlevel 0
-#aoe 1
+#aoe 0
 #effect 123
 #damage 100 -- Broken Armor
 #spec 545259520 -- UW OK, no effect on lifeless
@@ -3912,16 +4407,24 @@
 #path 1 1
 #pathlevel 0 3
 #pathlevel 1 2
-#aoe 5
+#aoe 1002
 #nreff 1
 #fatiguecost 100
 #range 10
 #nextspell "Shed Armor"
 #end
 
+#newmonster 7028
+#copystats 3341
+#copyspr 3341
+#gcost 0
+#name "Jiniri"
+#descr "Jiniri Queens are descendant of the Sultans of Old Ubar. This one is magically created, but its blood is pure and runs thick with the magic of the Jinnun. All Jinnun have bodies which are insubstantial, almost transparent and ever young. They are gifted with flight and are innately skilled in the magic of the Jinnun. They can obfuscate their surroundings and hide their entire entourage with illusions and tricks of the mind. Their weaknesses are that they suffer pain if touched by cold iron, or salt. They become weaker in lands of Drain."
+#end
+
 #newspell
-#name "Become Janni"
-#descr "The caster attempts to turn themselves into the form of a great janni, gaining great magical power"
+#name "Become Jiniri"
+#descr "The caster attempts to turn themselves into the form of a great jiniri, gaining great personal power"
 #school 1
 #researchlevel 7
 #path 0 0
@@ -3930,7 +4433,7 @@
 #pathlevel 1 2
 #effect 10130
 #fatiguecost 2000
-#damage 3341
+#damage 7028
 #nreff 1
 #spec 536870912
 #end
@@ -3954,21 +4457,30 @@
 #end
 
 #newspell
-#name "Summon Shrieking Maulers"
-#descr "Summons a small group of shrieking maulers, violent savage beastial flyers that love to jump into the fray and tear their enemies apart with furious abandon"
-#school 0
-#researchlevel 4
-#path 0 1
-#path 1 0
-#pathlevel 0 2
-#pathlevel 1 2
-#fatiguecost 500
-#effect 10001
-#nreff 5
-#damagemon "Shrieking Mauler"
+#copyspell 742 -- Revive Bane
+#name "Shrieking Mauler Chief"
+#damagemon "Shrieking Mauler Chief"
+#school -1
 #end
 
 #newspell
+#name "Summon Shrieking Maulers"
+#descr "Summons a tribe of shrieking maulers, violent savage beastial flyers that love to jump into the fray and tear their enemies apart with furious abandon."
+#school 0
+#researchlevel 5 -- from 4
+#path 0 1
+#path 1 0
+#pathlevel 0 3 -- From 2, these are super good units.
+#pathlevel 1 2
+#fatiguecost 3000
+#effect 10001
+#nreff 15
+#damagemon "Shrieking Mauler"
+#nextspell "Shrieking Mauler Chief"
+#end
+
+#newspell
+#copyspell 779 -- Summon Water Elemental
 #name "Summon Smog Elemental"
 #descr "Summons a smog elemental, a deadly animate cloud of smoke that slowly suffocates its foes to death"
 #school 0
@@ -3978,7 +4490,6 @@
 #pathlevel 0 3
 #pathlevel 1 1
 #fatiguecost 1000
-#effect 10001
 #nreff 1
 #damage 7000
 #end
@@ -3995,7 +4506,7 @@
 #fatiguecost 200
 #damagemon "Shrieking Mauler"
 #effect 43
-#nreff 2010
+#nreff 1006
 #end
 
 #newspell
@@ -4016,7 +4527,7 @@
 #newspell
 #name "Large Area Explosion"
 #effect 2
-#damage 1010
+#damage 1006
 #spec 549755813952
 #aoe 2002
 #casttime 100
@@ -4060,14 +4571,22 @@
 #pathlevel 1 2
 #effect 109
 #fatiguecost 40
-#spec 1188967893811855488
+#spec 1188967893811855504--1188967893811855488
 #range 50
 #end
 
 #newspell
-#copyspell 542
+#copyspell 542 -- Splash of Molten Metal
 #end
 
+#newspell
+#name "Small Area Explosion"
+#effect 2
+#damage 1006
+#spec 549755813952
+#aoe 1
+#casttime 100
+#end
 
 #newspell
 #name "Nova Explosion"
@@ -4076,10 +4595,12 @@
 #aoe 5050
 #spec 16480
 #explspr 10113
+#nextspell "Small Area Explosion"
 #end
 
 #newspell
 #name "Nova"
+#descr "The caster focuses their magic into a small bead which they hurl at the enemy army. Upon arriving, the bead detonates in a gout of fire and kinetic force."
 #path 0 0
 #pathlevel 0 5
 #path 1 3
@@ -4099,8 +4620,8 @@
 #end
 
 #newspell
-#name "Summon Azer"
-#descr "Summons an Azer, a potent magic item creator skilled in Earth and Fire, and often other magics"
+#name "Attract Azer"
+#descr "Beckons and then bargains with an Azer, a potent magic item creator skilled in Earth and Fire, and often other magics. In return for gems and a honoured place in the new Pantokrator's court they will serve for the duration of the Ascension War."
 #school 4
 #researchlevel 7
 #path 0 0
@@ -4161,12 +4682,12 @@
 #name "Summon Magma Dragon"
 #descr "Summons a Magma Dragon, a brutish, wingless lizard of fire and stone"
 #school 4
-#researchlevel 7
+#researchlevel 8
 #path 0 3
 #path 1 0
 #pathlevel 0 5
 #pathlevel 1 2
-#fatiguecost 3000
+#fatiguecost 3500
 #effect 10021
 #nreff 1
 #damagemon "Magma Dragon"
@@ -4182,14 +4703,14 @@
 #pathlevel 0 4
 #pathlevel 1 2
 #nreff 1
-#aoe 1009
+#aoe 1002
 #effect 24
-#damage 2005
+#damage 2004
 #range 100
-#fatiguecost 99
+#fatiguecost 50
 #prec 5
 #range 25
-#spec 1152921504606994496
+#spec 1152921504606994528 --1152921504606994496
 #end
 
 #newspell
@@ -4199,7 +4720,7 @@
 #effect 11
 #nreff 1
 #damage 1125899906842624 -- Soul Annihilation
-#spec 36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
+#spec 36046389213413504--36028797027369088 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
 #end
 
 #newspell 
@@ -4221,14 +4742,14 @@
 #name "Summon Star Archon"
 #descr "The Caster beseechers the heavens for a general to lead their armies, and the heavens return in the form of a Star Archon"
 #school 0
-#researchlevel 5
+#researchlevel 6
 #path 0 4
 #path 1 0
 #pathlevel 0 4
 #pathlevel 1 2
 #nreff 1
 #effect 10021
-#fatiguecost 2500
+#fatiguecost 2000
 #damagemon "Star Archon"
 #end
 
@@ -4242,10 +4763,10 @@
 #end
 
 #newspell
-#name "Summon Archon Army"
-#descr "The Caster beseechers the heavens for an army, and is transported to a province of their choice, accompanied by a force of legion archons"
+#name "Request Divine Intervention"
+#descr "The Caster beseechers the heavens for aid, and is transported to any province of their choice, accompanied by a strike team of legion archons"
 #school 0
-#researchlevel 6
+#researchlevel 8
 #path 0 4
 #path 1 0
 #pathlevel 0 4
@@ -4253,7 +4774,7 @@
 #nreff 1
 #effect 10019
 #fatiguecost 4000
-#provrange 5
+#provrange 9
 #nextspell "Archon Army"
 #end
 
@@ -4268,17 +4789,18 @@
 
 #newspell
 #name "Starburst"
-#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a little fatigue damage"
+#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a fatigue damage"
 #precision -3
 #flightspr 141
 #school 2
-#researchlevel 3
+#researchlevel 4
 #path 0 4
 #path 1 0
 #pathlevel 0 2
 #pathlevel 1 1
-#effect 2
-#fatiguecost 40
+--#effect 2
+#effect 109
+#fatiguecost 30
 #damage 1
 #nreff 2020
 #spec 16512
@@ -4288,21 +4810,22 @@
 
 #newspell
 #name "Starbloom"
-#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a little fatigue damage"
+#descr "The caster projects a huge swarm of sparking energy at the enemy army. Each projectile burns a little even through armor, and does a fatigue damage"
 #precision -3
 #flightspr 141
 #school 2
-#researchlevel 6
+#researchlevel 7
 #path 0 4
 #path 1 0
 #pathlevel 0 4
 #pathlevel 1 2
-#effect 2
-#fatiguecost 80
+--#effect 2
+#effect 109
+#fatiguecost 60
 #damage 1
 #nreff 5050
 #spec 16512
-#range 50
+#range 5040
 #nextspell  "Starburst Fatigue"
 #end
 
@@ -4310,7 +4833,7 @@
 #name "Summon Celestial Librarian"
 #descr "Summons a Celestial Librarian, a sage of the heavens that specializes in aiding fellow mages in research"
 #school 5
-#researchlevel 5
+#researchlevel 6
 #path 0 0
 #path 1 4
 #pathlevel 0 4
@@ -4325,7 +4848,7 @@
 #name "Summon Celestial Sage"
 #descr "Summons a Celestial Sage, a greater sage of the heavens capable of leading grand research projects"
 #school 5
-#researchlevel 5
+#researchlevel 8
 #path 0 0
 #path 1 4
 #pathlevel 0 5
@@ -4339,7 +4862,7 @@
 #newspell
 #copyspell 655
 #name "Cracking Vines"
-#descr "The caster summons a violent burst of vines that worm their way into the stone of a magic being to tear it apart from the inside out"
+#descr "The caster summons a violent burst of vines that worm their way into the stone of an unliving being to tear it apart from the inside out"
 #range 75
 #spec 9453696
 #researchlevel 6
@@ -4372,7 +4895,7 @@
 #path 1 6
 #pathlevel 0 2
 #pathlevel 1 2
-#nreff 5
+#nreff 505
 #effect 10001
 #fatiguecost 1000
 #damagemon "Ankheg"
@@ -4402,47 +4925,55 @@
 #researchlevel 6
 #damagemon "Shambling Mound"
 #fatiguecost 2000
-#nreff 5
+#nreff 1003
 #path 0 0
 #path 1 6
 #pathlevel 0 4
 #pathlevel 1 2
 #end
+ 
 
-#newspell
-#name "Hatching"
-#effect 1
-#damage -7000
-#researchlevel 12
-#school -2
-#end 
+--#newspell
+--#name "Spawning"
+--#effect 2
+--#damage 999
+--#researchlevel 12
+--#school -2
+--#spec 118912
+--#flyspr -1
+--#explspr -1
+--#end
 
-#newspell
-#name "Spawning"
-#effect 2
-#damage 999
-#researchlevel 12
-#school -2
-#spec 1152921504606867584
-#end
+--#newspell -- HEART currently broken.
+--#copyspell 165
+--#name "Infestation"
+--#descr "HEART==DOESNT WORK. This rather horrific magic spawns a large group of insect eggs within a group of unsuspecting allied soldiers. If they fail a magic resistance check, the eggs will hatch, bursting into large amounts of giant insects and inevitably killing the hosts in the process."
+--#effect 17
+--#damage 4
+--#path 0 6
+--#path 1 0 
+--#pathlevel 0 4
+--#pathlevel 1 2
+--#fatiguecost 0--100
+--#aoe 10
+--#school 4
+--#researchlevel 0--5
+--#spec 1152921505164705920
+--#range 15
+--#flyspr -1
+--#explspr -1
+--#end
 
-#newspell
-#name "Infestation"
-#descr "This rather horrific magic spawns a large group of insect eggs within a group of unsuspecting allied soldiers. If they fail a magic resistance check, the eggs will hatch, bursting into large amounts of giant insects and inevitably killing the hosts in the process"
-#effect 13
-#damage 1
-#nextspell "Spawning"
-#path 0 6
-#path 1 0
-#pathlevel 0 4
-#pathlevel 1 2
-#fatiguecost 100
-#aoe 10
-#school 4
-#researchlevel 5
-#spec 541081728
-#range 15
-#end
+--#newspell
+--#name "Hatching"
+--#effect 1
+--#damage -7000
+--#range 5
+--#researchlevel 12
+--#school -2
+--#flyspr -1
+--#explspr -1
+--#end
 
 #newspell
 #name "Summon Great Beetles"
@@ -4473,7 +5004,7 @@
 #descr "Summons a large force of Great Beetles led by a General"
 #effect 10001
 #damage -7001
-#nreff 20
+#nreff 1016
 #fatiguecost 3000
 #path 0 6
 #path 1 0
@@ -4496,7 +5027,7 @@
 #path 1 0
 #pathlevel 0 2
 #pathlevel 1 2
-#fatiguecost 2500
+#fatiguecost 1500
 #end
 
 #newspell 
@@ -4508,7 +5039,9 @@
 #researchlevel 6
 #path 1 5
 #pathlevel 1 1
-#fatiguecost 30
+#aoe 1002
+#damage 2014
+#fatiguecost 20
 #end
 
 #newspell
@@ -4517,13 +5050,13 @@
 #descr "The caster summons a small group of powerful fiery undead warriors."
 #effect 1
 #school 0
-#researchlevel 3
+#researchlevel 4
 #path 0 0
-#pathlevel 0 4
+#pathlevel 0 1
 #path 1 5
 #pathlevel 1 1
 #nreff 2
-#fatiguecost 400
+#fatiguecost 100
 #damagemon "Risen Warrior"
 #end
 
@@ -4538,7 +5071,7 @@
 #pathlevel 0 3
 #pathlevel 1 1
 #damagemon "Risen Sharpshooter"
-#fatiguecost 400
+#fatiguecost 300
 #nreff 1
 #end
 
@@ -4564,17 +5097,17 @@
 #descr "Summons an ancient undead king of the desert"
 #nreff 1
 #school 0
-#researchlevel 8
+#researchlevel 7
 #path 0 0
 #path 1 5
 #pathlevel 0 4
 #pathlevel 1 3
-#fatiguecost 4000
+#fatiguecost 3000
 #end
 
 #newspell
 #name "Create Temple of Embalming"
-#descr "The caster raises a horde of zombies to construct a great temple of enbalming. Death mages will be able to enter the tower and be turned into mummies"
+#descr "The caster raises a horde of zombies to construct a great temple of enbalming. Death mages will be able to enter the tower and be turned into mummies so long as an embalming mummy is present and the province isn't under siege."
 #effect 10084
 #damage 550
 #friendlyench 1
@@ -4604,6 +5137,7 @@
 
 #newspell
 #name "Supersonic Slash"
+#descr "The caster flings a flensing blade of wind at his targets. This blade will slice through armor, and leave anyont struck to bleed out, however it can be dodged by the swift."
 #aoe 1
 #effect 2
 #damage 25
@@ -4629,10 +5163,11 @@
 #aoe 0
 #end
 
-#newspell 
+#newspell -- Added description, reduced size.
 #copyspell "Supersonic Slash"
 #name "Supersonic Wind"
-#aoe 10
+#descr "The caster flings a massive blade of wind at his foes. This blade will slice through armor, and leave anyont struck to bleed out, however it can be dodged by the swift."
+#aoe 1004
 #damage 20
 #pathlevel 0 4
 #pathlevel 1 3
@@ -4647,7 +5182,7 @@
 
 #newspell 
 #name "Summon Condor Men"
-#descr "The caster bribes a group of condormen, extremely fast flying bird men"
+#descr "The caster bribes a group of condormen, extremely fast flying bird men. They will require pay in gold."
 #school 0
 #researchlevel 1
 #path 0 2
@@ -4656,13 +5191,13 @@
 #pathlevel 1 1
 #nreff 2010
 #effect 10001
-#fatiguecost 500
+#fatiguecost 1000
 #damagemon "Condor Man"
 #end
 
 #newspell
 #name "Summon Condor Lord"
-#descr "The Caster ililicits the services of a condor lord, an extremely fast cousin of the caelumites"
+#descr "The Caster elicits the services of a condor lord, an extremely fast cousin of the caelumites"
 #school 0
 #researchlevel 3
 #path 0 2
@@ -4679,7 +5214,7 @@
 #name "Condor Army"
 #researchlevel 12
 #school -2
-#nreff 5050
+#nreff 4040
 #effect 10001
 #damagemon "Condor Man"
 #end
@@ -4693,7 +5228,7 @@
 #path 1 1
 #pathlevel 0 2
 #pathlevel 1 1
-#nreff 3
+#nreff 1
 #effect 10021
 #damagemon "Condor Lord"
 #fatiguecost 2000
@@ -4711,7 +5246,7 @@
 #pathlevel 1 1
 #effect 10130
 #fatiguecost 500
-#damage 7006
+#damage 7031
 #nreff 1
 #spec 536870912
 #end
@@ -4785,7 +5320,7 @@
 #newspell
 #copyspell 995 -- Astral Window
 #name "Brewing Storm"
-#descr "The caster crushes a butterfly, and in a province of their choice a gigantic storm begins to rage for the next month."
+#descr "The caster crushes a butterfly, and in a province of their choice a gigantic storm begins to rage."
 #researchlevel 5
 #path 0 1
 #pathlevel 0 3
@@ -4800,7 +5335,7 @@
 #newspell
 #copyspell 498
 #name "Mud Globs"
-#descr "The caster hurls multiple clumps of sticky mud. Units hit will likely be slowed significantly."
+#descr "The caster hurls multiple clumps of sticky mud. Units hit will likely be slowed significantly, though they won't take any damage."
 #researchlevel 4
 #school 4
 #path 0 2
@@ -4861,7 +5396,7 @@
 #path 1 3
 #pathlevel 0 3
 #pathlevel 1 3
-#fatiguecost 2000
+#fatiguecost 2500
 #effect 10021
 #nreff 1
 #damagemon "Mud Lord"
@@ -4916,7 +5451,7 @@
 #newspell
 #copyspell 635
 #name "Mold Shell"
-#descr "The caster seals a group of soldiers in a layer of stone, improving their resistance to most forms of mundane damage"
+#descr "The caster seals a group of soldiers in a layer of stone, improving their resistance to most forms of mundane damage."
 #researchlevel 6
 #path 0 3
 #path 1 2
@@ -4988,7 +5523,7 @@
 #fatiguecost 30
 #flightspr 10307
 #explspr 10219
-#aoe 5d
+#aoe 5
 #range 5045
 #spec 1152921504606996480
 #end
@@ -5035,8 +5570,8 @@
 #copyspell "Unleashed Will"
 #name "Psychic Ascension"
 #descr "The caster unleashes a vast amount of mental power, imbuing a small group of nearby troops with significant mental defenses, partially phasing them out of reality, and allowing them to move in all directions as they wish"
-#aoe 5
-#fatiguecost 200
+#aoe 1006
+#fatiguecost 99
 #researchlevel 9
 #nextspell "Phase through Reality"
 #range 5
@@ -5048,9 +5583,9 @@
 #damagemon "Floating Neuron"
 #effect 10001
 #school 0
-#researchlevel 6
+#researchlevel 5
 #nreff 1
-#fatiguecost 700
+#fatiguecost 300
 #path 0 2
 #path 1 4
 #pathlevel 0 1
@@ -5064,8 +5599,8 @@
 #effect 10021
 #school 0
 #researchlevel 7
-#nreff 2
-#fatiguecost 3000
+#nreff 1
+#fatiguecost 2500
 #path 0 2
 #path 1 4
 #pathlevel 0 3
@@ -5079,8 +5614,8 @@
 #effect 10021
 #school 5
 #researchlevel 8
-#nreff 2
-#fatiguecost 4000
+#nreff 1
+#fatiguecost 1000
 #path 0 2
 #path 1 4
 #pathlevel 0 4
@@ -5109,9 +5644,9 @@
 #effect 1
 #damagemon "Void Gem"
 #school 0
-#researchlevel 6
+#researchlevel 7
 #nreff 1
-#fatiguecost 200
+#fatiguecost 300
 #path 0 4
 #path 1 2
 #pathlevel 0 4
@@ -5120,14 +5655,15 @@
 #end
 
 #newspell
-#name "Summon Intellect Hound"
-#descr "The caster summons an intellect hound to serve him. Even though only one hound will answer his call, a whole pack will arrive when that leader enters combat"
+#copyspell 905 -- Behemoth
+#name "Entice Intellect Hound Alpha"
+#descr "The caster uses a set of magical enchantments and a few magical gems to lure an Intellect Hound pack to serve him."
 #effect 1
-#damagemon "Intellect Hound"
+#damagemon "Intellect Hound Alpha"
 #school 4
 #researchlevel 5
 #nreff 1
-#fatiguecost 300
+#fatiguecost 800
 #path 0 4
 #path 1 2
 #pathlevel 0 2
@@ -5158,7 +5694,7 @@
 #path 0 4
 #path 1 2
 #pathlevel 0 3
-#pathlevel 1 3 
+#pathlevel 1 2 -- Lowered by 1
 #nreff 1
 #effect 108
 #range 50
@@ -5167,7 +5703,7 @@
 #flightspr -1
 #explspr 10200
 #damage -11
-#fatiguecost 50
+#fatiguecost 30
 #spec 17592194449536 -- AN, Def Negates, UW ok
 #end
 
@@ -5262,13 +5798,13 @@
 #newspell
 #copyspell 558 -- Cleansing Water
 #name "Water of Acheron"
-#descr "The caster releases a torrent of water drawn from Acheron, the River of Pain. The water will cause those it strikes to experience significant pain, and its almost impossible to concentrate on spells through the pain"
+#descr "The caster releases a torrent of water drawn from Acheron, the River of Pain. The water will cause those it strikes to experience significant pain, and its almost impossible to act through the pain"
 #path 1 5
 #pathlevel 0 3
 #pathlevel 1 2
 #researchlevel 6
 #damage 15
-#aoe 1005
+#aoe 1004
 #spec 64 -- AP
 #nextspell "Acheron Pain"
 #end
@@ -5298,7 +5834,7 @@
 #path 1 5
 #pathlevel 0 3
 #pathlevel 1 3
-#fatiguecost 800
+#fatiguecost 1400
 #effect 10001
 #nreff 1
 #damagemon "Shard of Oceanus"
@@ -5313,7 +5849,7 @@
 #path 1 5
 #pathlevel 0 3
 #pathlevel 1 1
-#fatiguecost 2500
+#fatiguecost 1800 -- From 25, to match Naiad Warriors
 #effect 10001
 #nreff 15
 #damagemon "Kokthynid"
@@ -5322,7 +5858,7 @@
 #newspell
 #copyspell 1009
 #name "Extract of Lethe"
-#descr "This ritual immerses an undead in a specially prepared pool of waters of lethe, curing it of all mental ills. This is an extremely costly ritual, but will work on great undead"
+#descr "This ritual immerses an undead in a specially prepared pool of waters of lethe, curing it of all mental ills. This is an extremely costly ritual, but will work on otherwise permanently injured undead."
 #path 0 2
 #path 1 5
 #pathlevel 0 3
@@ -5354,8 +5890,8 @@
 #descr "The caster summons a flood of drowned souls from the deeps, spiritlike undead that can drown with a touch"
 #pathlevel 0 3
 #pathlevel 1 3
-#researchlevel 6
-#nreff 2015
+#researchlevel 7
+#nreff 2014
 #end
 
 #newspell
@@ -5380,9 +5916,9 @@
 #effect 10001
 #pathlevel 0 3
 #pathlevel 1 3
-#researchlevel 7
+#researchlevel 8
 #nreff 30
-#fatiguecost 6000
+#fatiguecost 5000
 #end
 
 #newspell
@@ -5402,7 +5938,7 @@
 
 #newspell
 #name "Summon Boatman"
-#descr "The caster summons a small group of drowned sirens, haunting singers of the deep that drown men with their songs"
+#descr "The caster summons a boatman. An enigmatic being that patrols the rivers of the underworld aboad their barges. They can lead a Necromancer through the Stygian Paths more safely that would be otherwise possible."
 #effect 10001
 #path 0 5
 #path 1 2
@@ -5410,7 +5946,7 @@
 #pathlevel 1 2
 #researchlevel 6
 #nreff 1
-#fatiguecost 2000
+#fatiguecost 1200
 #damagemon "Boatman"
 #school 0
 #end
@@ -5447,11 +5983,11 @@
 #effect 10021
 #path 0 2
 #path 1 6
-#pathlevel 0 1
-#pathlevel 1 1
+#pathlevel 0 3
+#pathlevel 1 2
 #researchlevel 7
 #nreff 1
-#fatiguecost 1500
+#fatiguecost 1700
 #damagemon "Frost Worm"
 #school 0
 #end
@@ -5466,7 +6002,7 @@
 #pathlevel 0 2
 #pathlevel 1 1
 #effect 10130
-#fatiguecost 200
+#fatiguecost 400
 #damagemon "Triton Mage"
 #nreff 1
 #spec 536870912
@@ -5484,6 +6020,7 @@
 #newspell
 #copyspell 712
 #name "Northern Vines"
+#descr "The caster animates the frozen vines of the North to ensnare their foes. The fines will be more difficult to escape in lands of growth."
 #path 1 2
 #pathlevel 0 2
 #pathlevel 1 2
@@ -5503,7 +6040,7 @@
 #researchlevel 6
 #school 0
 #effect 10001
-#fatiguecost 25
+#fatiguecost 2500r
 #damagemon "Froghemoth"
 #end
 
@@ -5521,7 +6058,7 @@
 #aoe 5
 #range 1007
 #fatiguecost 10
-#casttime 50
+#casttime 100 -- From 50, only touch spells are 50
 #spec 1099511627840
 #end
 
@@ -5542,14 +6079,14 @@
 #name "Flensing"
 #descr "The caster channels a violent burst of sand, scouring a small area clean of anything not as hard as stone"
 #effect 2
-#damage 1025
+#damage 3014
 #school 2
 #researchlevel 7
 #path 0 3
 #path 1 1
 #pathlevel 0 2
 #pathlevel 1 2
-#aoe 3
+#aoe 2
 #range 5050
 #fatiguecost 10
 #casttime 100
@@ -5560,7 +6097,7 @@
 #copyspell "Whirling Sands"
 #name "Scouring Winds"
 #descr "The caster churns up a large storm cloud of biting sand that will rage for a short while"
-#aoe 15
+#aoe 1006
 #pathlevel 0 3
 #pathlevel 1 3
 #researchlevel 6
@@ -5575,7 +6112,8 @@
 #effect 9002
 #pathlevel 0 4
 #pathlevel 0 3
-#researchlevel 7
+#researchlevel 8
+#fatiguecost 200
 #end
 
 #newspell
@@ -5587,9 +6125,9 @@
 #path 1 1
 #pathlevel 0 3
 #pathlevel 1 2
-#fatiguecost 300
+#fatiguecost 100
 #effect 1
-#nreff 10001
+#nreff 1
 #damage 7022
 #range 5
 #end
@@ -5629,7 +6167,7 @@
 #path 1 3
 #pathlevel 0 2
 #pathlevel 1 2
-#fatiguecost 50
+#fatiguecost 30
 #aoe 5
 #range 5
 #end
@@ -5639,7 +6177,7 @@
 #descr "The caster animates a pile of specially forged blades, that will attempt to cut the down the caster's enemies"
 #effect 1
 #school 3
-#researchlevel 5
+#researchlevel 6 -- From 5, to match Elemental spam. These things are strong
 #damagemon "Animated Sword"
 #path 0 1
 #path 1 3
@@ -5671,13 +6209,14 @@
 #researchlevel 12
 #school -2
 #effect 2
-#damage 2
-#spec 128
+#damage 1003 -- 1003 from 2
+#spec 64 
+#aoe 1
 #end
 
 #newspell
 #name "Sonic Boom"
-#descr "The caster rends the air, creating an almighty sound that leaves those close to the source stunned and wounded"
+#descr "The caster rends the air, creating an almighty sound that leaves those close to the source stunned and battered"
 #effect 128
 #damage 5
 #path 0 1
@@ -5713,9 +6252,9 @@
 #path 1 3
 #pathlevel 0 2
 #pathlevel 1 2
-#nreff 30
+#nreff 2026
 #school 3
-#researchlevel 3
+#researchlevel 5
 #fatiguecost 2000
 #end
 
@@ -5761,7 +6300,7 @@
 #newspell
 #name "Crystalline Paralysis"
 #effect 66
-#damage 10
+#damage 5
 #school -2
 #end
 
@@ -5769,6 +6308,7 @@
 #copyspell 616
 #name "Crystal Grasp"
 #nextspell "Crystalline Paralysis"
+#descr "The caster reaches into the depths of the earth, and draws them forth to support and paralyze his foes. Flying enemies will be able to avoid the effect."
 #path 1 4
 #pathlevel 1 1
 #researchlevel 4
@@ -5780,13 +6320,14 @@
 #descr "The caster approaches an alightment of singing stones, strange semi sentient rocks that can aid a communion of mages in combat. The stones are bribed to be placed under the command of a mage, and will aid in defending the province from intruders"
 #effect 10001
 #school 5
-#researchlevel 4
+#researchlevel 7
 #path 0 3
 #pathlevel 0 2
 #path 1 4
 #pathlevel 1 2
 #nreff 4
-#fatiguecost 800
+#damagemon "Singing Stone"
+#fatiguecost 2200
 #end
 
 #newspell
@@ -5800,9 +6341,9 @@
 #pathlevel 0 2
 #pathlevel 1 2
 #school 5
-#researchlevel 3
+#researchlevel 7
 #damagemon "Resonant Crystal"
-#fatiguecost 1
+#fatiguecost 200
 #end
 
 #newspell
@@ -5810,7 +6351,7 @@
 #name "Summon Crystal Power"
 #descr "The caster floods the battlefield with an immense surge of magic, causing all mages on the battlefield to become more powerful"
 #aoe 666
-#fatiguecost 500
+#fatiguecost 400
 #researchlevel 9
 #path 0 4
 #path 1 3
@@ -5830,7 +6371,7 @@
 #school 1
 #researchlevel 6
 #fatiguecost 200
-#nreff 1007
+#nreff 1005
 #range 5
 #end
 
@@ -5843,9 +6384,10 @@
 #path 1 3
 #pathlevel 0 3
 #pathlevel 1 2
-#researchlevel 4
+#researchlevel 5
 #nreff 1
-#fatiguecost 700
+#fatiguecost 900
+#damagemon "Shard Thrower"
 #end
 
 #newspell
@@ -5883,7 +6425,7 @@
 #descr "The caster sends a hail of crystal shards to impact in a province of their choice, where they will quickly spread to nearby villages and infect a group."
 #effect 10038
 #damagemon "Faceted"
-#nreff 2010
+#nreff 2014
 #school 5
 #path 0 4
 #path 1 3
@@ -5913,7 +6455,7 @@
 #newspell
 #copyspell 535
 #name "Baneful Wind"
-#descr "The caster hurls many whirling blades infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less hearty units and will often cause their victims to start rapidly aging"
+#descr "The caster hurls many whirling blades infused with deathly enemy towards enemy units. The shards are not too powerful, but can severely injure less armored units and will often cause their victims to start rapidly aging"
 #spec 1152922604120571968
 #path 1 5
 #pathlevel 1 2
@@ -5971,7 +6513,7 @@
 #newspell
 #copyspell 1106
 #name "Empower Bones"
-#descr "The caster rapidly increases the strength of the bones of the army, causing effected soldiers to strike with great force. This does not improve the hardness of the bones, and unlucky soldiers might "
+#descr "The caster rapidly increases the strength of the bones of the army, causing effected soldiers to strike with great force. This does not improve the hardness of the bones, and unlucky soldiers might suffer injury."
 #school 4
 #researchlevel 7
 #path 0 3
@@ -5983,7 +6525,7 @@
 
 #newspell
 #name "Unbury Spiker"
-#descr "X"
+#descr "Occasionally huge bones are found protruding from the earth after earthquakes or during mining excavations. The bones can be animated and are difficult to destroy, clubbing enemies with giant spike covered tails."
 #effect 10001
 #path 0 3
 #path 1 5
@@ -5997,11 +6539,11 @@
 #end
 
 #newspell
-#name "Unbury the dead"
-#descr "The caster pulses a dirge for the dead through the ground, causing the bones of long dead warriors to rise and join the battle. The risen warriors will likely emerge from all over the battlefield"
+#name "Unbury the Dead"
+#descr "The caster pulses a dirge for the dead through the ground, causing the bones of long dead warriors to rise and join the battle. The risen warriors will emerge from all over the battlefield."
 #effect 43
 #damage -7004
-#nreff 1515
+#nreff 2010
 #fatiguecost 100
 #path 0 5
 #path 1 3
@@ -6016,7 +6558,7 @@
 #name "Confusion Spores"
 #descr "The caster blankets an area with spores, causing damage and confusion when inhaled by the living"
 #effect 3007
-#damage 5
+#damage 3
 #path 0 5
 #path 1 3
 #pathlevel 0 2
@@ -6041,7 +6583,7 @@
 #newspell
 #copyspell "Confusion Spores"
 #name "Hypnosis Spores"
-#descr "The caster blankets a area with deadly spores that worm their way into the minds of those effected, attempting to control them to the side of the caster"
+#descr "The caster blankets a small area with deadly spores that worm their way into the minds of those effected, attempting to control them to the side of the caster"
 #pathlevel 0 3
 #fatiguecost 40
 #aoe 1
@@ -6109,7 +6651,7 @@
 #newspell
 #name "Contact Red Robber"
 #descr "The caster contacts an elusive figure known as the Red Robber, a strange being who can spread magic"
-#effect 10021
+#effect 10089 -- Rit summon unique.
 #damagemon "Red Robber"
 #path 0 5
 #path 1 3
@@ -6180,7 +6722,7 @@
 #pathlevel 1 2
 #researchlevel 7
 #school 0
-#fatiguecost 2500
+#fatiguecost 3000
 #nreff 1
 #end
 
@@ -6224,9 +6766,10 @@
 #name "Avatar of Gaia"
 #descr "The caster infuses themselves with an incredible amount of power drawn from the earth. This will empower him, and also cause the entire battlefield to gain in the power of nature"
 #nextspell "Overflow of Gaia"
+#range 0
 #school 0
 #researchlevel 9
-#path 1 3
+#path 1 3-
 #pathlevel 0 5 
 #pathlevel 1 2
 #fatiguecost 500
@@ -6241,7 +6784,7 @@
 #pathlevel 0 3
 #pathlevel 1 1
 #damagemon "Giant Wurm"
-#researchlevel 6
+#researchlevel 5
 #school 0
 #nreff 1
 #fatiguecost 100
@@ -6256,7 +6799,7 @@
 #pathlevel 0 4
 #pathlevel 1 1
 #damagemon "Great Wurm"
-#researchlevel 9
+#researchlevel 8
 #school 0
 #nreff 1
 #fatiguecost 300
@@ -6266,13 +6809,13 @@
 #name "Become Treant"
 #descr "The caster attempts to turn themselves into the form of a noble treant, gaining great physical power"
 #school 4
-#researchlevel 6
+#researchlevel 7
 #path 0 6
 #path 1 3
 #pathlevel 0 3
 #pathlevel 1 2
 #effect 10130
-#fatiguecost 1500
+#fatiguecost 1800
 #damagemon "Treant Lord"
 #nreff 1
 #spec 536870912
@@ -6282,13 +6825,13 @@
 #name "Become Gorgon"
 #descr "The caster attempts to turn themselves into the form of a horrific gorgon, gaining strange new abilities"
 #school 4
-#researchlevel 6
+#researchlevel 7
 #path 0 3
 #path 1 6
 #pathlevel 0 4
 #pathlevel 1 2
 #effect 10130
-#fatiguecost 1500
+#fatiguecost 2000 
 #damage 138
 #nreff 1
 #spec 536870912
@@ -6318,15 +6861,16 @@
 #descr "The caster creates a group of phantasmal archers that will rain semi real arrows down on the enemy army"
 #effect 1
 #damage 3233
-#nreff 1010
+#nreff 3
 #school 1
 #path 0 1
 #path 1 4
 #pathlevel 0 1
 #pathlevel 1 1
 #researchlevel 2
-#fatiguecost 100
+#fatiguecost 20
 #range 5
+#aibadlvl 2
 #end
 
 #newspell
@@ -6334,7 +6878,7 @@
 #descr "The caster creates a small group of phantasmal giants that will attack the enemy"
 #effect 1
 #damagemon "Phantasmal Giant"
-#nreff 505
+#nreff 506
 #school 1
 #path 0 1
 #path 1 4
@@ -6395,10 +6939,10 @@
 
 #newspell
 #name "Phantasmal Horde"
-#descr "The caster summons a small horde of phantasmal warriors. The resonant nature of this magic should cause it to spawn additional hordes for each communion slave aiding a master who casts it"
+#descr "The caster summons a small horde of phantasmal warriors. The resonant nature of this magic should cause it to spawn additional hordes for each communion slave aiding a master who casts it. This spell is not advised for mages not feeding its power into a communion."
 #effect 1043
 #damage 297
-#nreff 5005
+#nreff 4004
 #school 1
 #path 0 1
 #path 1 4
@@ -6407,12 +6951,14 @@
 #researchlevel 6
 #fatiguecost 300
 #range 5
+#ainocast 1
 #end
 
 #newspell
 #name "Phantasmal Crusaders"
 #effect 10001
 #damagemon "Phantasmal Crusader"
+#descr "The caster summons a group of phantasmal crusaders. While they are just as weak as other phantasms, the faithful will believe them to be sacred."
 #nreff 505
 #school 1
 #path 0 1
@@ -6420,13 +6966,14 @@
 #pathlevel 0 2
 #pathlevel 1 2
 #researchlevel 6
-#fatiguecost 500
+#fatiguecost 400
 #end
 
 #newspell
 #name "Phantasmal Assassin"
 #effect 10021
 #damagemon "Phantasmal Assassin"
+#descr "The caster summons an assassin, or at least the image there-of."
 #nreff 1
 #school 1
 #path 0 1
@@ -6441,27 +6988,29 @@
 #name "Phantasmal Mage"
 #effect 10021
 #damagemon "Mirror Mage"
+#descr "The caster summons a mage, or at least the image there-of."
 #nreff 1
 #school 1
 #path 0 1
 #path 1 4
 #pathlevel 0 3
 #pathlevel 1 2
-#researchlevel 6
-#fatiguecost 400
+#researchlevel 7
+#fatiguecost 500
 #end
 
 #newspell
 #name "Phantasmal Communicants"
 #effect 10001
 #damagemon "Phantasmal Communicant"
-#nreff 505
+#descr "The caster summons a pair of Communicants, or at least the image there-of."
+#nreff 2
 #school 1
 #path 0 1
 #path 1 4
 #pathlevel 0 2
 #pathlevel 1 1
-#researchlevel 5
+#researchlevel 7
 #fatiguecost 500
 #end
 
@@ -6469,6 +7018,7 @@
 #name "Phantasmal Spy"
 #effect 10119
 #damagemon "Phantasmal Spy"
+#descr "The caster summons a spy, or at least the image there-of."
 #nreff 1
 #school 1
 #path 0 1
@@ -6482,7 +7032,7 @@
 #newspell
 #effect 5002
 #aoe 5
-#damage 1005
+#damage 1005 
 #name "Field of Razors"
 #descr "The caster forms a field of near invisible razors of force, causing those in the area to be sliced and torn by blades they can barely see, though heavy armor will protect most soldiers"
 #spec 1100585369664
@@ -6512,8 +7062,8 @@
 #end
 
 #newspell
-#effect 5002
-#aoe 1001
+#effect 2
+#aoe 1
 #damage 25
 #name "Shard Strike"
 #descr "The caster lashes out with a quickly formed blade of force, severing foes nearby"
@@ -6525,7 +7075,7 @@
 #researchlevel 6
 #school 2
 #range 1
-#fatiguecost 60
+#fatiguecost 5
 #casttime 50
 #nreff 1
 #end
@@ -6539,16 +7089,16 @@
 #path 1 1
 #pathlevel 0 3
 #pathlevel 1 2
-#researchlevel 4
+#researchlevel 5
 #school 5
-#fatiguecost 1500
+#fatiguecost 1000
 #end
 
 #newspell
 #name "Contact Gish"
 #effect 10021
 #damagemon "Githyanki Gish"
-#descr "The caster sends a signalling pulse through the barriers in the veil, calling for the services of a Githyanki Gish, a skilled astral and age mage and swordsperson"
+#descr "The caster sends a signalling pulse through the barriers in the veil, calling for the services of a Githyanki Gish, a skilled astral and air mage and swordsperson."
 #path 0 4
 #path 1 1
 #pathlevel 0 4
@@ -6568,7 +7118,7 @@
 #pathlevel 0 3
 #pathlevel 1 2
 #effect 10130
-#fatiguecost 2000
+#fatiguecost 2500
 #damagemon "Githyanki Gish"
 #nreff 1
 #spec 536870912
@@ -6584,7 +7134,7 @@
 #pathlevel 0 1
 #pathlevel 1 1
 #damage 255
-#aoe 10
+#aoe 2008
 #range 50
 #fatiguecost 30
 #sound 23 -- Doom
@@ -6625,15 +7175,16 @@
 #pathlevel 1 2
 #researchlevel 7
 #school 5
-#end
+#end 
 
 #newspell
 #name "Recruit Court Warriors"
 #effect 10001
 #damagemon "Court Warrior"
 #descr "The caster strikes a bargain with a group of warriors from one of the fey courts, gaining their services. Depending on the time of year different units will answer the call"
+#details "This spell summons a group of 3d6 Summer Court Warriors in summer and spring, or 3d6 Winter Court Warriors in fall or winter."
 #path 0 1
-#path 1 6
+#path 1 6 
 #pathlevel 0 2
 #pathlevel 1 2
 #researchlevel 5
@@ -6645,7 +7196,7 @@
 #name "Recruit Court Archers"
 #effect 10001
 #damagemon "Court Archer"
-#descr "The caster strikes a bargain with a group of archers from one of the fey courts, gaining their services. Depending on the time of year different units will answer the call"
+#descr "The caster strikes a bargain with a group of archers from one of the fey courts, gaining their services. Depending on the time of year different units will answer the call"#details "This spell summons a group of 3d6 Summer Court Archers in summer and spring, or 3d6 Winter Court Archer in fall or winter."
 #path 0 1
 #path 1 6
 #pathlevel 0 2
@@ -6660,13 +7211,14 @@
 #effect 10001
 #damagemon "Court Lord"
 #descr "The caster strikes a bargain with a lord of one of the fey courts, gaining their services. Depending on the time of year a different commander will answer the call. The lord will be accompanied by a small band of soldiers"
+#details "This spell summons a Summer Court Lord in summer and spring, or a Winter Court Lord in fall or winter, as well as 3d6 of the appropriate warrior."
 #path 0 1
 #path 1 6
 #pathlevel 0 3
 #pathlevel 1 2
 #researchlevel 6
 #school 0
-#fatiguecost 4000
+#fatiguecost 3600
 #nextspell "Recruit Court Warriors"
 #end
 
@@ -6674,7 +7226,8 @@
 #name "Recruit Court Lady"
 #effect 10001
 #damagemon "Court lady"
-#descr "The caster strikes a bargain with a lady of one of the fey courts, gaining their services. Depending on the time of year a different commander will answer the call"
+#descr "The caster strikes a bargain with a lady of one of the fey courts, gaining their services. Depending on the time of year a different commander will answer the call."
+#details "This spell summons a Summer Court Lady in summer and spring, or a Winter Court Lady in fall or winter."
 #path 0 1
 #path 1 6
 #pathlevel 0 4
@@ -6688,7 +7241,7 @@
 #name "Recruit Wild Hunt Warriors"
 #effect 10001
 #damagemon "Wild Hunt Warrior"
-#descr "The caster bargains for the services of a group of wild hunt Warriors, savage fey hunters that pay allegiance to no court and cause discontent wherever they go"
+#descr "The caster bargains for the services of a group of wild hunt Warriors, savage fey hunters that pay allegiance to no court and cause discontent wherever they go."
 #path 0 6
 #path 1 1
 #pathlevel 0 2
@@ -6725,7 +7278,7 @@
 #pathlevel 1 2
 #researchlevel 6
 #school 0
-#fatiguecost 4000
+#fatiguecost 3600
 #nextspell "Recruit Wild Hunt Warriors"
 #end
 
@@ -6746,7 +7299,7 @@
 #newspell
 #copyspell 503
 #name "Healers Rebuke"
-#damage 10
+#damage 8
 #aoe 9
 #nreff 1
 #researchlevel 12
@@ -6796,7 +7349,7 @@
 #path 0 4
 #path 1 6
 #pathlevel 0 3
-#pathlevel 1 3
+#pathlevel 1 2
 #researchlevel 5
 #school 0
 #fatiguecost 1500
@@ -6809,8 +7362,8 @@
 #descr "The caster bargains for the aid of a celestial healer, a being from an organization of healers that can cure the wounded and sick with great efficiency, and even wield potent healing magic in combat"
 #path 0 4
 #path 1 6
-#pathlevel 0 4
-#pathlevel 1 4
+#pathlevel 0 3
+#pathlevel 1 2
 #researchlevel 7
 #school 0
 #fatiguecost 3500
@@ -6895,8 +7448,8 @@
 #pathlevel 1 3
 #researchlevel 7
 #school 0
-#fatiguecost 7000
-#nreff 2
+#fatiguecost 5000
+#nreff 1
 #nextspell "Cackle Warriors"
 #end
 
@@ -6913,12 +7466,12 @@
 
 #newspell
 #name "Soul Slash"
-#descr "The caster slashes at an enemies soul, dealing potent damage and removing any ability to return from death"
+#descr "The caster slashes at an enemies soul, dealing potent damage and removing any ability to return from death."
 #effect 2
 #range 50
 #explspr 10206
 #prec 0
-#damage 20
+#damage 3017
 #path 0 5
 #path 1 4
 #pathlevel 0 2
@@ -6938,43 +7491,45 @@
 #spec 36028797018980480 -- AN, Ignores Shields , UWOK, Internal Damage, Extra effect on Damage
 #end
 
-#newspell
-#name "Reanimate Body"
-#effect 74
-#damage 999
-#researchlevel 12
-#school -2
-#spec 1152921504623624192
-#end
+--#newspell
+--#name "Reanimate Body"
+--#effect 74
+--#damage 999
+--#researchlevel 12
+--#school -2
+--#spec 1152921504624148480
+--#end
+
+--#newspell
+--#name "Reanimate Soul"
+--#effect 1
+--#damage 674
+--#researchlevel 12
+--#school -2
+--#end 
+
+--#newspell -- HEART Does Not Work Most Likely
+--#copyspell 165
+--#name "Soul Seperation"
+--#descr "DOES NOT WORK The caster forcefully splits the soul and body of several nearby soldiers, while pumping both full of necromantic energy. This will kill the weak willed and turn them into a reanimated spirit and corpse"
+--#effect 17
+--#damage 4
+--#nextspell "Reanimate Body"
+--#path 0 5
+--#path 1 4
+--#pathlevel 0 4
+--#pathlevel 1 3
+--#fatiguecost 0--100
+--#aoe 25
+--#school 4
+--#researchlevel 0--6
+--#spec 541081728
+--#range 25
+--#flyspr -1
+--#end
 
 #newspell
-#name "Reanimate Soul"
-#effect 1
-#damage 674
-#researchlevel 12
-#school -2
-#end 
-
-#newspell
-#name "Soul Seperation"
-#descr "The caster forcefully splits the soul and body of several nearby soldiers, while pumping both full of necromantic energy. This will kill the weak willed and turn them into a reanimated spirit and corpse"
-#effect 13
-#damage 1
-#nextspell "Reanimate Body"
-#path 0 5
-#path 1 4
-#pathlevel 0 4
-#pathlevel 1 3
-#fatiguecost 100
-#aoe 25
-#school 4
-#researchlevel 6
-#spec 541081728
-#range 25
-#end
-
-#newspell
-#name "Summon Nightskitter"
+#name "Summon Nightskitter" -- All night stuff recosts and descriptions added. HEART
 #effect 10001
 #damagemon "Nightskitter"
 #descr "The caster summons a nightskitter, a horrifying spider like undead being that can fling webs of darkness at its enemies. Like other nightshades, nightskitters gain significant power in the dark"
@@ -6984,7 +7539,7 @@
 #pathlevel 1 2
 #researchlevel 4
 #school 0
-#fatiguecost 1000
+#fatiguecost 400
 #nreff 1
 #end
 
@@ -6992,14 +7547,14 @@
 #name "Summon Nightwing"
 #effect 10001
 #damagemon "Nightwing"
-#descr "The caster summons a nightwing, a horrifying bat like undead being that can swoop down on its enemius. Like other nightshades, nightwings gain significant power in the dark"
+#descr "The caster summons a nightwing, a horrifying bat like undead being that can swoop down on its enemies. Like other nightshades, nightwings gain significant power in the dark"
 #path 0 5
 #path 1 4
 #pathlevel 0 3
 #pathlevel 1 2
 #researchlevel 5
 #school 0
-#fatiguecost 1000
+#fatiguecost 600
 #nreff 1
 #end
 
@@ -7007,14 +7562,14 @@
 #name "Summon Nightwalker"
 #effect 10001
 #damagemon "Nightwalker"
-#descr "The caster summons a nightwalker, a horrifying humanoid like undead being that can drain life from its foes. Like other nightshades, nightwalkers gain significant power in the dark"
+#descr "The caster summons a nightwalker, a horrifying humanoid like undead being that can drain life from its foes. Like other nightshades, nightwalkers gain significant power in the dark."
 #path 0 5
 #path 1 4
 #pathlevel 0 4
 #pathlevel 1 2
 #researchlevel 6
 #school 0
-#fatiguecost 1500
+#fatiguecost 1000
 #nreff 1
 #end
 
@@ -7022,14 +7577,14 @@
 #name "Summon Nightwave"
 #effect 10001
 #damagemon "Nightwave"
-#descr "The caster summons a nightwave, a horrifying shark like undead being that can fly through the air and is surrounded by the chill of the deep ocean. Like other nightshades, nightwaves gain significant power in the dark"
+#descr "The caster summons a nightwave, a horrifying shark like undead being that can fly through the air and is surrounded by the chill of the deep ocean. Like other nightshades, nightwaves gain significant power in the dark."
 #path 0 5
 #path 1 4
 #pathlevel 0 5
 #pathlevel 1 3
 #researchlevel 8
 #school 0
-#fatiguecost 3000
+#fatiguecost 2500
 #nreff 1
 #end
 -- New Items --
@@ -7047,7 +7602,8 @@
 #fly
 #ethereal
 #glamour
-#ironvul 3
+#ironvul 2
+#saltvul 2
 #end
 
 #newitem
@@ -7110,7 +7666,7 @@
 
 #newitem
 #name "Stygian Flask"
-#descr "A specially treated flask of water from the river Styx, drunk before combat it grants invulnerability, increased strength, and a beserk rage when "
+#descr "A specially treated flask of water from the river Styx, drunk before combat it grants invulnerability, increased strength, and a beserk rage when struck."
 #type 8
 #constlevel 6
 #mainpath 2
@@ -7132,8 +7688,8 @@
 #mainlevel 2
 #secondarylevel 1
 #spr "./MorvarchsMagic/StygianFlask.tga"
-#str 5
-#att 10
+#str 3
+#att 5
 #slashres
 #curse
 #autospell "Animate Saints Armaments"
@@ -7170,7 +7726,6 @@
 #spr "./MorvarchsMagic/AstralArmor.tga"
 #name "Shard Blade"
 #descr "A blade of crystal, shard blades are effortless to swing and ignore unliving material near entirely. shard blades sever the soul on slice, causing immediate death unless the soul can resist"
-#blink
 #constlevel 6
 #mainpath 4
 #secondarypath 1
@@ -7209,7 +7764,7 @@
 #path 5
 #rarity 5
 #level 0
-#summon "Embalming Zombie"
+#summon 625 -- Mummy
 #end
 
 #newsite 1901
@@ -7232,13 +7787,13 @@
 #nation -2
 #msg "A commander has undergone the rite of embalming and become a mummy"
 #nolog
-#req_monster "Embalming Zombie"
 #req_site "Temple of Embalming"
 #req_targorder 50
 #req_targpath1 5
+#req_targundead 0
+#req_targinanimate 0
 #req_pop0ok
 #transform 625
-#killmon "Embalming Zombie"
 #end
 
 #newevent
@@ -7270,7 +7825,7 @@
 #rarity 5
 #req_ench 552
 #req_pop0ok
-#msg "The population of this province has become suddenly extremely docile."
+#msg "The population of this province has become suddenly docile."
 #incscale3
 #unrest -100
 #end
@@ -7306,7 +7861,7 @@
 #req_site 1902
 #removesite 1902
 #nolog
-#4d6vis 6
+#3d6vis 6 -- From 4d6 avg from 5->16 to 5->12
 #end
 
 #newevent
