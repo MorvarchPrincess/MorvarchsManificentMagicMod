@@ -265,7 +265,7 @@
 #newweapon
 #copyweapon 8
 #name "Invisible Blade"
-#dt_aff 8192
+#secondaryeffect 690
 #end
 
 #newweapon
@@ -1191,7 +1191,7 @@
 #cleararmor
 #weapon 356
 #weapon 9
-#armor 135
+#armor 100
 #armor 136
 #prec 13
 #holy
@@ -1608,6 +1608,7 @@
 #shockres -10
 #amphibian
 #clearmagic
+#homerealm 0
 #magicskill 2 2
 #magicskill 4 2
 #custommagic 2560 100
@@ -1712,6 +1713,7 @@
 #stealthy 40
 #assassin
 #patience 2
+#weapon "Brain Spike"
 #end
 
 #newmonster
@@ -2624,6 +2626,7 @@
 #newmonster
 #name "Singing Stone" 
 #descr "Throughout most of the land, strange stones can be found set out in odd geometric patterns. Noone knows who placed them there, or why they seem to suddenly appear sometimes where there were none previous, but mages have found they have a strange form of sentience, and will naturally join communions established near by those they consider friendly"
+#spr1 "./MorvarchsMagic/SingingStone.tga"
 #hp 20
 #size 3
 #prot 17
@@ -2759,6 +2762,7 @@
 #clearweapons
 #clearmagic
 #size 6
+#homerealm 0
 #hp 100
 #prot 20
 #mr 16
@@ -2788,7 +2792,6 @@
 #magicskill 3 2
 #itemslots 31878
 #weapon "Astral Greatsword"
-#startitem 700
 #saltvul 1
 #end
 
@@ -2988,7 +2991,7 @@
 #weapon "Amber Blade"
 #end
 
-#newmonster
+#newmonster 7029
 #copystats "Treant Knight"
 #name "Treant Lord"
 #descr "Treants are giant, tree like figures that live deep in the forests of the world. They are tough and hardy, but susceptible to poisons and hard to convince to serve the awakening god. Treant Lords are powerful casters and leaders of their bretheren"
@@ -3204,6 +3207,7 @@
 #newmonster
 #copystats 538
 #copyspr 538
+#clearspec
 #name "Phantasmal Communicant"
 #descr "The phantasmal communicant is an illusion of a supplicant mage. The phantasm will join as a communion slave, but quickly disappate if the magic energy powering it is drained. The phantasm is elusive and difficult to hit, but once hit it will be destroyed. The weapons of a phantasm are unreal and will only harm those who believe them to be real"
 #hp 1
@@ -3219,6 +3223,7 @@
 #illusion
 #amphibian
 #spiritsight
+#comslave
 #end
 
 #newmonster
@@ -3368,7 +3373,7 @@
 #animal
 #end
 
-#newmonster
+#newmonster 7030
 #name "Githyanki Gish"
 #spr1 "./MorvarchsMagic/Gish_1.tga"
 #spr2 "./MorvarchsMagic/Gish_2.tga"
@@ -3390,7 +3395,6 @@
 #startage 300
 #maxage 750
 #darkvision 50
-#bonusspells 1
 #combatcaster
 #blink
 #teleport
@@ -3680,6 +3684,7 @@
 #awe 2
 #holy
 #autohealer 1
+#autodishealer 1
 #startitem 701
 #end
 
@@ -4489,7 +4494,7 @@
 #path 1 0
 #pathlevel 0 3
 #pathlevel 1 1
-#fatiguecost 1000
+#fatiguecost 100
 #nreff 1
 #damage 7000
 #end
@@ -4561,40 +4566,51 @@
 #nextspell "Large Area Explosion"
 #end
 
+
+#newspell
+#copyspell 542 -- Splash of Molten Metal
+#name "Shattering Carapace"
+#end
+
 #newspell
 #copyspell 703 -- Disintegrate
 #name "Stone to Lava"
-#descr "Turns the stone of a statue to pure lava, instantly destroying it and causing the remains to erupt out onto nearby allies. Casting this on a non-stone magic being will overload its innate mana, causing a similar effect"
+#descr "Turns the stone of a statue to pure lava, instantly destroying a portion of it and causing the remains to erupt out onto nearby allies. Casting this on a non-stone magic being will overload its innate mana, causing a similar effect"
 #path 0 0
 #pathlevel 0 3
 #path 1 3
 #pathlevel 1 2
-#effect 109
+#effect 2
+#damage 40
 #fatiguecost 40
-#spec 1188967893811855504--1188967893811855488
+#spec 36046389205008528--1188967893811855488
+#nextspell "Shattering Carapace"
 #range 50
 #end
 
-#newspell
-#copyspell 542 -- Splash of Molten Metal
-#end
+
+
 
 #newspell
 #name "Small Area Explosion"
 #effect 2
 #damage 1006
 #spec 549755813952
-#aoe 1
+#aoe 0
 #casttime 100
+#researchlevel 12
+#school -2
 #end
 
 #newspell
 #name "Nova Explosion"
 #effect 2
-#damage 2015
+#damage 2005
 #aoe 5050
 #spec 16480
 #explspr 10113
+#researchlevel 12
+#school -2
 #nextspell "Small Area Explosion"
 #end
 
@@ -4734,7 +4750,7 @@
 #pathlevel 1 1
 #nreff 1
 #effect 10001
-#fatiguecost 500
+#fatiguecost 800
 #damagemon "Legion Archon"
 #end
 
@@ -4784,7 +4800,7 @@
 #damage 5
 #researchlevel 12
 #school -2
-#spec 16512
+#spec 17592186060928
 #end
 
 #newspell
@@ -4838,7 +4854,7 @@
 #path 1 4
 #pathlevel 0 4
 #pathlevel 1 3
-#fatiguecost 3000
+#fatiguecost 2000
 #effect 10021
 #nreff 1
 #damagemon "Celestial Librarian"
@@ -4853,7 +4869,7 @@
 #path 1 4
 #pathlevel 0 5
 #pathlevel 1 3
-#fatiguecost 6000
+#fatiguecost 5000
 #effect 10021
 #nreff 1
 #damagemon "Celestial Sage"
@@ -5305,7 +5321,7 @@
 #name "Condense Mist Army"
 #descr "The caster condenses a small army out of mist"
 #school 0
-#researchlevel 5
+#researchlevel 6
 #path 0 1
 #pathlevel 0 3
 #path 1 2
@@ -5329,7 +5345,7 @@
 #school 5
 #fatiguecost 500
 #spec 0
-#damage 1 -- Wrathful Skies
+#damage 1 -- Storm
 #end
 
 #newspell
@@ -5658,7 +5674,7 @@
 #copyspell 905 -- Behemoth
 #name "Entice Intellect Hound Alpha"
 #descr "The caster uses a set of magical enchantments and a few magical gems to lure an Intellect Hound pack to serve him."
-#effect 1
+#effect 10001
 #damagemon "Intellect Hound Alpha"
 #school 4
 #researchlevel 5
@@ -5749,7 +5765,7 @@
 
 #newspell
 #name "Waters of the Styx"
-#descr "The caster douses a nearby group of troops with the waters from the river Styx, river of hate. The effected soldiers will gain increased strength and "
+#descr "The caster douses a nearby group of troops with the waters from the river Styx, river of hate. The effected soldiers will gain increased strength and beserk at the slightest provocation, whether they could do so previously or not"
 #damage 384
 #effect 10
 #school 4
@@ -6003,7 +6019,7 @@
 #pathlevel 1 1
 #effect 10130
 #fatiguecost 400
-#damagemon "Triton Mage"
+#damage 3540
 #nreff 1
 #spec 536870912
 #end
@@ -6108,7 +6124,7 @@
 #name "Sandstorm"
 #descr "The caster churns up a huge storm of biting sand that will rage across the entire battlefield for a short while"
 #aoe 666
-#damage 1010
+#damage 1007
 #effect 9002
 #pathlevel 0 4
 #pathlevel 0 3
@@ -6351,12 +6367,13 @@
 #name "Summon Crystal Power"
 #descr "The caster floods the battlefield with an immense surge of magic, causing all mages on the battlefield to become more powerful"
 #aoe 666
+#researchlevel 8
 #fatiguecost 400
-#researchlevel 9
 #path 0 4
 #path 1 3
-#pathlevel 0 6
+#pathlevel 0 4
 #pathlevel 1 3
+#spec 12599296
 #end
 
 #newspell
@@ -6816,7 +6833,7 @@
 #pathlevel 1 2
 #effect 10130
 #fatiguecost 1800
-#damagemon "Treant Lord"
+#damage 7029
 #nreff 1
 #spec 536870912
 #end
@@ -7119,7 +7136,7 @@
 #pathlevel 1 2
 #effect 10130
 #fatiguecost 2500
-#damagemon "Githyanki Gish"
+#damage 7030
 #nreff 1
 #spec 536870912
 #end
@@ -7478,6 +7495,7 @@
 #pathlevel 1 1
 #school 2
 #researchlevel 7
+#fatiguecost 20
 #spec 3458765613332299840
 #end
 
@@ -7731,7 +7749,7 @@
 #secondarypath 1
 #mainlevel 2
 #secondarylevel 2
-#armor 206
+#weapon "Shard Blade"
 #type 1
 #end
 
@@ -7785,9 +7803,9 @@
 #newevent
 #rarity 5
 #nation -2
-#msg "A commander has undergone the rite of embalming and become a mummy"
+#msg "A commander has undergone the rite of embalming and become a mummy [Temple of Embalming]"
 #nolog
-#req_site "Temple of Embalming"
+#req_site 1
 #req_targorder 50
 #req_targpath1 5
 #req_targundead 0
